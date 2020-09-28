@@ -10,7 +10,7 @@
                 <div class="top-nav__row">
                     <ul class="top-nav__list">
                         <li class="top-nav__item">
-                            <a href="#" class="top-nav__link">
+                            <a href="/catalog/" class="top-nav__link">
                                 <span uk-icon="menu"></span>
                                 <span class="top-nav__parent">Продукция</span>
                             </a>
@@ -291,3 +291,20 @@
         </div>
     </div>
 </header>
+<?if ($APPLICATION->GetCurPage(false) !== "/"): ?>
+    <div class="page-wrapper">
+        <main class="content">
+            <div class="page-title">
+                <div class="uk-container">
+                    <h1 class="uk-h2">Орехи</h1>
+                    <ul class="uk-breadcrumb breadcrumbs">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Продукция</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Орехи</a></li>
+                        <li class="breadcrumbs__item"><span class="breadcrumbs__link">Фундук</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="uk-section uk-margin">
+                <div class="uk-container">
+<? endif; ?>

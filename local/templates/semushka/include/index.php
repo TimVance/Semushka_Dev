@@ -18,13 +18,31 @@
     <main class="content">
         <section class="uk-section">
             <div class="uk-container">
-                <h1 class="uk-h2">Компания “СЕМУШКА”</h1>
+                <h1 class="uk-h2">
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/local/templates/semushka/include/parts/about_title.php"
+                        )
+                    );?>
+                </h1>
                 <div class="uk-column-1-2@m">
-                    <p>На конгрессе INC в Ченнае озвучили прогноз мирового производства орехов: сезон 2017-2018 г. будет на 25% выше среднего за последние десять лет и достигнет 4.2 миллиона тонн. В сезоне 2017-2018 г. мировое производство сухофруктов (финики, курага, сладкая сушеная клюква, сушеный инжир, чернослив, изюм и сушеная смородина) достигнет 3 млн.т., что на 20% больше среднего за последние десять лет.</p>
-                    <p class="uk-visible@s">Ожидается, что производство сушеной клюквы превысит прошлогодние показатели на 10% и достигнет 200.3 тыс.т. Лидер мирового производства сушеной клюквы — США и 79%.</p>
-                    <p class="uk-visible@s">В Австралии идет постоянное обновление старых садов макадамии на новые прогрессивные сорта, с расширением плодоносящих площадей. В 2016 г. Южная </p>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/local/templates/semushka/include/parts/about.php"
+                        )
+                    );?>
                 </div>
-                <p class="uk-margin-medium-top@m"><a href="#" class="link link--arrow">Читать далее</a></p>
+                <p class="uk-margin-medium-top@m"><a href="/about/" class="link link--arrow">Читать далее</a></p>
             </div>
         </section>
         <section class="uk-section">

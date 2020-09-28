@@ -1,5 +1,9 @@
 <? if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
 
+            </div>
+        </section>
+    </main>
+</div>
 <footer class="footer">
     <div class="uk-container">
         <div class="footer__list uk-grid-small" uk-grid>
@@ -21,12 +25,60 @@
             );?>
             <div class="footer__item uk-width-1-4@m">
                 <div class="">
-                    <a href="tel:+ 74991103044" class="footer__item-title footer__item-title--phone">+ 7 (499) 110 3044</a>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/local/templates/semushka/include/parts/phone.php"
+                        )
+                    );?>
                     <div class="footer__item-body">
                         <ul class="footer__item-list">
-                            <li><p>1115093, Москва, Большая Серпуховская ул., дом 32, строение 1</p></li>
-                            <li><p>с 10:00 до 18:00</p></li>
-                            <li><p><a href="mailto:info@semushka-m.ru" class="link">info@semushka-m.ru</a></p></li>
+                            <li>
+                                <p>
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        "",
+                                        Array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "AREA_FILE_SUFFIX" => "inc",
+                                            "EDIT_TEMPLATE" => "",
+                                            "PATH" => "/local/templates/semushka/include/parts/address.php"
+                                        )
+                                    );?>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        "",
+                                        Array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "AREA_FILE_SUFFIX" => "inc",
+                                            "EDIT_TEMPLATE" => "",
+                                            "PATH" => "/local/templates/semushka/include/parts/worktime.php"
+                                        )
+                                    );?>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        "",
+                                        Array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "AREA_FILE_SUFFIX" => "inc",
+                                            "EDIT_TEMPLATE" => "",
+                                            "PATH" => "/local/templates/semushka/include/parts/mail.php"
+                                        )
+                                    );?>
+                                </p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -48,7 +100,7 @@
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => "local/templates/semushka/include/parts/copyright.php"
+                            "PATH" => "/local/templates/semushka/include/parts/copyright.php"
                         )
                     );?>
                 </div>
@@ -65,7 +117,7 @@
                     "AREA_FILE_SHOW" => "file",
                     "AREA_FILE_SUFFIX" => "inc",
                     "EDIT_TEMPLATE" => "",
-                    "PATH" => "local/templates/semushka/include/parts/requisites.php"
+                    "PATH" => "/local/templates/semushka/include/parts/requisites.php"
                 )
             );?>
         </div>
