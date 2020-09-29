@@ -19,11 +19,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 
 $this->AddEditAction($arResult['SECTION']['ID'], $arResult['SECTION']['EDIT_LINK'], $strSectionEdit);
 $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
-
-
-echo '<pre style="display:none;">';
-print_r($arResult["SECTIONS"]);
-echo '</pre>';?>
+?>
 
 <div uk-grid class="catalog uk-grid-small uk-child-width-1-3@m uk-child-width-1-2">
     <? $first = true; ?>
@@ -39,7 +35,7 @@ echo '</pre>';?>
             <div class="catalog__card">
                 <div class="catalog__image">
                     <div class="catalog__img">
-                        <img src="./src/images/catalog-test.png" alt="">
+                        <img src="<?=$section["PICTURE"]["SRC"]?>" alt="<?=$section["NAME"]?>">
                     </div>
                 </div>
                 <div class="catalog__body">
