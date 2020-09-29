@@ -1,699 +1,592 @@
-<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
+<div class="page-wrapper">
+    <main class="content">
+        <div class="uk-container">
+            <article class="product-detail">
+                <div class="uk-child-width-1-2@s" uk-grid>
+                    <div class="product-detail__item">
+                        <div
+                                class="fotorama"
+                                data-width="100%"
+                                data-ratio="800/600"
+                                data-allowfullscreen="native"
+                                data-nav="thumbs"
+                                data-fit="contain"
+                                data-loop="true"
+                                data-keyboard="true"
+                        >
+                            <img src="<?=SITE_TEMPLATE_PATH?>/images/slider-test.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/images/map-test.png" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/images/bg-test.png" alt="">
+                        </div>
+                    </div>
+                    <div class="product-detail__item">
+                        <div class="product-detail__header">
+                            <h2 class="uk-h2">Фундук 9/11ММ (сорт aтабаба)</h2>
+                        </div>
+                        <div class="product-detail__body">
+                            <div class="product-detail__info">
+                                <div class="product-detail__info-row">
+                                    <div class="product-detail__info-title">Размер</div>
+                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
+                                </div>
+                                <div class="product-detail__info-row">
+                                    <div class="product-detail__info-title">Срок хранения</div>
+                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
+                                </div>
+                                <div class="product-detail__info-row">
+                                    <div class="product-detail__info-title">Страна</div>
+                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
+                                </div>
+                                <div class="product-detail__info-row">
+                                    <div class="product-detail__info-title">Упаковка</div>
+                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
+                                </div>
+                                <div class="product-detail__info-row">
+                                    <div class="product-detail__info-title">25 кг, мешок</div>
+                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-detail__price">1200 Р</div>
+                        <div class="product-detail__footer">
+                            <div class="product-detail__footer-item">
+                                <form class="product-detail__tools">
+                                    <label for="select" class="select product-detail__select">
+                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
+                                        <div class="select__list">
+                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
+                                            <label class="select__label" for="list[0]">1кг</label>
+                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
+                                            <label class="select__label" for="list[1]">2кг</label>
+                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
+                                            <label class="select__label" for="list[2]">3кг</label>
+                                            <span class="select__placeholder">Вес</span>
+                                        </div>
+                                    </label>
+                                    <div class="product-detail__count">
+                                        <div class="count-tools js-product-quantity">
+                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
+                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
+                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="product-detail__footer-item">
+                                <button class="btn" type="button"><span>Купить</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="uk-section">
+                    <ul class="tabs" uk-tab>
+                        <li><a href="#">О продукции</a></li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Оплата</a></li>
+                    </ul>
 
-/** @var array $arParams */
-/** @var array $arResult */
-/** @global CMain $APPLICATION */
-/** @global CUser $USER */
-/** @global CDatabase $DB */
-/** @var CBitrixComponentTemplate $this */
-/** @var string $templateName */
-/** @var string $templateFile */
-/** @var string $templateFolder */
-/** @var string $componentPath */
-/** @var CBitrixComponent $component */
+                    <ul class="uk-switcher uk-margin">
+                        <li>
+                            <div class="uk-column-1-2@m">
+                                <p>На конгрессе INC в Ченнае озвучили прогноз мирового производства орехов: сезон 2017-2018 г. будет на 25% выше среднего за последние десять лет и достигнет 4.2 миллиона тонн. В сезоне 2017-2018 г. мировое производство сухофруктов (финики, курага, сладкая сушеная клюква, сушеный инжир, чернослив, изюм и сушеная смородина) достигнет 3 млн.т., что на 20% больше среднего за последние десять лет.</p>
+                                <p>Ожидается, что производство сушеной клюквы превысит прошлогодние показатели на 10% и достигнет 200.3 тыс.т. Лидер мирового производства сушеной клюквы — США и 79%.</p>
+                                <p>В Австралии идет постоянное обновление старых садов макадамии на новые прогрессивные сорта, с расширением плодоносящих площадей. В 2016 г. Южная </p>
+                            </div>
+                        </li>
+                        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                        <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+                    </ul>
+                </section>
+                <section class="uk-section">
+                    <h2 class="uk-h2">Наши сертификаты</h2>
+                    <div class="uk-child-width-1-4@s uk-child-width-1-2 product-detail__lightbox sertificate-list" uk-grid>
+                        <div class="sertificate-list__item">
+                            <div class="sertificate-list__body">
+                                <div class="sertificate-list__image">
+                                    <a class="uk-inline" href="./src/images/sertif-test.png" data-fancybox="gallery">
+                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/sertif-test.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="sertificate-list__info">
+                                    <span class="sertificate-list__text">PDF 35 кб</span>
+                                    <a href="#" class="sertificate-list__download"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sertificate-list__item">
+                            <div class="sertificate-list__body">
+                                <div class="sertificate-list__image">
+                                    <a class="uk-inline" href="./src/images/sertif2-test.png" data-fancybox="gallery">
+                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/sertif2-test.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="sertificate-list__info">
+                                    <span class="sertificate-list__text">PDF 35 кб</span>
+                                    <a href="#" class="sertificate-list__download"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sertificate-list__item">
+                            <div class="sertificate-list__body">
+                                <div class="sertificate-list__image">
+                                    <a class="uk-inline" href="./src/images/sertif3-test.png" data-fancybox="gallery">
+                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/sertif3-test.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="sertificate-list__info">
+                                    <span class="sertificate-list__text">PDF 35 кб</span>
+                                    <a href="#" class="sertificate-list__download"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sertificate-list__item">
+                            <div class="sertificate-list__body">
+                                <div class="sertificate-list__image">
+                                    <a class="uk-inline" href="./src/images/sertif4-test.png" data-fancybox="gallery">
+                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/sertif4-test.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="sertificate-list__info">
+                                    <span class="sertificate-list__text">PDF 35 кб</span>
+                                    <a href="#" class="sertificate-list__download"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="uk-section">
+                    <div class="uk-position-relative uk-visible-toggle uk-dark slider" tabindex="-1" uk-slider>
+                        <div class="slider__header">
+                            <div class="slider__title">Другие товары категории</div>
+                            <div class="uk-slidenav-container slider__container">
+                                <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                <a href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            </div>
+                        </div>
+                        <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@s uk-grid slider__list">
+                            <li class="slider__item">
+                                <article class="card">
+                                    <div class="card__image">
+                                        <div class="card__img">
+                                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
+                                        <div class="card__subtitle">(сорт aтабаба)</div>
+                                        <div class="card__info">
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Размер</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Срок хранения</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Страна</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Упаковка</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">25 кг, мешок</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
+                                            </div>
+                                        </div>
+                                        <div class="card__footer">
+                                            <div class="card__footer-item">
+                                                <form class="card__tools">
+                                                    <label for="select" class="select card__select">
+                                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
+                                                        <div class="select__list">
+                                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
+                                                            <label class="select__label" for="list[0]">1кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
+                                                            <label class="select__label" for="list[1]">2кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
+                                                            <label class="select__label" for="list[2]">3кг</label>
+                                                            <span class="select__placeholder">Вес</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="card__count">
+                                                        <div class="count-tools js-product-quantity">
+                                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
+                                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
+                                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card__footer-item">
+                                                <button class="btn" type="button"><span>Купить</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="slider__item">
+                                <article class="card">
+                                    <div class="card__image">
+                                        <div class="card__img">
+                                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
+                                        <div class="card__subtitle">(сорт aтабаба)</div>
+                                        <div class="card__info">
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Размер</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Срок хранения</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Страна</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Упаковка</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">25 кг, мешок</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
+                                            </div>
+                                        </div>
+                                        <div class="card__footer">
+                                            <div class="card__footer-item">
+                                                <form class="card__tools">
+                                                    <label for="select" class="select card__select">
+                                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
+                                                        <div class="select__list">
+                                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
+                                                            <label class="select__label" for="list[0]">1кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
+                                                            <label class="select__label" for="list[1]">2кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
+                                                            <label class="select__label" for="list[2]">3кг</label>
+                                                            <span class="select__placeholder">Вес</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="card__count">
+                                                        <div class="count-tools js-product-quantity">
+                                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
+                                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
+                                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card__footer-item">
+                                                <button class="btn" type="button"><span>Купить</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="slider__item">
+                                <article class="card">
+                                    <div class="card__image">
+                                        <div class="card__img">
+                                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
+                                        <div class="card__subtitle">(сорт aтабаба)</div>
+                                        <div class="card__info">
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Размер</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Срок хранения</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Страна</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Упаковка</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">25 кг, мешок</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
+                                            </div>
+                                        </div>
+                                        <div class="card__footer">
+                                            <div class="card__footer-item">
+                                                <form class="card__tools">
+                                                    <label for="select" class="select card__select">
+                                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
+                                                        <div class="select__list">
+                                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
+                                                            <label class="select__label" for="list[0]">1кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
+                                                            <label class="select__label" for="list[1]">2кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
+                                                            <label class="select__label" for="list[2]">3кг</label>
+                                                            <span class="select__placeholder">Вес</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="card__count">
+                                                        <div class="count-tools js-product-quantity">
+                                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
+                                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
+                                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card__footer-item">
+                                                <button class="btn" type="button"><span>Купить</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="slider__item">
+                                <article class="card">
+                                    <div class="card__image">
+                                        <div class="card__img">
+                                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
+                                        <div class="card__subtitle">(сорт aтабаба)</div>
+                                        <div class="card__info">
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Размер</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Срок хранения</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Страна</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Упаковка</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">25 кг, мешок</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
+                                            </div>
+                                        </div>
+                                        <div class="card__footer">
+                                            <div class="card__footer-item">
+                                                <form class="card__tools">
+                                                    <label for="select" class="select card__select">
+                                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
+                                                        <div class="select__list">
+                                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
+                                                            <label class="select__label" for="list[0]">1кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
+                                                            <label class="select__label" for="list[1]">2кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
+                                                            <label class="select__label" for="list[2]">3кг</label>
+                                                            <span class="select__placeholder">Вес</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="card__count">
+                                                        <div class="count-tools js-product-quantity">
+                                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
+                                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
+                                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card__footer-item">
+                                                <button class="btn" type="button"><span>Купить</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="slider__item">
+                                <article class="card">
+                                    <div class="card__image">
+                                        <div class="card__img">
+                                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
+                                        <div class="card__subtitle">(сорт aтабаба)</div>
+                                        <div class="card__info">
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Размер</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Срок хранения</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Страна</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">Упаковка</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
+                                            </div>
+                                            <div class="card__info-row">
+                                                <div class="card__info-title">25 кг, мешок</div>
+                                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
+                                            </div>
+                                        </div>
+                                        <div class="card__footer">
+                                            <div class="card__footer-item">
+                                                <form class="card__tools">
+                                                    <label for="select" class="select card__select">
+                                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
+                                                        <div class="select__list">
+                                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
+                                                            <label class="select__label" for="list[0]">1кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
+                                                            <label class="select__label" for="list[1]">2кг</label>
+                                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
+                                                            <label class="select__label" for="list[2]">3кг</label>
+                                                            <span class="select__placeholder">Вес</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="card__count">
+                                                        <div class="count-tools js-product-quantity">
+                                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
+                                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
+                                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card__footer-item">
+                                                <button class="btn" type="button"><span>Купить</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
 
-use Bitrix\Main\Loader;
-use Bitrix\Main\ModuleManager;
+                    </div>
+                </section>
+                <section class="uk-section">
+                    <div class="uk-position-relative uk-visible-toggle uk-dark slider" tabindex="-1" uk-slider>
+                        <div class="slider__header">
+                            <div class="slider__title">Новости по теме</div>
+                            <div class="uk-slidenav-container slider__container">
+                                <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                <a href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            </div>
+                        </div>
+                        <ul class="uk-slider-items uk-child-width-1-1 uk-grid slider__list">
+                            <li class="slider__item">
+                                <div class="uk-child-width-1-2@s news-list news-list--small" uk-grid>
+                                    <div class="news-list__item">
+                                        <article class="news-item">
+                                            <div class="news-item__image">
+                                                <a href="#" class="news-item__link">
+                                                    <div class="news-item__img">
+                                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/news-1.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="news-item__body">
+                                                <a href="#" class="news-item__title">На конгрессе INC в Ченнае озвучили прогноз мирового производства орехов:</a>
+                                                <div class="news-item__date news-detail-date">
+                                                    <span uk-icon="clock"></span>
+                                                    <time datetime="2020-09-18T08:23:11+07:00">16.09.2020</time>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="news-list__item">
+                                        <article class="news-item">
+                                            <div class="news-item__image">
+                                                <a href="#" class="news-item__link">
+                                                    <div class="news-item__img">
+                                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/news-2.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="news-item__body">
+                                                <a href="#" class="news-item__title">На конгрессе INC в Ченнае озвучили прогноз мирового производства орехов:</a>
+                                                <div class="news-item__date news-detail-date">
+                                                    <span uk-icon="clock"></span>
+                                                    <time datetime="2020-09-18T08:23:11+07:00">16.09.2020</time>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="news-list__item">
+                                        <article class="news-item">
+                                            <div class="news-item__image">
+                                                <a href="#" class="news-item__link">
+                                                    <div class="news-item__img">
+                                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/news-3.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="news-item__body">
+                                                <a href="#" class="news-item__title">На конгрессе INC в Ченнае озвучили прогноз мирового производства орехов:</a>
+                                                <div class="news-item__date news-detail-date">
+                                                    <span uk-icon="clock"></span>
+                                                    <time datetime="2020-09-18T08:23:11+07:00">16.09.2020</time>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="news-list__item">
+                                        <article class="news-item">
+                                            <div class="news-item__image">
+                                                <a href="#" class="news-item__link">
+                                                    <div class="news-item__img">
+                                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/news-1.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="news-item__body">
+                                                <a href="#" class="news-item__title">На конгрессе INC в Ченнае озвучили прогноз мирового производства орехов:</a>
+                                                <div class="news-item__date news-detail-date">
+                                                    <span uk-icon="clock"></span>
+                                                    <time datetime="2020-09-18T08:23:11+07:00">16.09.2020</time>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider__item">
+                                123
+                            </li>
+                            <li class="slider__item">
+                                123
+                            </li>
+                            <li class="slider__item">
+                                123
+                            </li>
+                            <li class="slider__item">
+                                123
+                            </li>
+                        </ul>
 
-$this->setFrameMode(true);
-$this->addExternalCss('/bitrix/css/main/bootstrap.css');
-
-if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMON_SETTINGS_BASKET_POPUP'] == 'Y')
-{
-	$basketAction = (isset($arParams['COMMON_ADD_TO_BASKET_ACTION']) ? array($arParams['COMMON_ADD_TO_BASKET_ACTION']) : array());
-}
-else
-{
-	$basketAction = (isset($arParams['DETAIL_ADD_TO_BASKET_ACTION']) ? $arParams['DETAIL_ADD_TO_BASKET_ACTION'] : array());
-}
-
-$isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEBAR_PATH']));
-?>
-<div class='row'>
-	<div class='<?=($isSidebar ? 'col-md-9 col-sm-8' : 'col-xs-12')?>'>
-		<?
-		if ($arParams["USE_COMPARE"] === "Y")
-		{
-			$APPLICATION->IncludeComponent(
-				"bitrix:catalog.compare.list",
-				"",
-				array(
-					"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
-					"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-					"NAME" => $arParams["COMPARE_NAME"],
-					"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
-					"COMPARE_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["compare"],
-					"ACTION_VARIABLE" => (!empty($arParams["ACTION_VARIABLE"]) ? $arParams["ACTION_VARIABLE"] : "action"),
-					"PRODUCT_ID_VARIABLE" => $arParams["PRODUCT_ID_VARIABLE"],
-					'POSITION_FIXED' => isset($arParams['COMPARE_POSITION_FIXED']) ? $arParams['COMPARE_POSITION_FIXED'] : '',
-					'POSITION' => isset($arParams['COMPARE_POSITION']) ? $arParams['COMPARE_POSITION'] : ''
-				),
-				$component,
-				array("HIDE_ICONS" => "Y")
-			);
-		}
-
-		$componentElementParams = array(
-			'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-			'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-			'PROPERTY_CODE' => (isset($arParams['DETAIL_PROPERTY_CODE']) ? $arParams['DETAIL_PROPERTY_CODE'] : []),
-			'META_KEYWORDS' => $arParams['DETAIL_META_KEYWORDS'],
-			'META_DESCRIPTION' => $arParams['DETAIL_META_DESCRIPTION'],
-			'BROWSER_TITLE' => $arParams['DETAIL_BROWSER_TITLE'],
-			'SET_CANONICAL_URL' => $arParams['DETAIL_SET_CANONICAL_URL'],
-			'BASKET_URL' => $arParams['BASKET_URL'],
-			'ACTION_VARIABLE' => $arParams['ACTION_VARIABLE'],
-			'PRODUCT_ID_VARIABLE' => $arParams['PRODUCT_ID_VARIABLE'],
-			'SECTION_ID_VARIABLE' => $arParams['SECTION_ID_VARIABLE'],
-			'CHECK_SECTION_ID_VARIABLE' => (isset($arParams['DETAIL_CHECK_SECTION_ID_VARIABLE']) ? $arParams['DETAIL_CHECK_SECTION_ID_VARIABLE'] : ''),
-			'PRODUCT_QUANTITY_VARIABLE' => $arParams['PRODUCT_QUANTITY_VARIABLE'],
-			'PRODUCT_PROPS_VARIABLE' => $arParams['PRODUCT_PROPS_VARIABLE'],
-			'CACHE_TYPE' => $arParams['CACHE_TYPE'],
-			'CACHE_TIME' => $arParams['CACHE_TIME'],
-			'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
-			'SET_TITLE' => $arParams['SET_TITLE'],
-			'SET_LAST_MODIFIED' => $arParams['SET_LAST_MODIFIED'],
-			'MESSAGE_404' => $arParams['~MESSAGE_404'],
-			'SET_STATUS_404' => $arParams['SET_STATUS_404'],
-			'SHOW_404' => $arParams['SHOW_404'],
-			'FILE_404' => $arParams['FILE_404'],
-			'PRICE_CODE' => $arParams['~PRICE_CODE'],
-			'USE_PRICE_COUNT' => $arParams['USE_PRICE_COUNT'],
-			'SHOW_PRICE_COUNT' => $arParams['SHOW_PRICE_COUNT'],
-			'PRICE_VAT_INCLUDE' => $arParams['PRICE_VAT_INCLUDE'],
-			'PRICE_VAT_SHOW_VALUE' => $arParams['PRICE_VAT_SHOW_VALUE'],
-			'USE_PRODUCT_QUANTITY' => $arParams['USE_PRODUCT_QUANTITY'],
-			'PRODUCT_PROPERTIES' => (isset($arParams['PRODUCT_PROPERTIES']) ? $arParams['PRODUCT_PROPERTIES'] : []),
-			'ADD_PROPERTIES_TO_BASKET' => (isset($arParams['ADD_PROPERTIES_TO_BASKET']) ? $arParams['ADD_PROPERTIES_TO_BASKET'] : ''),
-			'PARTIAL_PRODUCT_PROPERTIES' => (isset($arParams['PARTIAL_PRODUCT_PROPERTIES']) ? $arParams['PARTIAL_PRODUCT_PROPERTIES'] : ''),
-			'LINK_IBLOCK_TYPE' => $arParams['LINK_IBLOCK_TYPE'],
-			'LINK_IBLOCK_ID' => $arParams['LINK_IBLOCK_ID'],
-			'LINK_PROPERTY_SID' => $arParams['LINK_PROPERTY_SID'],
-			'LINK_ELEMENTS_URL' => $arParams['LINK_ELEMENTS_URL'],
-
-			'OFFERS_CART_PROPERTIES' => (isset($arParams['OFFERS_CART_PROPERTIES']) ? $arParams['OFFERS_CART_PROPERTIES'] : []),
-			'OFFERS_FIELD_CODE' => $arParams['DETAIL_OFFERS_FIELD_CODE'],
-			'OFFERS_PROPERTY_CODE' => (isset($arParams['DETAIL_OFFERS_PROPERTY_CODE']) ? $arParams['DETAIL_OFFERS_PROPERTY_CODE'] : []),
-			'OFFERS_SORT_FIELD' => $arParams['OFFERS_SORT_FIELD'],
-			'OFFERS_SORT_ORDER' => $arParams['OFFERS_SORT_ORDER'],
-			'OFFERS_SORT_FIELD2' => $arParams['OFFERS_SORT_FIELD2'],
-			'OFFERS_SORT_ORDER2' => $arParams['OFFERS_SORT_ORDER2'],
-
-			'ELEMENT_ID' => $arResult['VARIABLES']['ELEMENT_ID'],
-			'ELEMENT_CODE' => $arResult['VARIABLES']['ELEMENT_CODE'],
-			'SECTION_ID' => $arResult['VARIABLES']['SECTION_ID'],
-			'SECTION_CODE' => $arResult['VARIABLES']['SECTION_CODE'],
-			'SECTION_URL' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['section'],
-			'DETAIL_URL' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['element'],
-			'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
-			'CURRENCY_ID' => $arParams['CURRENCY_ID'],
-			'HIDE_NOT_AVAILABLE' => $arParams['HIDE_NOT_AVAILABLE'],
-			'HIDE_NOT_AVAILABLE_OFFERS' => $arParams['HIDE_NOT_AVAILABLE_OFFERS'],
-			'USE_ELEMENT_COUNTER' => $arParams['USE_ELEMENT_COUNTER'],
-			'SHOW_DEACTIVATED' => $arParams['SHOW_DEACTIVATED'],
-			'USE_MAIN_ELEMENT_SECTION' => $arParams['USE_MAIN_ELEMENT_SECTION'],
-			'STRICT_SECTION_CHECK' => (isset($arParams['DETAIL_STRICT_SECTION_CHECK']) ? $arParams['DETAIL_STRICT_SECTION_CHECK'] : ''),
-			'ADD_PICT_PROP' => $arParams['ADD_PICT_PROP'],
-			'LABEL_PROP' => $arParams['LABEL_PROP'],
-			'LABEL_PROP_MOBILE' => $arParams['LABEL_PROP_MOBILE'],
-			'LABEL_PROP_POSITION' => $arParams['LABEL_PROP_POSITION'],
-			'OFFER_ADD_PICT_PROP' => $arParams['OFFER_ADD_PICT_PROP'],
-			'OFFER_TREE_PROPS' => (isset($arParams['OFFER_TREE_PROPS']) ? $arParams['OFFER_TREE_PROPS'] : []),
-			'PRODUCT_SUBSCRIPTION' => $arParams['PRODUCT_SUBSCRIPTION'],
-			'SHOW_DISCOUNT_PERCENT' => $arParams['SHOW_DISCOUNT_PERCENT'],
-			'DISCOUNT_PERCENT_POSITION' => (isset($arParams['DISCOUNT_PERCENT_POSITION']) ? $arParams['DISCOUNT_PERCENT_POSITION'] : ''),
-			'SHOW_OLD_PRICE' => $arParams['SHOW_OLD_PRICE'],
-			'SHOW_MAX_QUANTITY' => $arParams['SHOW_MAX_QUANTITY'],
-			'MESS_SHOW_MAX_QUANTITY' => (isset($arParams['~MESS_SHOW_MAX_QUANTITY']) ? $arParams['~MESS_SHOW_MAX_QUANTITY'] : ''),
-			'RELATIVE_QUANTITY_FACTOR' => (isset($arParams['RELATIVE_QUANTITY_FACTOR']) ? $arParams['RELATIVE_QUANTITY_FACTOR'] : ''),
-			'MESS_RELATIVE_QUANTITY_MANY' => (isset($arParams['~MESS_RELATIVE_QUANTITY_MANY']) ? $arParams['~MESS_RELATIVE_QUANTITY_MANY'] : ''),
-			'MESS_RELATIVE_QUANTITY_FEW' => (isset($arParams['~MESS_RELATIVE_QUANTITY_FEW']) ? $arParams['~MESS_RELATIVE_QUANTITY_FEW'] : ''),
-			'MESS_BTN_BUY' => (isset($arParams['~MESS_BTN_BUY']) ? $arParams['~MESS_BTN_BUY'] : ''),
-			'MESS_BTN_ADD_TO_BASKET' => (isset($arParams['~MESS_BTN_ADD_TO_BASKET']) ? $arParams['~MESS_BTN_ADD_TO_BASKET'] : ''),
-			'MESS_BTN_SUBSCRIBE' => (isset($arParams['~MESS_BTN_SUBSCRIBE']) ? $arParams['~MESS_BTN_SUBSCRIBE'] : ''),
-			'MESS_BTN_DETAIL' => (isset($arParams['~MESS_BTN_DETAIL']) ? $arParams['~MESS_BTN_DETAIL'] : ''),
-			'MESS_NOT_AVAILABLE' => (isset($arParams['~MESS_NOT_AVAILABLE']) ? $arParams['~MESS_NOT_AVAILABLE'] : ''),
-			'MESS_BTN_COMPARE' => (isset($arParams['~MESS_BTN_COMPARE']) ? $arParams['~MESS_BTN_COMPARE'] : ''),
-			'MESS_PRICE_RANGES_TITLE' => (isset($arParams['~MESS_PRICE_RANGES_TITLE']) ? $arParams['~MESS_PRICE_RANGES_TITLE'] : ''),
-			'MESS_DESCRIPTION_TAB' => (isset($arParams['~MESS_DESCRIPTION_TAB']) ? $arParams['~MESS_DESCRIPTION_TAB'] : ''),
-			'MESS_PROPERTIES_TAB' => (isset($arParams['~MESS_PROPERTIES_TAB']) ? $arParams['~MESS_PROPERTIES_TAB'] : ''),
-			'MESS_COMMENTS_TAB' => (isset($arParams['~MESS_COMMENTS_TAB']) ? $arParams['~MESS_COMMENTS_TAB'] : ''),
-			'MAIN_BLOCK_PROPERTY_CODE' => (isset($arParams['DETAIL_MAIN_BLOCK_PROPERTY_CODE']) ? $arParams['DETAIL_MAIN_BLOCK_PROPERTY_CODE'] : ''),
-			'MAIN_BLOCK_OFFERS_PROPERTY_CODE' => (isset($arParams['DETAIL_MAIN_BLOCK_OFFERS_PROPERTY_CODE']) ? $arParams['DETAIL_MAIN_BLOCK_OFFERS_PROPERTY_CODE'] : ''),
-			'USE_VOTE_RATING' => $arParams['DETAIL_USE_VOTE_RATING'],
-			'VOTE_DISPLAY_AS_RATING' => (isset($arParams['DETAIL_VOTE_DISPLAY_AS_RATING']) ? $arParams['DETAIL_VOTE_DISPLAY_AS_RATING'] : ''),
-			'USE_COMMENTS' => $arParams['DETAIL_USE_COMMENTS'],
-			'BLOG_USE' => (isset($arParams['DETAIL_BLOG_USE']) ? $arParams['DETAIL_BLOG_USE'] : ''),
-			'BLOG_URL' => (isset($arParams['DETAIL_BLOG_URL']) ? $arParams['DETAIL_BLOG_URL'] : ''),
-			'BLOG_EMAIL_NOTIFY' => (isset($arParams['DETAIL_BLOG_EMAIL_NOTIFY']) ? $arParams['DETAIL_BLOG_EMAIL_NOTIFY'] : ''),
-			'VK_USE' => (isset($arParams['DETAIL_VK_USE']) ? $arParams['DETAIL_VK_USE'] : ''),
-			'VK_API_ID' => (isset($arParams['DETAIL_VK_API_ID']) ? $arParams['DETAIL_VK_API_ID'] : 'API_ID'),
-			'FB_USE' => (isset($arParams['DETAIL_FB_USE']) ? $arParams['DETAIL_FB_USE'] : ''),
-			'FB_APP_ID' => (isset($arParams['DETAIL_FB_APP_ID']) ? $arParams['DETAIL_FB_APP_ID'] : ''),
-			'BRAND_USE' => (isset($arParams['DETAIL_BRAND_USE']) ? $arParams['DETAIL_BRAND_USE'] : 'N'),
-			'BRAND_PROP_CODE' => (isset($arParams['DETAIL_BRAND_PROP_CODE']) ? $arParams['DETAIL_BRAND_PROP_CODE'] : ''),
-			'DISPLAY_NAME' => (isset($arParams['DETAIL_DISPLAY_NAME']) ? $arParams['DETAIL_DISPLAY_NAME'] : ''),
-			'IMAGE_RESOLUTION' => (isset($arParams['DETAIL_IMAGE_RESOLUTION']) ? $arParams['DETAIL_IMAGE_RESOLUTION'] : ''),
-			'PRODUCT_INFO_BLOCK_ORDER' => (isset($arParams['DETAIL_PRODUCT_INFO_BLOCK_ORDER']) ? $arParams['DETAIL_PRODUCT_INFO_BLOCK_ORDER'] : ''),
-			'PRODUCT_PAY_BLOCK_ORDER' => (isset($arParams['DETAIL_PRODUCT_PAY_BLOCK_ORDER']) ? $arParams['DETAIL_PRODUCT_PAY_BLOCK_ORDER'] : ''),
-			'ADD_DETAIL_TO_SLIDER' => (isset($arParams['DETAIL_ADD_DETAIL_TO_SLIDER']) ? $arParams['DETAIL_ADD_DETAIL_TO_SLIDER'] : ''),
-			'TEMPLATE_THEME' => (isset($arParams['TEMPLATE_THEME']) ? $arParams['TEMPLATE_THEME'] : ''),
-			'ADD_SECTIONS_CHAIN' => (isset($arParams['ADD_SECTIONS_CHAIN']) ? $arParams['ADD_SECTIONS_CHAIN'] : ''),
-			'ADD_ELEMENT_CHAIN' => (isset($arParams['ADD_ELEMENT_CHAIN']) ? $arParams['ADD_ELEMENT_CHAIN'] : ''),
-			'DISPLAY_PREVIEW_TEXT_MODE' => (isset($arParams['DETAIL_DISPLAY_PREVIEW_TEXT_MODE']) ? $arParams['DETAIL_DISPLAY_PREVIEW_TEXT_MODE'] : ''),
-			'DETAIL_PICTURE_MODE' => (isset($arParams['DETAIL_DETAIL_PICTURE_MODE']) ? $arParams['DETAIL_DETAIL_PICTURE_MODE'] : array()),
-			'ADD_TO_BASKET_ACTION' => $basketAction,
-			'ADD_TO_BASKET_ACTION_PRIMARY' => (isset($arParams['DETAIL_ADD_TO_BASKET_ACTION_PRIMARY']) ? $arParams['DETAIL_ADD_TO_BASKET_ACTION_PRIMARY'] : null),
-			'SHOW_CLOSE_POPUP' => isset($arParams['COMMON_SHOW_CLOSE_POPUP']) ? $arParams['COMMON_SHOW_CLOSE_POPUP'] : '',
-			'DISPLAY_COMPARE' => (isset($arParams['USE_COMPARE']) ? $arParams['USE_COMPARE'] : ''),
-			'COMPARE_PATH' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['compare'],
-			'USE_COMPARE_LIST' => 'Y',
-			'BACKGROUND_IMAGE' => (isset($arParams['DETAIL_BACKGROUND_IMAGE']) ? $arParams['DETAIL_BACKGROUND_IMAGE'] : ''),
-			'COMPATIBLE_MODE' => (isset($arParams['COMPATIBLE_MODE']) ? $arParams['COMPATIBLE_MODE'] : ''),
-			'DISABLE_INIT_JS_IN_COMPONENT' => (isset($arParams['DISABLE_INIT_JS_IN_COMPONENT']) ? $arParams['DISABLE_INIT_JS_IN_COMPONENT'] : ''),
-			'SET_VIEWED_IN_COMPONENT' => (isset($arParams['DETAIL_SET_VIEWED_IN_COMPONENT']) ? $arParams['DETAIL_SET_VIEWED_IN_COMPONENT'] : ''),
-			'SHOW_SLIDER' => (isset($arParams['DETAIL_SHOW_SLIDER']) ? $arParams['DETAIL_SHOW_SLIDER'] : ''),
-			'SLIDER_INTERVAL' => (isset($arParams['DETAIL_SLIDER_INTERVAL']) ? $arParams['DETAIL_SLIDER_INTERVAL'] : ''),
-			'SLIDER_PROGRESS' => (isset($arParams['DETAIL_SLIDER_PROGRESS']) ? $arParams['DETAIL_SLIDER_PROGRESS'] : ''),
-			'USE_ENHANCED_ECOMMERCE' => (isset($arParams['USE_ENHANCED_ECOMMERCE']) ? $arParams['USE_ENHANCED_ECOMMERCE'] : ''),
-			'DATA_LAYER_NAME' => (isset($arParams['DATA_LAYER_NAME']) ? $arParams['DATA_LAYER_NAME'] : ''),
-			'BRAND_PROPERTY' => (isset($arParams['BRAND_PROPERTY']) ? $arParams['BRAND_PROPERTY'] : ''),
-
-			'USE_GIFTS_DETAIL' => $arParams['USE_GIFTS_DETAIL']?: 'Y',
-			'USE_GIFTS_MAIN_PR_SECTION_LIST' => $arParams['USE_GIFTS_MAIN_PR_SECTION_LIST']?: 'Y',
-			'GIFTS_SHOW_DISCOUNT_PERCENT' => $arParams['GIFTS_SHOW_DISCOUNT_PERCENT'],
-			'GIFTS_SHOW_OLD_PRICE' => $arParams['GIFTS_SHOW_OLD_PRICE'],
-			'GIFTS_DETAIL_PAGE_ELEMENT_COUNT' => $arParams['GIFTS_DETAIL_PAGE_ELEMENT_COUNT'],
-			'GIFTS_DETAIL_HIDE_BLOCK_TITLE' => $arParams['GIFTS_DETAIL_HIDE_BLOCK_TITLE'],
-			'GIFTS_DETAIL_TEXT_LABEL_GIFT' => $arParams['GIFTS_DETAIL_TEXT_LABEL_GIFT'],
-			'GIFTS_DETAIL_BLOCK_TITLE' => $arParams['GIFTS_DETAIL_BLOCK_TITLE'],
-			'GIFTS_SHOW_NAME' => $arParams['GIFTS_SHOW_NAME'],
-			'GIFTS_SHOW_IMAGE' => $arParams['GIFTS_SHOW_IMAGE'],
-			'GIFTS_MESS_BTN_BUY' => $arParams['~GIFTS_MESS_BTN_BUY'],
-			'GIFTS_PRODUCT_BLOCKS_ORDER' => $arParams['LIST_PRODUCT_BLOCKS_ORDER'],
-			'GIFTS_SHOW_SLIDER' => $arParams['LIST_SHOW_SLIDER'],
-			'GIFTS_SLIDER_INTERVAL' => isset($arParams['LIST_SLIDER_INTERVAL']) ? $arParams['LIST_SLIDER_INTERVAL'] : '',
-			'GIFTS_SLIDER_PROGRESS' => isset($arParams['LIST_SLIDER_PROGRESS']) ? $arParams['LIST_SLIDER_PROGRESS'] : '',
-
-			'GIFTS_MAIN_PRODUCT_DETAIL_PAGE_ELEMENT_COUNT' => $arParams['GIFTS_MAIN_PRODUCT_DETAIL_PAGE_ELEMENT_COUNT'],
-			'GIFTS_MAIN_PRODUCT_DETAIL_BLOCK_TITLE' => $arParams['GIFTS_MAIN_PRODUCT_DETAIL_BLOCK_TITLE'],
-			'GIFTS_MAIN_PRODUCT_DETAIL_HIDE_BLOCK_TITLE' => $arParams['GIFTS_MAIN_PRODUCT_DETAIL_HIDE_BLOCK_TITLE'],
-		);
-
-		if (isset($arParams['USER_CONSENT']))
-		{
-			$componentElementParams['USER_CONSENT'] = $arParams['USER_CONSENT'];
-		}
-
-		if (isset($arParams['USER_CONSENT_ID']))
-		{
-			$componentElementParams['USER_CONSENT_ID'] = $arParams['USER_CONSENT_ID'];
-		}
-
-		if (isset($arParams['USER_CONSENT_IS_CHECKED']))
-		{
-			$componentElementParams['USER_CONSENT_IS_CHECKED'] = $arParams['USER_CONSENT_IS_CHECKED'];
-		}
-
-		if (isset($arParams['USER_CONSENT_IS_LOADED']))
-		{
-			$componentElementParams['USER_CONSENT_IS_LOADED'] = $arParams['USER_CONSENT_IS_LOADED'];
-		}
-
-		$elementId = $APPLICATION->IncludeComponent(
-			'bitrix:catalog.element',
-			'',
-			$componentElementParams,
-			$component
-		);
-		$GLOBALS['CATALOG_CURRENT_ELEMENT_ID'] = $elementId;
-
-		if ($elementId > 0)
-		{
-			if ($arParams['USE_STORE'] == 'Y' && ModuleManager::isModuleInstalled('catalog'))
-			{
-				$APPLICATION->IncludeComponent(
-					'bitrix:catalog.store.amount',
-					'.default',
-					array(
-						'ELEMENT_ID' => $elementId,
-						'STORE_PATH' => $arParams['STORE_PATH'],
-						'CACHE_TYPE' => 'A',
-						'CACHE_TIME' => '36000',
-						'MAIN_TITLE' => $arParams['MAIN_TITLE'],
-						'USE_MIN_AMOUNT' =>  $arParams['USE_MIN_AMOUNT'],
-						'MIN_AMOUNT' => $arParams['MIN_AMOUNT'],
-						'STORES' => $arParams['STORES'],
-						'SHOW_EMPTY_STORE' => $arParams['SHOW_EMPTY_STORE'],
-						'SHOW_GENERAL_STORE_INFORMATION' => $arParams['SHOW_GENERAL_STORE_INFORMATION'],
-						'USER_FIELDS' => $arParams['USER_FIELDS'],
-						'FIELDS' => $arParams['FIELDS']
-					),
-					$component,
-					array('HIDE_ICONS' => 'Y')
-				);
-			}
-
-			$recommendedData = array();
-			$recommendedCacheId = array('IBLOCK_ID' => $arParams['IBLOCK_ID']);
-
-			$obCache = new CPHPCache();
-			if ($obCache->InitCache(36000, serialize($recommendedCacheId), '/catalog/recommended'))
-			{
-				$recommendedData = $obCache->GetVars();
-			}
-			elseif ($obCache->StartDataCache())
-			{
-				if (Loader::includeModule('catalog'))
-				{
-					$arSku = CCatalogSku::GetInfoByProductIBlock($arParams['IBLOCK_ID']);
-					$recommendedData['OFFER_IBLOCK_ID'] = (!empty($arSku) ? $arSku['IBLOCK_ID'] : 0);
-					$recommendedData['IBLOCK_LINK'] = '';
-					$recommendedData['ALL_LINK'] = '';
-					$rsProps = CIBlockProperty::GetList(
-						array('SORT' => 'ASC', 'ID' => 'ASC'),
-						array('IBLOCK_ID' => $arParams['IBLOCK_ID'], 'PROPERTY_TYPE' => 'E', 'ACTIVE' => 'Y')
-					);
-					$found = false;
-					while ($arProp = $rsProps->Fetch())
-					{
-						if ($found)
-						{
-							break;
-						}
-
-						if ($arProp['CODE'] == '')
-						{
-							$arProp['CODE'] = $arProp['ID'];
-						}
-
-						$arProp['LINK_IBLOCK_ID'] = intval($arProp['LINK_IBLOCK_ID']);
-						if ($arProp['LINK_IBLOCK_ID'] != 0 && $arProp['LINK_IBLOCK_ID'] != $arParams['IBLOCK_ID'])
-						{
-							continue;
-						}
-
-						if ($arProp['LINK_IBLOCK_ID'] > 0)
-						{
-							if ($recommendedData['IBLOCK_LINK'] == '')
-							{
-								$recommendedData['IBLOCK_LINK'] = $arProp['CODE'];
-								$found = true;
-							}
-						}
-						else
-						{
-							if ($recommendedData['ALL_LINK'] == '')
-							{
-								$recommendedData['ALL_LINK'] = $arProp['CODE'];
-							}
-						}
-					}
-
-					if ($found)
-					{
-						if (defined('BX_COMP_MANAGED_CACHE'))
-						{
-							global $CACHE_MANAGER;
-							$CACHE_MANAGER->StartTagCache('/catalog/recommended');
-							$CACHE_MANAGER->RegisterTag('iblock_id_'.$arParams['IBLOCK_ID']);
-							$CACHE_MANAGER->EndTagCache();
-						}
-					}
-				}
-
-				$obCache->EndDataCache($recommendedData);
-			}
-
-			if (!empty($recommendedData))
-			{
-				if (!empty($recommendedData['IBLOCK_LINK']) || !empty($recommendedData['ALL_LINK']))
-				{
-					?>
-					<div class='row'>
-						<div class='col-xs-12' data-entity="parent-container">
-							<div class="catalog-block-header" data-entity="header" data-showed="false" style="display: none; opacity: 0;">
-								<?=GetMessage('CATALOG_RECOMMENDED_BY_LINK')?>
-							</div>
-							<?
-							$APPLICATION->IncludeComponent(
-								'bitrix:catalog.recommended.products',
-								'',
-								array(
-									'ID' => $elementId,
-									'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-									'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-									'PROPERTY_LINK' => (!empty($recommendedData['IBLOCK_LINK']) ? $recommendedData['IBLOCK_LINK'] : $recommendedData['ALL_LINK']),
-									'CACHE_TYPE' => $arParams['CACHE_TYPE'],
-									'CACHE_TIME' => $arParams['CACHE_TIME'],
-									'CACHE_FILTER' => $arParams['CACHE_FILTER'],
-									'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
-									'BASKET_URL' => $arParams['BASKET_URL'],
-									'ACTION_VARIABLE' => (!empty($arParams['ACTION_VARIABLE']) ? $arParams['ACTION_VARIABLE'] : 'action').'_crp',
-									'PRODUCT_ID_VARIABLE' => $arParams['PRODUCT_ID_VARIABLE'],
-									'PRODUCT_QUANTITY_VARIABLE' => $arParams['PRODUCT_QUANTITY_VARIABLE'],
-									'ADD_PROPERTIES_TO_BASKET' => (isset($arParams['ADD_PROPERTIES_TO_BASKET']) ? $arParams['ADD_PROPERTIES_TO_BASKET'] : ''),
-									'PRODUCT_PROPS_VARIABLE' => $arParams['PRODUCT_PROPS_VARIABLE'],
-									'PARTIAL_PRODUCT_PROPERTIES' => (isset($arParams['PARTIAL_PRODUCT_PROPERTIES']) ? $arParams['PARTIAL_PRODUCT_PROPERTIES'] : ''),
-									'PAGE_ELEMENT_COUNT' => $arParams['ALSO_BUY_ELEMENT_COUNT'],
-									'LINE_ELEMENT_COUNT' => $arParams['ALSO_BUY_ELEMENT_COUNT'],
-									'TEMPLATE_THEME' => (isset($arParams['TEMPLATE_THEME']) ? $arParams['TEMPLATE_THEME'] : ''),
-									'SHOW_OLD_PRICE' => $arParams['SHOW_OLD_PRICE'],
-									'SHOW_DISCOUNT_PERCENT' => $arParams['SHOW_DISCOUNT_PERCENT'],
-									'DISCOUNT_PERCENT_POSITION' => $arParams['DISCOUNT_PERCENT_POSITION'],
-									'PRICE_CODE' => $arParams['~PRICE_CODE'],
-									'USE_PRICE_COUNT' => $arParams['USE_PRICE_COUNT'],
-									'SHOW_PRICE_COUNT' => $arParams['SHOW_PRICE_COUNT'],
-									'PRODUCT_SUBSCRIPTION' => $arParams['PRODUCT_SUBSCRIPTION'],
-									'PRICE_VAT_INCLUDE' => $arParams['PRICE_VAT_INCLUDE'],
-									'USE_PRODUCT_QUANTITY' => $arParams['USE_PRODUCT_QUANTITY'],
-									'PRODUCT_DISPLAY_MODE' => $arParams['PRODUCT_DISPLAY_MODE'],
-									'PRODUCT_BLOCKS_ORDER' => $arParams['LIST_PRODUCT_BLOCKS_ORDER'],
-									'SECTION_URL' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['section'],
-									'DETAIL_URL' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['element'],
-									'ADD_TO_BASKET_ACTION' => $basketAction,
-									'SHOW_CLOSE_POPUP' => isset($arParams['COMMON_SHOW_CLOSE_POPUP']) ? $arParams['COMMON_SHOW_CLOSE_POPUP'] : '',
-
-									'ELEMENT_SORT_FIELD' => $arParams['ELEMENT_SORT_FIELD'],
-									'ELEMENT_SORT_ORDER' => $arParams['ELEMENT_SORT_ORDER'],
-									'ELEMENT_SORT_FIELD2' => $arParams['ELEMENT_SORT_FIELD2'],
-									'ELEMENT_SORT_ORDER2' => $arParams['ELEMENT_SORT_ORDER2'],
-
-									'SET_TITLE' => 'N',
-									'SET_BROWSER_TITLE' => 'N',
-									'SET_META_KEYWORDS' => 'N',
-									'SET_META_DESCRIPTION' => 'N',
-									'SET_LAST_MODIFIED' => 'N',
-									'ADD_SECTIONS_CHAIN' => 'N',
-
-									'HIDE_BLOCK_TITLE' => 'Y',
-									'SHOW_NAME' => 'Y',
-									'SHOW_IMAGE' => 'Y',
-
-									'MESS_BTN_BUY' => (isset($arParams['~MESS_BTN_BUY']) ? $arParams['~MESS_BTN_BUY'] : ''),
-									'MESS_BTN_ADD_TO_BASKET' => (isset($arParams['~MESS_BTN_ADD_TO_BASKET']) ? $arParams['~MESS_BTN_ADD_TO_BASKET'] : ''),
-									'MESS_BTN_SUBSCRIBE' => (isset($arParams['~MESS_BTN_SUBSCRIBE']) ? $arParams['~MESS_BTN_SUBSCRIBE'] : ''),
-									'MESS_BTN_DETAIL' => (isset($arParams['~MESS_BTN_DETAIL']) ? $arParams['~MESS_BTN_DETAIL'] : ''),
-									'MESS_NOT_AVAILABLE' => (isset($arParams['~MESS_NOT_AVAILABLE']) ? $arParams['~MESS_NOT_AVAILABLE'] : ''),
-									'MESS_BTN_COMPARE' => (isset($arParams['~MESS_BTN_COMPARE']) ? $arParams['~MESS_BTN_COMPARE'] : ''),
-
-									'LABEL_PROP_MULTIPLE' => $arParams['LABEL_PROP'],
-									'LABEL_PROP_MOBILE' => $arParams['LABEL_PROP_MOBILE'],
-									'LABEL_PROP_POSITION' => $arParams['LABEL_PROP_POSITION'],
-
-									'SHOW_SLIDER' => $arParams['LIST_SHOW_SLIDER'],
-									'SLIDER_INTERVAL' => isset($arParams['LIST_SLIDER_INTERVAL']) ? $arParams['LIST_SLIDER_INTERVAL'] : '',
-									'SLIDER_PROGRESS' => isset($arParams['LIST_SLIDER_PROGRESS']) ? $arParams['LIST_SLIDER_PROGRESS'] : '',
-
-									'SHOW_PRODUCTS_'.$arParams['IBLOCK_ID'] => 'Y',
-									'HIDE_NOT_AVAILABLE' => $arParams['HIDE_NOT_AVAILABLE'],
-									'HIDE_NOT_AVAILABLE_OFFERS' => $arParams['HIDE_NOT_AVAILABLE_OFFERS'],
-									'OFFERS_FIELD_CODE' => $arParams['LIST_OFFERS_FIELD_CODE'],
-									'PROPERTY_CODE_'.$arParams['IBLOCK_ID'] => (isset($arParams['LIST_PROPERTY_CODE']) ? $arParams['LIST_PROPERTY_CODE'] : []),
-									'PROPERTY_CODE_MOBILE' => $arParams['LIST_PROPERTY_CODE_MOBILE'],
-									'PROPERTY_CODE_'.$recommendedData['OFFER_IBLOCK_ID'] => (isset($arParams['LIST_OFFERS_PROPERTY_CODE']) ?  $arParams['LIST_OFFERS_PROPERTY_CODE'] : []),
-									'CART_PROPERTIES_'.$arParams['IBLOCK_ID'] => (isset($arParams['PRODUCT_PROPERTIES']) ? $arParams['PRODUCT_PROPERTIES'] : []),
-									'CART_PROPERTIES_'.$recommendedData['OFFER_IBLOCK_ID'] => (isset($arParams['OFFERS_CART_PROPERTIES']) ? $arParams['OFFERS_CART_PROPERTIES'] : []),
-									'OFFER_TREE_PROPS_'.$recommendedData['OFFER_IBLOCK_ID'] => (isset($arParams['OFFER_TREE_PROPS']) ? $arParams['OFFER_TREE_PROPS'] : []),
-									'ADDITIONAL_PICT_PROP_'.$arParams['IBLOCK_ID'] => $arParams['ADD_PICT_PROP'],
-									'ADDITIONAL_PICT_PROP_'.$recommendedData['OFFER_IBLOCK_ID'] => $arParams['OFFER_ADD_PICT_PROP'],
-									'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
-									'CURRENCY_ID' => $arParams['CURRENCY_ID'],
-
-									'USE_ENHANCED_ECOMMERCE' => (isset($arParams['USE_ENHANCED_ECOMMERCE']) ? $arParams['USE_ENHANCED_ECOMMERCE'] : ''),
-									'DATA_LAYER_NAME' => (isset($arParams['DATA_LAYER_NAME']) ? $arParams['DATA_LAYER_NAME'] : ''),
-									'BRAND_PROPERTY' => (isset($arParams['BRAND_PROPERTY']) ? $arParams['BRAND_PROPERTY'] : ''),
-								),
-								$component
-							);
-							?>
-						</div>
-					</div>
-					<?
-				}
-
-				if (!isset($arParams['DETAIL_SHOW_POPULAR']) || $arParams['DETAIL_SHOW_POPULAR'] != 'N')
-				{
-					?>
-					<div class='row'>
-						<div class='col-xs-12' data-entity="parent-container">
-							<div class="catalog-block-header" data-entity="header" data-showed="false" style="display: none; opacity: 0;">
-								<?=GetMessage('CATALOG_POPULAR_IN_SECTION')?>
-							</div>
-							<?
-							$APPLICATION->IncludeComponent(
-								'bitrix:catalog.section',
-								'',
-								array(
-									'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-									'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-									'SECTION_ID' => $arResult['VARIABLES']['SECTION_ID'],
-									'SECTION_CODE' => $arResult['VARIABLES']['SECTION_CODE'],
-									'ELEMENT_SORT_FIELD' => 'shows',
-									'ELEMENT_SORT_ORDER' => 'desc',
-									'ELEMENT_SORT_FIELD2' => 'sort',
-									'ELEMENT_SORT_ORDER2' => 'asc',
-									'PROPERTY_CODE' => (isset($arParams['LIST_PROPERTY_CODE']) ? $arParams['LIST_PROPERTY_CODE'] : []),
-									'PROPERTY_CODE_MOBILE' => $arParams['LIST_PROPERTY_CODE_MOBILE'],
-									'INCLUDE_SUBSECTIONS' => $arParams['INCLUDE_SUBSECTIONS'],
-									'BASKET_URL' => $arParams['BASKET_URL'],
-									'ACTION_VARIABLE' => $arParams['ACTION_VARIABLE'],
-									'PRODUCT_ID_VARIABLE' => $arParams['PRODUCT_ID_VARIABLE'],
-									'SECTION_ID_VARIABLE' => $arParams['SECTION_ID_VARIABLE'],
-									'PRODUCT_QUANTITY_VARIABLE' => $arParams['PRODUCT_QUANTITY_VARIABLE'],
-									'PRODUCT_PROPS_VARIABLE' => $arParams['PRODUCT_PROPS_VARIABLE'],
-									'CACHE_TYPE' => $arParams['CACHE_TYPE'],
-									'CACHE_TIME' => $arParams['CACHE_TIME'],
-									'CACHE_FILTER' => $arParams['CACHE_FILTER'],
-									'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
-									'DISPLAY_COMPARE' => $arParams['USE_COMPARE'],
-									'PRICE_CODE' => $arParams['~PRICE_CODE'],
-									'USE_PRICE_COUNT' => $arParams['USE_PRICE_COUNT'],
-									'SHOW_PRICE_COUNT' => $arParams['SHOW_PRICE_COUNT'],
-									'PAGE_ELEMENT_COUNT' => 4,
-									'FILTER_IDS' => array($elementId),
-
-									"SET_TITLE" => "N",
-									"SET_BROWSER_TITLE" => "N",
-									"SET_META_KEYWORDS" => "N",
-									"SET_META_DESCRIPTION" => "N",
-									"SET_LAST_MODIFIED" => "N",
-									"ADD_SECTIONS_CHAIN" => "N",
-
-									'PRICE_VAT_INCLUDE' => $arParams['PRICE_VAT_INCLUDE'],
-									'USE_PRODUCT_QUANTITY' => $arParams['USE_PRODUCT_QUANTITY'],
-									'ADD_PROPERTIES_TO_BASKET' => (isset($arParams['ADD_PROPERTIES_TO_BASKET']) ? $arParams['ADD_PROPERTIES_TO_BASKET'] : ''),
-									'PARTIAL_PRODUCT_PROPERTIES' => (isset($arParams['PARTIAL_PRODUCT_PROPERTIES']) ? $arParams['PARTIAL_PRODUCT_PROPERTIES'] : ''),
-									'PRODUCT_PROPERTIES' => (isset($arParams['PRODUCT_PROPERTIES']) ? $arParams['PRODUCT_PROPERTIES'] : []),
-
-									'OFFERS_CART_PROPERTIES' => (isset($arParams['OFFERS_CART_PROPERTIES']) ? $arParams['OFFERS_CART_PROPERTIES'] : []),
-									'OFFERS_FIELD_CODE' => $arParams['LIST_OFFERS_FIELD_CODE'],
-									'OFFERS_PROPERTY_CODE' => (isset($arParams['LIST_OFFERS_PROPERTY_CODE']) ? $arParams['LIST_OFFERS_PROPERTY_CODE'] : []),
-									'OFFERS_SORT_FIELD' => $arParams['OFFERS_SORT_FIELD'],
-									'OFFERS_SORT_ORDER' => $arParams['OFFERS_SORT_ORDER'],
-									'OFFERS_SORT_FIELD2' => $arParams['OFFERS_SORT_FIELD2'],
-									'OFFERS_SORT_ORDER2' => $arParams['OFFERS_SORT_ORDER2'],
-									'OFFERS_LIMIT' => (isset($arParams['LIST_OFFERS_LIMIT']) ? $arParams['LIST_OFFERS_LIMIT'] : 0),
-
-									'SECTION_URL' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['section'],
-									'DETAIL_URL' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['element'],
-									'USE_MAIN_ELEMENT_SECTION' => $arParams['USE_MAIN_ELEMENT_SECTION'],
-									'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
-									'CURRENCY_ID' => $arParams['CURRENCY_ID'],
-									'HIDE_NOT_AVAILABLE' => $arParams['HIDE_NOT_AVAILABLE'],
-									'HIDE_NOT_AVAILABLE_OFFERS' => $arParams['HIDE_NOT_AVAILABLE_OFFERS'],
-
-									'LABEL_PROP' => $arParams['LABEL_PROP'],
-									'LABEL_PROP_MOBILE' => $arParams['LABEL_PROP_MOBILE'],
-									'LABEL_PROP_POSITION' => $arParams['LABEL_PROP_POSITION'],
-									'ADD_PICT_PROP' => $arParams['ADD_PICT_PROP'],
-									'PRODUCT_DISPLAY_MODE' => $arParams['PRODUCT_DISPLAY_MODE'],
-									'PRODUCT_BLOCKS_ORDER' => $arParams['LIST_PRODUCT_BLOCKS_ORDER'],
-									'PRODUCT_ROW_VARIANTS' => "[{'VARIANT':'3','BIG_DATA':false}]",
-									'ENLARGE_PRODUCT' => $arParams['LIST_ENLARGE_PRODUCT'],
-									'ENLARGE_PROP' => isset($arParams['LIST_ENLARGE_PROP']) ? $arParams['LIST_ENLARGE_PROP'] : '',
-									'SHOW_SLIDER' => $arParams['LIST_SHOW_SLIDER'],
-									'SLIDER_INTERVAL' => isset($arParams['LIST_SLIDER_INTERVAL']) ? $arParams['LIST_SLIDER_INTERVAL'] : '',
-									'SLIDER_PROGRESS' => isset($arParams['LIST_SLIDER_PROGRESS']) ? $arParams['LIST_SLIDER_PROGRESS'] : '',
-
-									'DISPLAY_TOP_PAGER' => 'N',
-									'DISPLAY_BOTTOM_PAGER' => 'N',
-									'HIDE_SECTION_DESCRIPTION' => 'Y',
-
-									'RCM_TYPE' => isset($arParams['BIG_DATA_RCM_TYPE']) ? $arParams['BIG_DATA_RCM_TYPE'] : '',
-									'RCM_PROD_ID' => $elementId,
-									'SHOW_FROM_SECTION' => 'Y',
-
-									'OFFER_ADD_PICT_PROP' => $arParams['OFFER_ADD_PICT_PROP'],
-									'OFFER_TREE_PROPS' => (isset($arParams['OFFER_TREE_PROPS']) ? $arParams['OFFER_TREE_PROPS'] : []),
-									'PRODUCT_SUBSCRIPTION' => $arParams['PRODUCT_SUBSCRIPTION'],
-									'SHOW_DISCOUNT_PERCENT' => $arParams['SHOW_DISCOUNT_PERCENT'],
-									'DISCOUNT_PERCENT_POSITION' => $arParams['DISCOUNT_PERCENT_POSITION'],
-									'SHOW_OLD_PRICE' => $arParams['SHOW_OLD_PRICE'],
-									'SHOW_MAX_QUANTITY' => $arParams['SHOW_MAX_QUANTITY'],
-									'MESS_SHOW_MAX_QUANTITY' => (isset($arParams['~MESS_SHOW_MAX_QUANTITY']) ? $arParams['~MESS_SHOW_MAX_QUANTITY'] : ''),
-									'RELATIVE_QUANTITY_FACTOR' => (isset($arParams['RELATIVE_QUANTITY_FACTOR']) ? $arParams['RELATIVE_QUANTITY_FACTOR'] : ''),
-									'MESS_RELATIVE_QUANTITY_MANY' => (isset($arParams['~MESS_RELATIVE_QUANTITY_MANY']) ? $arParams['~MESS_RELATIVE_QUANTITY_MANY'] : ''),
-									'MESS_RELATIVE_QUANTITY_FEW' => (isset($arParams['~MESS_RELATIVE_QUANTITY_FEW']) ? $arParams['~MESS_RELATIVE_QUANTITY_FEW'] : ''),
-									'MESS_BTN_BUY' => (isset($arParams['~MESS_BTN_BUY']) ? $arParams['~MESS_BTN_BUY'] : ''),
-									'MESS_BTN_ADD_TO_BASKET' => (isset($arParams['~MESS_BTN_ADD_TO_BASKET']) ? $arParams['~MESS_BTN_ADD_TO_BASKET'] : ''),
-									'MESS_BTN_SUBSCRIBE' => (isset($arParams['~MESS_BTN_SUBSCRIBE']) ? $arParams['~MESS_BTN_SUBSCRIBE'] : ''),
-									'MESS_BTN_DETAIL' => (isset($arParams['~MESS_BTN_DETAIL']) ? $arParams['~MESS_BTN_DETAIL'] : ''),
-									'MESS_NOT_AVAILABLE' => (isset($arParams['~MESS_NOT_AVAILABLE']) ? $arParams['~MESS_NOT_AVAILABLE'] : ''),
-									'MESS_BTN_COMPARE' => (isset($arParams['~MESS_BTN_COMPARE']) ? $arParams['~MESS_BTN_COMPARE'] : ''),
-
-									'USE_ENHANCED_ECOMMERCE' => (isset($arParams['USE_ENHANCED_ECOMMERCE']) ? $arParams['USE_ENHANCED_ECOMMERCE'] : ''),
-									'DATA_LAYER_NAME' => (isset($arParams['DATA_LAYER_NAME']) ? $arParams['DATA_LAYER_NAME'] : ''),
-									'BRAND_PROPERTY' => (isset($arParams['BRAND_PROPERTY']) ? $arParams['BRAND_PROPERTY'] : ''),
-
-									'TEMPLATE_THEME' => (isset($arParams['TEMPLATE_THEME']) ? $arParams['TEMPLATE_THEME'] : ''),
-									'ADD_TO_BASKET_ACTION' => $basketAction,
-									'SHOW_CLOSE_POPUP' => isset($arParams['COMMON_SHOW_CLOSE_POPUP']) ? $arParams['COMMON_SHOW_CLOSE_POPUP'] : '',
-									'COMPARE_PATH' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['compare'],
-									'COMPARE_NAME' => $arParams['COMPARE_NAME'],
-									'USE_COMPARE_LIST' => 'Y',
-									'BACKGROUND_IMAGE' => '',
-									'DISABLE_INIT_JS_IN_COMPONENT' => (isset($arParams['DISABLE_INIT_JS_IN_COMPONENT']) ? $arParams['DISABLE_INIT_JS_IN_COMPONENT'] : '')
-								),
-								$component
-							);
-							?>
-						</div>
-					</div>
-					<?
-				}
-
-				if (
-					Loader::includeModule('catalog')
-					&& (!isset($arParams['DETAIL_SHOW_VIEWED']) || $arParams['DETAIL_SHOW_VIEWED'] != 'N')
-				)
-				{
-					?>
-					<div class='row'>
-						<div class='col-xs-12' data-entity="parent-container">
-							<div class="catalog-block-header" data-entity="header" data-showed="false" style="display: none; opacity: 0;">
-								<?=GetMessage('CATALOG_VIEWED')?>
-							</div>
-							<?
-							$APPLICATION->IncludeComponent(
-								'bitrix:catalog.products.viewed',
-								'',
-								array(
-									'IBLOCK_MODE' => 'single',
-									'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-									'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-									'ELEMENT_SORT_FIELD' => $arParams['ELEMENT_SORT_FIELD'],
-									'ELEMENT_SORT_ORDER' => $arParams['ELEMENT_SORT_ORDER'],
-									'ELEMENT_SORT_FIELD2' => $arParams['ELEMENT_SORT_FIELD2'],
-									'ELEMENT_SORT_ORDER2' => $arParams['ELEMENT_SORT_ORDER2'],
-									'PROPERTY_CODE_'.$arParams['IBLOCK_ID'] => (isset($arParams['LIST_PROPERTY_CODE']) ? $arParams['LIST_PROPERTY_CODE'] : []),
-									'PROPERTY_CODE_'.$recommendedData['OFFER_IBLOCK_ID'] => (isset($arParams['LIST_OFFERS_PROPERTY_CODE']) ? $arParams['LIST_OFFERS_PROPERTY_CODE'] : []),
-									'PROPERTY_CODE_MOBILE'.$arParams['IBLOCK_ID'] => $arParams['LIST_PROPERTY_CODE_MOBILE'],
-									'BASKET_URL' => $arParams['BASKET_URL'],
-									'ACTION_VARIABLE' => $arParams['ACTION_VARIABLE'],
-									'PRODUCT_ID_VARIABLE' => $arParams['PRODUCT_ID_VARIABLE'],
-									'PRODUCT_QUANTITY_VARIABLE' => $arParams['PRODUCT_QUANTITY_VARIABLE'],
-									'PRODUCT_PROPS_VARIABLE' => $arParams['PRODUCT_PROPS_VARIABLE'],
-									'CACHE_TYPE' => $arParams['CACHE_TYPE'],
-									'CACHE_TIME' => $arParams['CACHE_TIME'],
-									'CACHE_FILTER' => $arParams['CACHE_FILTER'],
-									'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
-									'DISPLAY_COMPARE' => $arParams['USE_COMPARE'],
-									'PRICE_CODE' => $arParams['~PRICE_CODE'],
-									'USE_PRICE_COUNT' => $arParams['USE_PRICE_COUNT'],
-									'SHOW_PRICE_COUNT' => $arParams['SHOW_PRICE_COUNT'],
-									'PAGE_ELEMENT_COUNT' => 4,
-									'SECTION_ELEMENT_ID' => $elementId,
-
-									"SET_TITLE" => "N",
-									"SET_BROWSER_TITLE" => "N",
-									"SET_META_KEYWORDS" => "N",
-									"SET_META_DESCRIPTION" => "N",
-									"SET_LAST_MODIFIED" => "N",
-									"ADD_SECTIONS_CHAIN" => "N",
-
-									'PRICE_VAT_INCLUDE' => $arParams['PRICE_VAT_INCLUDE'],
-									'USE_PRODUCT_QUANTITY' => $arParams['USE_PRODUCT_QUANTITY'],
-									'ADD_PROPERTIES_TO_BASKET' => (isset($arParams['ADD_PROPERTIES_TO_BASKET']) ? $arParams['ADD_PROPERTIES_TO_BASKET'] : ''),
-									'PARTIAL_PRODUCT_PROPERTIES' => (isset($arParams['PARTIAL_PRODUCT_PROPERTIES']) ? $arParams['PARTIAL_PRODUCT_PROPERTIES'] : ''),
-									'CART_PROPERTIES_'.$arParams['IBLOCK_ID'] => (isset($arParams['PRODUCT_PROPERTIES']) ? $arParams['PRODUCT_PROPERTIES'] : []),
-									'CART_PROPERTIES_'.$recommendedData['OFFER_IBLOCK_ID'] => (isset($arParams['OFFERS_CART_PROPERTIES']) ? $arParams['OFFERS_CART_PROPERTIES'] : []),
-									'ADDITIONAL_PICT_PROP_'.$arParams['IBLOCK_ID'] => $arParams['ADD_PICT_PROP'],
-									'ADDITIONAL_PICT_PROP_'.$recommendedData['OFFER_IBLOCK_ID'] => $arParams['OFFER_ADD_PICT_PROP'],
-
-									'SHOW_FROM_SECTION' => 'N',
-									'DETAIL_URL' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['element'],
-									'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
-									'CURRENCY_ID' => $arParams['CURRENCY_ID'],
-									'HIDE_NOT_AVAILABLE' => $arParams['HIDE_NOT_AVAILABLE'],
-									'HIDE_NOT_AVAILABLE_OFFERS' => $arParams['HIDE_NOT_AVAILABLE_OFFERS'],
-
-									'LABEL_PROP_'.$arParams['IBLOCK_ID'] => $arParams['LABEL_PROP'],
-									'LABEL_PROP_MOBILE_'.$arParams['IBLOCK_ID'] => $arParams['LABEL_PROP_MOBILE'],
-									'LABEL_PROP_POSITION' => $arParams['LABEL_PROP_POSITION'],
-									'PRODUCT_BLOCKS_ORDER' => $arParams['LIST_PRODUCT_BLOCKS_ORDER'],
-									'PRODUCT_ROW_VARIANTS' => "[{'VARIANT':'3','BIG_DATA':false}]",
-									'ENLARGE_PRODUCT' => $arParams['LIST_ENLARGE_PRODUCT'],
-									'ENLARGE_PROP_'.$arParams['IBLOCK_ID'] => isset($arParams['LIST_ENLARGE_PROP']) ? $arParams['LIST_ENLARGE_PROP'] : '',
-									'SHOW_SLIDER' => $arParams['LIST_SHOW_SLIDER'],
-									'SLIDER_INTERVAL' => isset($arParams['LIST_SLIDER_INTERVAL']) ? $arParams['LIST_SLIDER_INTERVAL'] : '',
-									'SLIDER_PROGRESS' => isset($arParams['LIST_SLIDER_PROGRESS']) ? $arParams['LIST_SLIDER_PROGRESS'] : '',
-
-									'OFFER_TREE_PROPS_'.$recommendedData['OFFER_IBLOCK_ID'] => (isset($arParams['OFFER_TREE_PROPS']) ? $arParams['OFFER_TREE_PROPS'] : []),
-									'PRODUCT_SUBSCRIPTION' => $arParams['PRODUCT_SUBSCRIPTION'],
-									'SHOW_DISCOUNT_PERCENT' => $arParams['SHOW_DISCOUNT_PERCENT'],
-									'DISCOUNT_PERCENT_POSITION' => $arParams['DISCOUNT_PERCENT_POSITION'],
-									'SHOW_OLD_PRICE' => $arParams['SHOW_OLD_PRICE'],
-									'SHOW_MAX_QUANTITY' => $arParams['SHOW_MAX_QUANTITY'],
-									'MESS_SHOW_MAX_QUANTITY' => (isset($arParams['~MESS_SHOW_MAX_QUANTITY']) ? $arParams['~MESS_SHOW_MAX_QUANTITY'] : ''),
-									'RELATIVE_QUANTITY_FACTOR' => (isset($arParams['RELATIVE_QUANTITY_FACTOR']) ? $arParams['RELATIVE_QUANTITY_FACTOR'] : ''),
-									'MESS_RELATIVE_QUANTITY_MANY' => (isset($arParams['~MESS_RELATIVE_QUANTITY_MANY']) ? $arParams['~MESS_RELATIVE_QUANTITY_MANY'] : ''),
-									'MESS_RELATIVE_QUANTITY_FEW' => (isset($arParams['~MESS_RELATIVE_QUANTITY_FEW']) ? $arParams['~MESS_RELATIVE_QUANTITY_FEW'] : ''),
-									'MESS_BTN_BUY' => (isset($arParams['~MESS_BTN_BUY']) ? $arParams['~MESS_BTN_BUY'] : ''),
-									'MESS_BTN_ADD_TO_BASKET' => (isset($arParams['~MESS_BTN_ADD_TO_BASKET']) ? $arParams['~MESS_BTN_ADD_TO_BASKET'] : ''),
-									'MESS_BTN_SUBSCRIBE' => (isset($arParams['~MESS_BTN_SUBSCRIBE']) ? $arParams['~MESS_BTN_SUBSCRIBE'] : ''),
-									'MESS_BTN_DETAIL' => (isset($arParams['~MESS_BTN_DETAIL']) ? $arParams['~MESS_BTN_DETAIL'] : ''),
-									'MESS_NOT_AVAILABLE' => (isset($arParams['~MESS_NOT_AVAILABLE']) ? $arParams['~MESS_NOT_AVAILABLE'] : ''),
-									'MESS_BTN_COMPARE' => (isset($arParams['~MESS_BTN_COMPARE']) ? $arParams['~MESS_BTN_COMPARE'] : ''),
-
-									'USE_ENHANCED_ECOMMERCE' => (isset($arParams['USE_ENHANCED_ECOMMERCE']) ? $arParams['USE_ENHANCED_ECOMMERCE'] : ''),
-									'DATA_LAYER_NAME' => (isset($arParams['DATA_LAYER_NAME']) ? $arParams['DATA_LAYER_NAME'] : ''),
-									'BRAND_PROPERTY' => (isset($arParams['BRAND_PROPERTY']) ? $arParams['BRAND_PROPERTY'] : ''),
-
-									'TEMPLATE_THEME' => (isset($arParams['TEMPLATE_THEME']) ? $arParams['TEMPLATE_THEME'] : ''),
-									'ADD_TO_BASKET_ACTION' => $basketAction,
-									'SHOW_CLOSE_POPUP' => isset($arParams['COMMON_SHOW_CLOSE_POPUP']) ? $arParams['COMMON_SHOW_CLOSE_POPUP'] : '',
-									'COMPARE_PATH' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['compare'],
-									'COMPARE_NAME' => $arParams['COMPARE_NAME'],
-									'USE_COMPARE_LIST' => 'Y'
-								),
-								$component
-							);
-							?>
-						</div>
-					</div>
-					<?
-				}
-			}
-		}
-		?>
-	</div>
-	<? if ($isSidebar): ?>
-		<div class='col-md-3 col-sm-4'>
-			<?
-			$APPLICATION->IncludeComponent(
-				'bitrix:main.include',
-				'',
-				array(
-					'AREA_FILE_SHOW' => 'file',
-					'PATH' => $arParams['SIDEBAR_PATH'],
-					'AREA_FILE_RECURSIVE' => 'N',
-					'EDIT_MODE' => 'html',
-				),
-				false,
-				array('HIDE_ICONS' => 'Y')
-			);
-			?>
-		</div>
-	<? endif ?>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
 </div>

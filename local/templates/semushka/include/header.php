@@ -296,6 +296,9 @@
     <? if (strpos($APPLICATION->GetCurPage(false), "/news/") !== false): ?>
         <? if ($APPLICATION->GetCurPage() !== "/news/index.php") $detail_page = true; ?>
     <? endif; ?>
+    <? if (strpos($APPLICATION->GetCurPage(false), "/catalog/") !== false): ?>
+        <? if ($APPLICATION->GetCurPage() !== "/catalog/index.php") $detail_page = true; ?>
+    <? endif; ?>
     <? if (!$detail_page): ?>
     <div class="page-wrapper">
         <main class="content">
