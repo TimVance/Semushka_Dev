@@ -4,7 +4,7 @@
     <div class="header--desktop uk-visible@m">
         <div class="uk-container">
             <div class="logo">
-                <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.svg" alt="Логотип: Семушка - back to nature" title="Логотип: Семушка - back to nature">
+                <a href="/"><img src="<?=SITE_TEMPLATE_PATH?>/images/logo.svg" alt="Логотип: Семушка - back to nature" title="Логотип: Семушка - back to nature"></a>
             </div>
             <nav class="top-nav">
                 <div class="top-nav__row">
@@ -94,12 +94,12 @@
                             </div>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" class="top-nav__link">
+                            <a href="/news/" class="top-nav__link">
                                 <span>Новости</span>
                             </a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" class="top-nav__link">
+                            <a href="/about/" class="top-nav__link">
                                 <span>О&nbsp;компании</span>
                             </a>
                         </li>
@@ -296,12 +296,16 @@
         <main class="content">
             <div class="page-title">
                 <div class="uk-container">
-                    <h1 class="uk-h2">Орехи</h1>
-                    <ul class="uk-breadcrumb breadcrumbs">
-                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Продукция</a></li>
-                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Орехи</a></li>
-                        <li class="breadcrumbs__item"><span class="breadcrumbs__link">Фундук</span></li>
-                    </ul>
+                    <h1 class="uk-h2"><?$APPLICATION->ShowTitle(false);?></h1>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:breadcrumb",
+                        "breadcrumb",
+                        Array(
+                            "PATH" => "",
+                            "SITE_ID" => "s1",
+                            "START_FROM" => "0"
+                        )
+                    );?>
                 </div>
             </div>
 
