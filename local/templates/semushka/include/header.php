@@ -291,7 +291,12 @@
         </div>
     </div>
 </header>
-<?if ($APPLICATION->GetCurPage(false) !== "/"): ?>
+<?if ($APPLICATION->GetCurPage(false) !== "/" && ERROR_404 != "Y"): ?>
+    <? $detail_page = false; ?>
+    <? if (strpos($APPLICATION->GetCurPage(false), "/news/") !== false): ?>
+        <? if ($APPLICATION->GetCurPage() !== "/news/index.php") $detail_page = true; ?>
+    <? endif; ?>
+    <? if (!$detail_page): ?>
     <div class="page-wrapper">
         <main class="content">
             <div class="page-title">
@@ -311,4 +316,5 @@
 
             <section class="uk-section uk-margin">
                 <div class="uk-container">
+    <? endif; ?>
 <? endif; ?>

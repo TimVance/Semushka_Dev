@@ -6,15 +6,16 @@ CHTTP::SetStatus("404 Not Found");
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
-$APPLICATION->SetTitle("404 Not Found");
+$APPLICATION->SetTitle("Такой страницы не существует");?>
 
-$APPLICATION->IncludeComponent("bitrix:main.map", ".default", Array(
-	"LEVEL"	=>	"3",
-	"COL_NUM"	=>	"2",
-	"SHOW_DESCRIPTION"	=>	"Y",
-	"SET_TITLE"	=>	"Y",
-	"CACHE_TIME"	=>	"36000000"
-	)
-);
+<div class="page-wrapper">
+    <main class="content">
+        <div class="uk-container uk-text-center">
+            <h2 class="uk-h2">Такой страницы не существует</h2>
+            <p><a href="/" class="link">Вернуться на главную</a></p>
+            <div class="uk-margin-large"><img src="<?=SITE_TEMPLATE_PATH?>/images/404.svg" alt="404"></div>
+        </div>
+    </main>
+</div>
 
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1,9 +1,17 @@
 <? if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
 
-            </div>
-        </section>
-    </main>
-</div>
+<?if ($APPLICATION->GetCurPage(false) !== "/"): ?>
+    <? $detail_page = false; ?>
+    <? if (strpos("/news/", $APPLICATION->GetCurPage(false) !== false)): ?>
+        <? if ($APPLICATION->GetCurPage() !== "/news/index.php") $detail_page = true; ?>
+    <? endif; ?>
+    <? if (!$detail_page): ?>
+                    </div>
+                </section>
+            </main>
+        </div>
+    <? endif; ?>
+<? endif; ?>
 <footer class="footer">
     <div class="uk-container">
         <div class="footer__list uk-grid-small" uk-grid>
