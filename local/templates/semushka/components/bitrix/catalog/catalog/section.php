@@ -1,328 +1,72 @@
-<div class="page-wrapper">
-    <main class="content">
-        <div class="uk-container">
-<section class="uk-section">
-    <div class="uk-position-relative uk-visible-toggle uk-dark slider" tabindex="-1" uk-slider>
-        <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@s uk-grid slider__list">
-            <li class="slider__item">
-                <article class="card">
-                    <div class="card__image">
-                        <div class="card__img">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card__body">
-                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
-                        <div class="card__subtitle">(сорт aтабаба)</div>
-                        <div class="card__info">
-                            <div class="card__info-row">
-                                <div class="card__info-title">Размер</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Срок хранения</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Страна</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Упаковка</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">25 кг, мешок</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
-                            </div>
-                        </div>
-                        <div class="card__footer">
-                            <div class="card__footer-item">
-                                <form class="card__tools">
-                                    <label for="select" class="select card__select">
-                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
-                                        <div class="select__list">
-                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
-                                            <label class="select__label" for="list[0]">1кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
-                                            <label class="select__label" for="list[1]">2кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
-                                            <label class="select__label" for="list[2]">3кг</label>
-                                            <span class="select__placeholder">Вес</span>
-                                        </div>
-                                    </label>
-                                    <div class="card__count">
-                                        <div class="count-tools js-product-quantity">
-                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
-                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
-                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card__footer-item">
-                                <button class="btn" type="button"><span>Купить</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </li>
-            <li class="slider__item">
-                <article class="card">
-                    <div class="card__image">
-                        <div class="card__img">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card__body">
-                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
-                        <div class="card__subtitle">(сорт aтабаба)</div>
-                        <div class="card__info">
-                            <div class="card__info-row">
-                                <div class="card__info-title">Размер</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Срок хранения</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Страна</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Упаковка</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">25 кг, мешок</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
-                            </div>
-                        </div>
-                        <div class="card__footer">
-                            <div class="card__footer-item">
-                                <form class="card__tools">
-                                    <label for="select" class="select card__select">
-                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
-                                        <div class="select__list">
-                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
-                                            <label class="select__label" for="list[0]">1кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
-                                            <label class="select__label" for="list[1]">2кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
-                                            <label class="select__label" for="list[2]">3кг</label>
-                                            <span class="select__placeholder">Вес</span>
-                                        </div>
-                                    </label>
-                                    <div class="card__count">
-                                        <div class="count-tools js-product-quantity">
-                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
-                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
-                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card__footer-item">
-                                <button class="btn" type="button"><span>Купить</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </li>
-            <li class="slider__item">
-                <article class="card">
-                    <div class="card__image">
-                        <div class="card__img">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card__body">
-                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
-                        <div class="card__subtitle">(сорт aтабаба)</div>
-                        <div class="card__info">
-                            <div class="card__info-row">
-                                <div class="card__info-title">Размер</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Срок хранения</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Страна</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Упаковка</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">25 кг, мешок</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
-                            </div>
-                        </div>
-                        <div class="card__footer">
-                            <div class="card__footer-item">
-                                <form class="card__tools">
-                                    <label for="select" class="select card__select">
-                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
-                                        <div class="select__list">
-                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
-                                            <label class="select__label" for="list[0]">1кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
-                                            <label class="select__label" for="list[1]">2кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
-                                            <label class="select__label" for="list[2]">3кг</label>
-                                            <span class="select__placeholder">Вес</span>
-                                        </div>
-                                    </label>
-                                    <div class="card__count">
-                                        <div class="count-tools js-product-quantity">
-                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
-                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
-                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card__footer-item">
-                                <button class="btn" type="button"><span>Купить</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </li>
-            <li class="slider__item">
-                <article class="card">
-                    <div class="card__image">
-                        <div class="card__img">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card__body">
-                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
-                        <div class="card__subtitle">(сорт aтабаба)</div>
-                        <div class="card__info">
-                            <div class="card__info-row">
-                                <div class="card__info-title">Размер</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Срок хранения</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Страна</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Упаковка</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">25 кг, мешок</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
-                            </div>
-                        </div>
-                        <div class="card__footer">
-                            <div class="card__footer-item">
-                                <form class="card__tools">
-                                    <label for="select" class="select card__select">
-                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
-                                        <div class="select__list">
-                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
-                                            <label class="select__label" for="list[0]">1кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
-                                            <label class="select__label" for="list[1]">2кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
-                                            <label class="select__label" for="list[2]">3кг</label>
-                                            <span class="select__placeholder">Вес</span>
-                                        </div>
-                                    </label>
-                                    <div class="card__count">
-                                        <div class="count-tools js-product-quantity">
-                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
-                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
-                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card__footer-item">
-                                <button class="btn" type="button"><span>Купить</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </li>
-            <li class="slider__item">
-                <article class="card">
-                    <div class="card__image">
-                        <div class="card__img">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/images/card-test.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card__body">
-                        <div class="card__title"><a href="#">Фундук 9/11ММ</a></div>
-                        <div class="card__subtitle">(сорт aтабаба)</div>
-                        <div class="card__info">
-                            <div class="card__info-row">
-                                <div class="card__info-title">Размер</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Срок хранения</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Страна</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">Упаковка</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
-                            </div>
-                            <div class="card__info-row">
-                                <div class="card__info-title">25 кг, мешок</div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
-                            </div>
-                        </div>
-                        <div class="card__footer">
-                            <div class="card__footer-item">
-                                <form class="card__tools">
-                                    <label for="select" class="select card__select">
-                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
-                                        <div class="select__list">
-                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
-                                            <label class="select__label" for="list[0]">1кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
-                                            <label class="select__label" for="list[1]">2кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
-                                            <label class="select__label" for="list[2]">3кг</label>
-                                            <span class="select__placeholder">Вес</span>
-                                        </div>
-                                    </label>
-                                    <div class="card__count">
-                                        <div class="count-tools js-product-quantity">
-                                            <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
-                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
-                                            <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card__footer-item">
-                                <button class="btn" type="button"><span>Купить</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </li>
-        </ul>
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+use Bitrix\Main\Loader;
+use Bitrix\Main\ModuleManager;
 
-    </div>
-</section>
-</div>
-    </main>
-        </div>
+$this->setFrameMode(true);
+
+if (!isset($arParams['FILTER_VIEW_MODE']) || (string)$arParams['FILTER_VIEW_MODE'] == '')
+    $arParams['FILTER_VIEW_MODE'] = 'VERTICAL';
+$arParams['USE_FILTER'] = (isset($arParams['USE_FILTER']) && $arParams['USE_FILTER'] == 'Y' ? 'Y' : 'N');
+
+$isVerticalFilter = ('Y' == $arParams['USE_FILTER'] && $arParams["FILTER_VIEW_MODE"] == "VERTICAL");
+$isSidebar = ($arParams["SIDEBAR_SECTION_SHOW"] == "Y" && isset($arParams["SIDEBAR_PATH"]) && !empty($arParams["SIDEBAR_PATH"]));
+$isFilter = ($arParams['USE_FILTER'] == 'Y');
+
+if ($isFilter)
+{
+    $arFilter = array(
+        "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+        "ACTIVE" => "Y",
+        "GLOBAL_ACTIVE" => "Y",
+    );
+    if (0 < intval($arResult["VARIABLES"]["SECTION_ID"]))
+        $arFilter["ID"] = $arResult["VARIABLES"]["SECTION_ID"];
+    elseif ('' != $arResult["VARIABLES"]["SECTION_CODE"])
+        $arFilter["=CODE"] = $arResult["VARIABLES"]["SECTION_CODE"];
+
+    $obCache = new CPHPCache();
+    if ($obCache->InitCache(36000, serialize($arFilter), "/iblock/catalog"))
+    {
+        $arCurSection = $obCache->GetVars();
+    }
+    elseif ($obCache->StartDataCache())
+    {
+        $arCurSection = array();
+        if (Loader::includeModule("iblock"))
+        {
+            $dbRes = CIBlockSection::GetList(array(), $arFilter, false, array("ID"));
+
+            if(defined("BX_COMP_MANAGED_CACHE"))
+            {
+                global $CACHE_MANAGER;
+                $CACHE_MANAGER->StartTagCache("/iblock/catalog");
+
+                if ($arCurSection = $dbRes->Fetch())
+                    $CACHE_MANAGER->RegisterTag("iblock_id_".$arParams["IBLOCK_ID"]);
+
+                $CACHE_MANAGER->EndTagCache();
+            }
+            else
+            {
+                if(!$arCurSection = $dbRes->Fetch())
+                    $arCurSection = array();
+            }
+        }
+        $obCache->EndDataCache($arCurSection);
+    }
+    if (!isset($arCurSection))
+        $arCurSection = array();
+}
+
+include($_SERVER["DOCUMENT_ROOT"]."/".$this->GetFolder()."/section_vertical.php");

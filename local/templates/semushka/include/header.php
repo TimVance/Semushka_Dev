@@ -8,113 +8,25 @@
             </div>
             <nav class="top-nav">
                 <div class="top-nav__row">
-                    <ul class="top-nav__list">
-                        <li class="top-nav__item">
-                            <a href="/catalog/" class="top-nav__link">
-                                <span uk-icon="menu"></span>
-                                <span class="top-nav__parent">Продукция</span>
-                            </a>
-                            <div class="top-nav__childs">
-                                <div class="uk-container">
-                                    <div class="main-nav">
-                                        <ul class="main-nav__list main-nav__list--lvl1">
-                                            <li class="main-nav__item main-nav__item--lvl1">
-                                                <a href="#" class="main-nav__link">Орехи</a>
-                                                <div class="main-nav__childs">
-                                                    <div class="uk-container">
-                                                        <ul class="main-nav__list main-nav__list--lvl2">
-                                                            <li class="main-nav__item main-nav__item--lvl2">
-                                                                <a href="#" class="main-nav__link">Грецкий орех</a>
-                                                            </li>
-                                                            <li class="main-nav__item main-nav__item--lvl2">
-                                                                <a href="#" class="main-nav__link">Миндаль</a>
-                                                            </li>
-                                                            <li class="main-nav__item main-nav__item--lvl2">
-                                                                <a href="#" class="main-nav__link">Фундук</a>
-                                                                <div class="main-nav__childs">
-                                                                    <ul class="main-nav__list main-nav__list--lvl3">
-                                                                        <li class="main-nav__item main-nav__item--lvl3">
-                                                                            <a href="#" class="main-nav__link">Жареный</a>
-                                                                        </li>
-                                                                        <li class="main-nav__item main-nav__item--lvl3">
-                                                                            <a href="#" class="main-nav__link">Бланшированный</a>
-                                                                        </li>
-                                                                        <li class="main-nav__item main-nav__item--lvl3">
-                                                                            <a href="#" class="main-nav__link">В скорлупе</a>
-                                                                        </li>
-                                                                        <li class="main-nav__item main-nav__item--lvl3">
-                                                                            <a href="#" class="main-nav__link">Дробленый</a>
-                                                                        </li>
-                                                                        <li class="main-nav__item main-nav__item--lvl3">
-                                                                            <a href="#" class="main-nav__link">Сырой</a>
-                                                                        </li>
-                                                                        <li class="main-nav__item main-nav__item--lvl3">
-                                                                            <a href="#" class="main-nav__link">Лепестки</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <div class="main-nav__image uk-cover-container uk-height-medium">
-                                                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/menu-test.png" alt="" uk-cover>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="main-nav__item main-nav__item--lvl2">
-                                                                <a href="#" class="main-nav__link">Кешью</a>
-                                                            </li>
-                                                            <li class="main-nav__item main-nav__item--lvl2">
-                                                                <a href="#" class="main-nav__link">Ореховые смеси</a>
-                                                            </li>
-                                                            <li class="main-nav__item main-nav__item--lvl2">
-                                                                <a href="#" class="main-nav__link">Другие</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="main-nav__item main-nav__item--lvl1">
-                                                <a href="#" class="main-nav__link">Семена</a>
-                                            </li>
-                                            <li class="main-nav__item main-nav__item--lvl1">
-                                                <a href="#" class="main-nav__link">Сухофрукты</a>
-                                                <div class="main-nav__childs">
-                                                    <ul class="main-nav__list main-nav__list--lvl2">
-                                                        <li class="main-nav__item main-nav__item--lvl2"><a href="#" class="main-nav__link">Фруктики</a></li>
-                                                        <li class="main-nav__item main-nav__item--lvl2"><a href="#" class="main-nav__link">Фруктики 2</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="main-nav__item main-nav__item--lvl1">
-                                                <a href="#" class="main-nav__link">Цукаты</a>
-                                            </li>
-                                            <li class="main-nav__item main-nav__item--lvl1">
-                                                <a href="#" class="main-nav__link">Для кондитеров</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="top-nav__item">
-                            <a href="/news/" class="top-nav__link">
-                                <span>Новости</span>
-                            </a>
-                        </li>
-                        <li class="top-nav__item">
-                            <a href="/about/" class="top-nav__link">
-                                <span>О&nbsp;компании</span>
-                            </a>
-                        </li>
-                        <li class="top-nav__item">
-                            <div class="top-nav__link lang-selector">
-                                <span class="lang-selector__text">RU</span>
-                                <div uk-dropdown="pos: bottom-justify" class="lang-selector__dropdown">
-                                    <ul class="uk-nav uk-dropdown-nav lang-selector__dropdown-nav">
-                                        <li class="uk-active"><a href="#" class="top-nav__link">RU</a></li>
-                                        <li><a href="#" class="top-nav__link">EN</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "header",
+                        array(
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "CHILD_MENU_TYPE" => "header",
+                            "DELAY" => "N",
+                            "MAX_LEVEL" => "3",
+                            "MENU_CACHE_GET_VARS" => array(
+                            ),
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_TYPE" => "A",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "ROOT_MENU_TYPE" => "header",
+                            "USE_EXT" => "Y",
+                            "COMPONENT_TEMPLATE" => "header"
+                        ),
+                        false, Array('HIDE_ICONS' => 'Y')
+                    );?>
                     <div class="top-nav__services services-list">
                         <div class="services-list__item">
                             <a href="#" class="services-list__icon services-list__icon--search"></a>
