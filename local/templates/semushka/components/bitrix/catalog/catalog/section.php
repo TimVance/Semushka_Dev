@@ -68,5 +68,24 @@ if ($isFilter)
     if (!isset($arCurSection))
         $arCurSection = array();
 }
+?>
 
-include($_SERVER["DOCUMENT_ROOT"]."/".$this->GetFolder()."/section_vertical.php");
+<div class="page-wrapper">
+    <main class="content">
+        <div class="page-title">
+            <div class="uk-container">
+                <h1 class="uk-h2">Орехи</h1>
+                <ul class="uk-breadcrumb breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Продукция</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Орехи</a></li>
+                    <li class="breadcrumbs__item"><span class="breadcrumbs__link">Фундук</span></li>
+                </ul>
+            </div>
+        </div>
+        <section class="uk-section uk-margin">
+            <div class="uk-container">
+                <?include($_SERVER["DOCUMENT_ROOT"]."/".$this->GetFolder()."/section_vertical.php");?>
+            </div>
+        </section>
+    </main>
+</div>

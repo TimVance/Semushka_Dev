@@ -99,7 +99,16 @@
                 </div>
             </div>
             <div class="footer__info-item uk-width-1-4@m">
-                <a href="/policy/">Политика конфиденциальности</a>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => "/local/templates/semushka/include/parts/policy.php"
+                    )
+                );?>
                 <div>
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:main.include",
@@ -114,7 +123,16 @@
                 </div>
             </div>
             <div class="footer__info-item uk-width-1-2@m uk-visible@m">
-                <img src="<?=SITE_TEMPLATE_PATH?>/images/map-test.png" alt="1115093, Москва, Большая Серпуховская ул., дом 32, строение 1">
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => "/local/templates/semushka/include/parts/map.php"
+                    )
+                );?>
             </div>
         </div>
         <div class="copyright">

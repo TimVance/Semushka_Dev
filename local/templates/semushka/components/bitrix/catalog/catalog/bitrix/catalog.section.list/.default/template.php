@@ -35,7 +35,7 @@ $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_
             <div class="catalog__card">
                 <div class="catalog__image">
                     <div class="catalog__img">
-                        <img src="<?=$section["PICTURE"]["SRC"]?>" alt="<?=$section["NAME"]?>">
+                        <img src="<?=(!empty($section["PICTURE"]["SRC"]) ? $section["PICTURE"]["SRC"] : $this->GetFolder().'/images/line-empty.png')?>" alt="<?=$section["NAME"]?>">
                     </div>
                 </div>
                 <div class="catalog__body">

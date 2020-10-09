@@ -2,8 +2,6 @@
 
 <?if (!empty($arResult)):?>
 
-<? echo '<pre style="display: none">'; print_r($arResult); echo '</pre>'; ?>
-
 <? $first = true; ?>
 <? foreach ($arResult as $item): ?>
     <? if ($item["IS_PARENT"] == 1): ?>

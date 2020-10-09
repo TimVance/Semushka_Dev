@@ -92,7 +92,7 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y")
 }
 $APPLICATION->IncludeComponent(
     "bitrix:catalog.section.list",
-    "",
+    "section",
     $sectionListParams,
     $component,
     array("HIDE_ICONS" => "Y")
@@ -101,7 +101,7 @@ unset($sectionListParams);
 
 $APPLICATION->IncludeComponent(
     "bitrix:catalog.section",
-    ".default",
+    "",
     array(
         "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
         "IBLOCK_ID" => $arParams["IBLOCK_ID"],
