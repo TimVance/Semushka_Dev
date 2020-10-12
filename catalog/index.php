@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Каталог");
 	"catalog", 
 	array(
 		"ACTION_VARIABLE" => "action",
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_PICT_PROP" => "-",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -145,7 +145,7 @@ $APPLICATION->SetTitle("Каталог");
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
 		"SECTION_TOP_DEPTH" => "2",
 		"SEF_MODE" => "Y",
-		"SET_LAST_MODIFIED" => "N",
+		"SET_LAST_MODIFIED" => "Y",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
@@ -184,7 +184,7 @@ $APPLICATION->SetTitle("Каталог");
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
 		"USE_REVIEW" => "N",
-		"USE_SALE_BESTSELLERS" => "Y",
+		"USE_SALE_BESTSELLERS" => "N",
 		"USE_STORE" => "N",
 		"COMPONENT_TEMPLATE" => "catalog",
 		"SEF_FOLDER" => "/catalog/",
@@ -198,6 +198,11 @@ $APPLICATION->SetTitle("Каталог");
 			1 => "",
 		),
 		"FILTER_PRICE_CODE" => array(
+		),
+		"LIST_PROPERTY_CODE_MOBILE" => array(
+			0 => "size",
+		),
+		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(
 		),
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
