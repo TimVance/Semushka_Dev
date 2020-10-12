@@ -37,7 +37,11 @@ if (!empty($arResult["ITEMS"])) {
                 <li class="slider__item">
                     <div class="uk-child-width-1-2@s news-list news-list--small" uk-grid>
                         <? foreach ($chunk as $item): ?>
-                            <div class="news-list__item">
+                            <?
+                            $this->AddEditAction($item['ID'], $item['EDIT_LINK'], CIBlock::GetArrayByID($item["IBLOCK_ID"], "ELEMENT_EDIT"));
+                            $this->AddDeleteAction($item['ID'], $item['DELETE_LINK'], CIBlock::GetArrayByID($item["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+                            ?>
+                            <div class="news-list__item" id="<?=$this->GetEditAreaId($item['ID']);?>">
                                 <article class="news-item">
                                     <div class="news-item__image">
                                         <a href="#" class="news-item__link">
@@ -47,7 +51,7 @@ if (!empty($arResult["ITEMS"])) {
                                         </a>
                                     </div>
                                     <div class="news-item__body">
-                                        <a href="#" class="news-item__title"><?=$item["NAME"]?></a>
+                                        <a href="<?=$item["DETAIL_PAGE_URL"]?>" class="news-item__title"><?=$item["NAME"]?></a>
                                         <div class="news-item__date news-detail-date">
                                             <span uk-icon="clock"></span>
                                             <time><?=FormatDateFromDB($item["DATE_CREATE"], 'SHORT')?></time>

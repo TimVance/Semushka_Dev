@@ -7,7 +7,7 @@ $this->setFrameMode(true);
     <? if (!empty($arResult["DETAIL_PICTURE"]["SRC"])): ?>
         <div class="page-top page-top--news" style="background-image: url('<?=$arResult["DETAIL_PICTURE"]["SRC"]?>');"></div>
     <? endif; ?>
-    <main class="content">
+    <div class="content">
         <div class="uk-container">
             <article class="news-detail">
                 <div class="news-detail">

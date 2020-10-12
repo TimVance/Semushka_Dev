@@ -18,7 +18,11 @@ $this->setFrameMode(true);
     <div class="uk-child-width-1-4@s uk-child-width-1-2 product-detail__lightbox sertificate-list" uk-grid>
         <? foreach ($arResult["ITEMS"] as $item): ?>
             <? if (empty($item["PREVIEW_PICTURE"]["SRC"]) && empty($item["DETAIL_PICTURE"]["SRC"])) continue; ?>
-            <div class="sertificate-list__item">
+            <?
+            $this->AddEditAction($item['ID'], $item['EDIT_LINK'], CIBlock::GetArrayByID($item["IBLOCK_ID"], "ELEMENT_EDIT"));
+            $this->AddDeleteAction($item['ID'], $item['DELETE_LINK'], CIBlock::GetArrayByID($item["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+            ?>
+            <div class="sertificate-list__item" id="<?=$this->GetEditAreaId($item['ID']);?>">
                 <div class="sertificate-list__body">
                     <div class="sertificate-list__image">
                         <a class="uk-inline" href="<?=$item["DETAIL_PICTURE"]["SRC"]?>" data-fancybox="gallery">

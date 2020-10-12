@@ -36,7 +36,11 @@ $this->setFrameMode(true);?>
         </div>
         <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@s uk-grid slider__list">
             <?foreach ($arResult["ITEMS"] as $item):?>
-                <li class="slider__item">
+                <?
+                $this->AddEditAction($item['ID'], $item['EDIT_LINK'], CIBlock::GetArrayByID($item["IBLOCK_ID"], "ELEMENT_EDIT"));
+                $this->AddDeleteAction($item['ID'], $item['DELETE_LINK'], CIBlock::GetArrayByID($item["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+                ?>
+                <li class="slider__item" id="<?=$this->GetEditAreaId($item['ID']);?>">
                     <article class="card">
                         <div class="card__image">
                             <div class="card__img">

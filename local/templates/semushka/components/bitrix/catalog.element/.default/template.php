@@ -12,6 +12,10 @@
  */
 
 $this->setFrameMode(true);
+
+$this->AddEditAction($arResult['ID'], $arResult['EDIT_LINK'], CIBlock::GetArrayByID($arResult["IBLOCK_ID"], "ELEMENT_EDIT"));
+$this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetArrayByID($arResult["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+
 ?>
 
 <div class="page-wrapper">
@@ -32,7 +36,7 @@ $this->setFrameMode(true);
         </div>
 
         <div class="uk-container">
-            <article class="product-detail">
+            <article class="product-detail" id="<?=$this->GetEditAreaId($arResult['ID']);?>">
                 <div class="uk-child-width-1-2@s" uk-grid>
                     <div class="product-detail__item">
                         <div
@@ -45,10 +49,18 @@ $this->setFrameMode(true);
                             data-loop="true"
                             data-keyboard="true"
                         >
-                            <img src="./src/images/slider-test.png" alt="">
-                            <img src="./src/images/card-test.png" alt="">
-                            <img src="./src/images/map-test.png" alt="">
-                            <img src="./src/images/bg-test.png" alt="">
+                            <?
+                            if (!empty($arResult["PROPERTIES"]["photo"]["VALUE"])) {
+                                foreach ($arResult["PROPERTIES"]["photo"]["VALUE"] as $photo) {
+                                    $image = CFile::GetPath($photo);
+                                    if (!empty($image))
+                                        echo '<img src="' . $image . '" alt="' . $arResult["NAME"] . '">';
+                                }
+                            }
+                            else {
+                                echo '<img src="'.$this->GetFolder().'/images/no_photo.jpg" alt="' . $arResult["NAME"] . '" />';
+                            }
+                            ?>
                         </div>
                     </div>
                     <div class="product-detail__item">
@@ -57,26 +69,12 @@ $this->setFrameMode(true);
                         </div>
                         <div class="product-detail__body">
                             <div class="product-detail__info">
-                                <div class="product-detail__info-row">
-                                    <div class="product-detail__info-title">Размер</div>
-                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка Фундук 9/11ММ">9/11</div>
-                                </div>
-                                <div class="product-detail__info-row">
-                                    <div class="product-detail__info-title">Срок хранения</div>
-                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка Срок хранения 6 мес">6 мес</div>
-                                </div>
-                                <div class="product-detail__info-row">
-                                    <div class="product-detail__info-title">Страна</div>
-                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка Страна Азербайджан">Азербайджан</div>
-                                </div>
-                                <div class="product-detail__info-row">
-                                    <div class="product-detail__info-title">Упаковка</div>
-                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка Упаковка Руб/кг">Руб/кг</div>
-                                </div>
-                                <div class="product-detail__info-row">
-                                    <div class="product-detail__info-title">25 кг, мешок</div>
-                                    <div class="product-detail__info-note" uk-tooltip="title: Подсказка 25 кг, мешок 1670">1670</div>
-                                </div>
+                                <? foreach ($arResult["DISPLAY_PROPERTIES"] as $prop): ?>
+                                    <div class="product-detail__info-row">
+                                        <div class="product-detail__info-title"><?=$prop["NAME"]?></div>
+                                        <div class="product-detail__info-note" uk-tooltip="title: <?=$prop["VALUE"]?>"><?=$prop["VALUE"]?></div>
+                                    </div>
+                                <? endforeach; ?>
                             </div>
                         </div>
                         <div class="product-detail__price">1200 Р</div>
@@ -112,88 +110,108 @@ $this->setFrameMode(true);
                 </div>
                 <section class="uk-section">
                     <ul class="tabs" uk-tab>
-                        <li><a href="#">О продукции</a></li>
+                        <? if (!empty($arResult["DETAIL_TEXT"])): ?>
+                            <li><a href="#">О продукции</a></li>
+                        <? endif; ?>
                         <li><a href="#">Доставка</a></li>
                         <li><a href="#">Оплата</a></li>
                     </ul>
 
                     <ul class="uk-switcher uk-margin">
+                        <? if (!empty($arResult["DETAIL_TEXT"])): ?>
+                            <li><?=$arResult["DETAIL_TEXT"]?></li>
+                        <? endif; ?>
                         <li>
-                            <div class="uk-column-1-2@m">
-                                <p>На конгрессе INC в Ченнае озвучили прогноз мирового производства орехов: сезон 2017-2018 г. будет на 25% выше среднего за последние десять лет и достигнет 4.2 миллиона тонн. В сезоне 2017-2018 г. мировое производство сухофруктов (финики, курага, сладкая сушеная клюква, сушеный инжир, чернослив, изюм и сушеная смородина) достигнет 3 млн.т., что на 20% больше среднего за последние десять лет.</p>
-                                <p>Ожидается, что производство сушеной клюквы превысит прошлогодние показатели на 10% и достигнет 200.3 тыс.т. Лидер мирового производства сушеной клюквы — США и 79%.</p>
-                                <p>В Австралии идет постоянное обновление старых садов макадамии на новые прогрессивные сорта, с расширением плодоносящих площадей. В 2016 г. Южная </p>
-                            </div>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/local/templates/semushka/include/parts/detail_pay.php"
+                                )
+                            );?>
                         </li>
-                        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+                        <li>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/local/templates/semushka/include/parts/detail_delivery.php"
+                                )
+                            );?>
+                        </li>
                     </ul>
                 </section>
                 <?$APPLICATION->IncludeComponent(
-                    "bitrix:news.list",
-                    "certificates",
-                    array(
-                        "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                        "ADD_SECTIONS_CHAIN" => "Y",
-                        "AJAX_MODE" => "N",
-                        "AJAX_OPTION_ADDITIONAL" => "",
-                        "AJAX_OPTION_HISTORY" => "N",
-                        "AJAX_OPTION_JUMP" => "N",
-                        "AJAX_OPTION_STYLE" => "Y",
-                        "CACHE_FILTER" => "N",
-                        "CACHE_GROUPS" => "Y",
-                        "CACHE_TIME" => "36000000",
-                        "CACHE_TYPE" => "A",
-                        "CHECK_DATES" => "Y",
-                        "DETAIL_URL" => "",
-                        "DISPLAY_BOTTOM_PAGER" => "Y",
-                        "DISPLAY_DATE" => "Y",
-                        "DISPLAY_NAME" => "Y",
-                        "DISPLAY_PICTURE" => "Y",
-                        "DISPLAY_PREVIEW_TEXT" => "Y",
-                        "DISPLAY_TOP_PAGER" => "N",
-                        "FIELD_CODE" => array(
-                            0 => "DETAIL_PICTURE",
-                            1 => "",
-                        ),
-                        "FILTER_NAME" => "",
-                        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                        "IBLOCK_ID" => "3",
-                        "IBLOCK_TYPE" => "content",
-                        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-                        "INCLUDE_SUBSECTIONS" => "Y",
-                        "MESSAGE_404" => "",
-                        "NEWS_COUNT" => "20",
-                        "PAGER_BASE_LINK_ENABLE" => "N",
-                        "PAGER_DESC_NUMBERING" => "N",
-                        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-                        "PAGER_SHOW_ALL" => "N",
-                        "PAGER_SHOW_ALWAYS" => "N",
-                        "PAGER_TEMPLATE" => ".default",
-                        "PAGER_TITLE" => "Новости",
-                        "PARENT_SECTION" => "",
-                        "PARENT_SECTION_CODE" => "",
-                        "PREVIEW_TRUNCATE_LEN" => "",
-                        "PROPERTY_CODE" => array(
-                            0 => "",
-                            1 => "",
-                        ),
-                        "SET_BROWSER_TITLE" => "Y",
-                        "SET_LAST_MODIFIED" => "N",
-                        "SET_META_DESCRIPTION" => "Y",
-                        "SET_META_KEYWORDS" => "Y",
-                        "SET_STATUS_404" => "N",
-                        "SET_TITLE" => "Y",
-                        "SHOW_404" => "N",
-                        "SORT_BY1" => "ACTIVE_FROM",
-                        "SORT_BY2" => "SORT",
-                        "SORT_ORDER1" => "DESC",
-                        "SORT_ORDER2" => "ASC",
-                        "STRICT_SECTION_CHECK" => "N",
-                        "COMPONENT_TEMPLATE" => ".default"
-                    ),
-                    false
-                );?>
+	"bitrix:news.list", 
+	"certificates", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "DETAIL_PICTURE",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "3",
+		"IBLOCK_TYPE" => "content",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "certificates"
+	),
+	false
+);?>
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:catalog.section",
                     "detail_similar_category",
@@ -273,66 +291,73 @@ $this->setFrameMode(true);
                         "USE_PRICE_COUNT" => "N",
                         "USE_PRODUCT_QUANTITY" => "N",
                         "COMPONENT_TEMPLATE" => ".default"
-                    ),
-                    false
-                );?>
-                <?$APPLICATION->IncludeComponent(
-                    "bitrix:news.list",
-                    "detail_news",
-                    Array(
-                        "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                        "ADD_SECTIONS_CHAIN" => "Y",
-                        "AJAX_MODE" => "N",
-                        "AJAX_OPTION_ADDITIONAL" => "",
-                        "AJAX_OPTION_HISTORY" => "N",
-                        "AJAX_OPTION_JUMP" => "N",
-                        "AJAX_OPTION_STYLE" => "Y",
-                        "CACHE_FILTER" => "N",
-                        "CACHE_GROUPS" => "Y",
-                        "CACHE_TIME" => "36000000",
-                        "CACHE_TYPE" => "A",
-                        "CHECK_DATES" => "Y",
-                        "DETAIL_URL" => "",
-                        "DISPLAY_BOTTOM_PAGER" => "Y",
-                        "DISPLAY_DATE" => "Y",
-                        "DISPLAY_NAME" => "Y",
-                        "DISPLAY_PICTURE" => "Y",
-                        "DISPLAY_PREVIEW_TEXT" => "Y",
-                        "DISPLAY_TOP_PAGER" => "N",
-                        "FIELD_CODE" => array(""),
-                        "FILTER_NAME" => "",
-                        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                        "IBLOCK_ID" => "2",
-                        "IBLOCK_TYPE" => "content",
-                        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-                        "INCLUDE_SUBSECTIONS" => "Y",
-                        "MESSAGE_404" => "",
-                        "NEWS_COUNT" => "20",
-                        "PAGER_BASE_LINK_ENABLE" => "N",
-                        "PAGER_DESC_NUMBERING" => "N",
-                        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-                        "PAGER_SHOW_ALL" => "N",
-                        "PAGER_SHOW_ALWAYS" => "N",
-                        "PAGER_TEMPLATE" => ".default",
-                        "PAGER_TITLE" => "Новости",
-                        "PARENT_SECTION" => "",
-                        "PARENT_SECTION_CODE" => "",
-                        "PREVIEW_TRUNCATE_LEN" => "",
-                        "PROPERTY_CODE" => array("",""),
-                        "SET_BROWSER_TITLE" => "Y",
-                        "SET_LAST_MODIFIED" => "N",
-                        "SET_META_DESCRIPTION" => "Y",
-                        "SET_META_KEYWORDS" => "Y",
-                        "SET_STATUS_404" => "N",
-                        "SET_TITLE" => "Y",
-                        "SHOW_404" => "N",
-                        "SORT_BY1" => "ACTIVE_FROM",
-                        "SORT_BY2" => "SORT",
-                        "SORT_ORDER1" => "DESC",
-                        "SORT_ORDER2" => "ASC",
-                        "STRICT_SECTION_CHECK" => "N"
                     )
                 );?>
+                <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"detail_news", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "content",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "detail_news"
+	),
+	false
+);?>
             </article>
         </div>
     </main>
