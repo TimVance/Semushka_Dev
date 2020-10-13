@@ -90,6 +90,7 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y")
         $sectionListParams["COUNT_ELEMENTS_FILTER"] = "CNT_AVAILABLE";
     }
 }
+/*
 $APPLICATION->IncludeComponent(
     "bitrix:catalog.section.list",
     "section",
@@ -97,6 +98,7 @@ $APPLICATION->IncludeComponent(
     $component,
     array("HIDE_ICONS" => "Y")
 );
+*/
 unset($sectionListParams);
 
 $APPLICATION->IncludeComponent(

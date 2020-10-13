@@ -203,6 +203,7 @@ $APPLICATION->SetTitle("Каталог");
 			0 => "size",
 		),
 		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(
+			0 => "size",
 		),
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
