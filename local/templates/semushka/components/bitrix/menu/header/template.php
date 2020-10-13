@@ -73,9 +73,9 @@ foreach($arResult as $arItem):?>
 		<?else:?>
 
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-				<li class="test2"><a href="" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item3<?endif?>" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
+				<li><a href="" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item3<?endif?>" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
 			<?else:?>
-				<li class="test3"><a href="" class="denied" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
+				<li><a href="" class="denied" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
 			<?endif?>
 
 		<?endif?>

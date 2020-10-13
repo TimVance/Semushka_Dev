@@ -4,6 +4,7 @@
 <html>
 	<head>
         <?
+        global $USER;
         use Bitrix\Main\Application;
         use Bitrix\Main\Page\Asset;
         use Bitrix\Main\Localization\Loc;
@@ -38,7 +39,7 @@
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
         ?>
 	</head>
-	<body>
+	<body<?=($USER->IsAdmin() ? ' class="admin"' : "")?>>
 		<div id="panel">
 			<?$APPLICATION->ShowPanel();?>
 		</div>

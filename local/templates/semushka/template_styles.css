@@ -5,3 +5,11 @@
 .card__img {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
+
+.header {
+    z-index: 1;
+}
+
+body.admin .page-wrapper {
+    margin-top: 0;
+}
