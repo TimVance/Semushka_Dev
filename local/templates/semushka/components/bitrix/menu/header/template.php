@@ -4,11 +4,12 @@
 <ul class="top-nav__list">
 
 <?
+
 $previousLevel = 0;
 foreach($arResult as $arItem):?>
 
 	<?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
-		<?=str_repeat("</ul></div></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
+		<?=str_repeat("</ul></div></div></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
 	<?endif?>
 
 	<?if ($arItem["IS_PARENT"]):?>
@@ -29,7 +30,7 @@ foreach($arResult as $arItem):?>
                             <ul class="main-nav__list main-nav__list--lvl1">
 		<?else:?>
 			<li class="main-nav__item main-nav__item--lvl1"><a href="<?=$arItem["LINK"]?>" class="main-nav__link parent<?if ($arItem["SELECTED"]):?> item-selected<?endif?>"><?=$arItem["TEXT"]?></a>
-            <div class="main-nav__childs"><ul class="main-nav__list main-nav__list--lvl2">
+            <div class="main-nav__childs"><div class="uk-container"><ul class="main-nav__list main-nav__list--lvl2">
 		<?endif?>
 
 	<?else:?>
@@ -39,7 +40,34 @@ foreach($arResult as $arItem):?>
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
 				<li class="top-nav__item"><a href="<?=$arItem["LINK"]?>" class="top-nav__link <?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a></li>
 			<?else:?>
-				<li class="main-nav__item main-nav__item--lvl2"><a class="main-nav__link" href="<?=$arItem["LINK"]?>" <?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><?=$arItem["TEXT"]?></a></li>
+				<li class="main-nav__item main-nav__item--lvl2">
+                    <a class="main-nav__link" href="<?=$arItem["LINK"]?>" <?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><?=$arItem["TEXT"]?></a>
+                    <div class="main-nav__childs">
+                        <ul class="main-nav__list main-nav__list--lvl3">
+                            <li class="main-nav__item main-nav__item--lvl3">
+                                <a href="#" class="main-nav__link">Жареный</a>
+                            </li>
+                            <li class="main-nav__item main-nav__item--lvl3">
+                                <a href="#" class="main-nav__link">Бланшированный</a>
+                            </li>
+                            <li class="main-nav__item main-nav__item--lvl3">
+                                <a href="#" class="main-nav__link">В скорлупе</a>
+                            </li>
+                            <li class="main-nav__item main-nav__item--lvl3">
+                                <a href="#" class="main-nav__link">Дробленый</a>
+                            </li>
+                            <li class="main-nav__item main-nav__item--lvl3">
+                                <a href="#" class="main-nav__link">Сырой</a>
+                            </li>
+                            <li class="main-nav__item main-nav__item--lvl3">
+                                <a href="#" class="main-nav__link">Лепестки</a>
+                            </li>
+                        </ul>
+                        <div class="main-nav__image uk-cover-container uk-height-medium">
+                            <img src="/local/templates/semushka/images/menu-test.png" alt="" uk-cover>
+                        </div>
+                    </div>
+                </li>
 			<?endif?>
 
 		<?else:?>
