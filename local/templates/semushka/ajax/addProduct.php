@@ -29,7 +29,7 @@ if (!empty($data["product_id"])) {
     $basket = Sale\Basket::loadItemsForFUser(Sale\Fuser::getId(), Context::getCurrent()->getSite());
     if ($item = $basket->getExistsItem('catalog', $productId)) {
         $item->setField('QUANTITY', $item->getQuantity() + $quantity);
-        $result['count'] = $item->getQuantity() + $quantity;
+        $result['count'] = $item->getQuantity();
     }
     else {
         $item = $basket->createItem('catalog', $productId);

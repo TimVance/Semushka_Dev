@@ -18,24 +18,7 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
 
 ?>
 
-<div class="page-wrapper">
-    <main class="content">
 
-        <div class="page-title">
-            <div class="uk-container">
-                <?$APPLICATION->IncludeComponent(
-                    "bitrix:breadcrumb",
-                    "breadcrumb",
-                    Array(
-                        "PATH" => "",
-                        "SITE_ID" => "s1",
-                        "START_FROM" => "0"
-                    )
-                );?>
-            </div>
-        </div>
-
-        <div class="uk-container">
             <article class="product-detail" id="<?=$this->GetEditAreaId($arResult['ID']);?>">
                 <div class="uk-child-width-1-2@s" uk-grid>
                     <div class="product-detail__item">
@@ -361,6 +344,3 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
 	false
 );?>
             </article>
-        </div>
-    </main>
-</div>

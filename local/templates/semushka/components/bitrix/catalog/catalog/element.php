@@ -193,10 +193,33 @@ if (isset($arParams['USER_CONSENT_IS_LOADED']))
 {
     $componentElementParams['USER_CONSENT_IS_LOADED'] = $arParams['USER_CONSENT_IS_LOADED'];
 }
+?>
 
-$APPLICATION->IncludeComponent(
-    'bitrix:catalog.element',
-    '',
-    $componentElementParams,
-    $component
-);
+
+
+<div class="page-wrapper">
+    <main class="content">
+        <div class="page-title">
+            <div class="uk-container">
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:breadcrumb",
+                    "breadcrumb",
+                    Array(
+                        "PATH" => "",
+                        "SITE_ID" => "s1",
+                        "START_FROM" => "0"
+                    )
+                );?>
+            </div>
+        </div>
+        <div class="uk-container">
+            <?$APPLICATION->IncludeComponent(
+                'bitrix:catalog.element',
+                '',
+                $componentElementParams,
+                $component
+            );?>
+        </div>
+    </main>
+</div>
+
