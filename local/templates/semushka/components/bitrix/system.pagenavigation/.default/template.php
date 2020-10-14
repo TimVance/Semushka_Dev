@@ -31,6 +31,8 @@ else
 }
 ?>
 
+<? if (empty($arResult["NavPageCount"])) return; ?>
+
 <div class="bx-pagination">
 	<div class="bx-pagination-container">
 		<ul>
