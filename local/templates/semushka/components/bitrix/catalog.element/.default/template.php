@@ -63,7 +63,7 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
                             ?>
                         </div>
                     </div>
-                    <div class="product-detail__item">
+                    <div class="product-detail__item js-product-detail__item" data-product-id="<?=$arResult["ID"]?>">
                         <div class="product-detail__header">
                             <h1 class="uk-h2"><?=$arResult["NAME"]?></h1>
                         </div>
@@ -77,7 +77,7 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
                                 <? endforeach; ?>
                             </div>
                         </div>
-                        <div class="product-detail__price">1200 Р</div>
+                        <div class="product-detail__price"><?=(!empty($arResult["PRICES"]["BASE"]["VALUE"]) ? $arResult["PRICES"]["BASE"]["PRINT_VALUE"] : "")?></div>
                         <div class="product-detail__footer">
                             <div class="product-detail__footer-item">
                                 <form class="product-detail__tools">
@@ -103,7 +103,9 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
                                 </form>
                             </div>
                             <div class="product-detail__footer-item">
-                                <button class="btn" type="button"><span>Купить</span></button>
+                                <button class="btn js-add-detail-product" type="button">
+                                    <span class="button_title">Купить</span>
+                                </button>
                             </div>
                         </div>
                     </div>
