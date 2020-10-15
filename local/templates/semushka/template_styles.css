@@ -13,3 +13,11 @@
 body.admin .page-wrapper {
     margin-top: 0;
 }
+
+.product-detail {
+    margin-top: 30px;
+}
+
+.filter-wrapper {
+    text-align: right;
+}

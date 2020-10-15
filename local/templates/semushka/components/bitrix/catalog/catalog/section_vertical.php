@@ -22,7 +22,8 @@ else
 
 // Filter
 if ($isFilter || $isSidebar): ?>
-    <? if ($isFilter): ?>
+    <? //if ($isFilter): ?>
+    <? if (false): ?>
         <div class="bx-sidebar-block">
             <?
             $APPLICATION->IncludeComponent(
@@ -60,6 +61,23 @@ if ($isFilter || $isSidebar): ?>
     <? endif ?>
 <?endif?>
 <? // Filter ?>
+
+<div class="uk-grid">
+<?
+// Sort
+?><div class="sort-wrapper uk-width-1-2">
+    <a href="#">Цена <i class="arrow"></i></a>
+    <a href="#">Популярность <i class="arrow"></i></a>
+</div><?
+// Sort
+
+// Filter
+?><div class="filter-wrapper uk-width-1-2">
+    <input type="checkbox" name="available" value="1"> Наличие
+</div><?
+// Filter
+?>
+</div>
 
 
 <?

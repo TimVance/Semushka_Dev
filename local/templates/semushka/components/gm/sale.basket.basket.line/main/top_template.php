@@ -80,9 +80,9 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 
 		if (!$compositeStub)
 		{
-			if ($arParams['SHOW_NUM_PRODUCTS'] == 'Y' && ($arResult['NUM_PRODUCTS'] > 0 || $arParams['SHOW_EMPTY_VALUES'] == 'Y'))
+			if ($arParams['SHOW_NUM_PRODUCTS'] == 'Y' && ($arResult['NUM_PRODUCTS'] >= 0 || $arParams['SHOW_EMPTY_VALUES'] == 'Y'))
 			{
-				echo '<span class="uk-badge">'.$arResult['NUM_PRODUCTS_CUSTOM'].'</span>';
+				echo '<span class="uk-badge">'.(!empty($arResult['NUM_PRODUCTS_CUSTOM']) ? $arResult['NUM_PRODUCTS_CUSTOM'] : 0).'</span>';
 			}
 		}
         ?>
