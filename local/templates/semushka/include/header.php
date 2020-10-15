@@ -29,7 +29,20 @@
                     );?>
                     <div class="top-nav__services services-list">
                         <div class="services-list__item">
-                            <a href="#" class="services-list__icon services-list__icon--search"></a>
+                            <button uk-toggle="target: #header-search" class="services-list__icon services-list__icon--search" type="button"></button>
+                            <div id="header-search" class="header-search" uk-offcanvas="overlay: true">
+                                <div class="uk-offcanvas-bar">
+                                    <div class="uk-container uk-position-relative">
+                                        <button class="uk-offcanvas-close" type="button" uk-close></button>
+                                        <form action="" class="form form--header-search">
+                                            <div class="form__item">
+                                                <input class="uk-input form__input" type="text" placeholder="Поиск">
+                                                <button class="btn form__btn">Найти</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="services-list__item">
                             <button uk-toggle="target: #receiver-modal" type="button" class="services-list__icon services-list__icon--receiver"></button>
@@ -37,36 +50,33 @@
                         </div>
                         <div class="services-list__item">
                             <button uk-toggle="target: #user-modal" type="button" class="services-list__icon services-list__icon--user"></button>
-
                         </div>
-                        <div class="services-list__item">
-                            <?$APPLICATION->IncludeComponent(
-                                "gm:sale.basket.basket.line",
-                                "main",
-                                Array(
-                                    "HIDE_ON_BASKET_PAGES" => "N",
-                                    "PATH_TO_AUTHORIZE" => "",
-                                    "PATH_TO_BASKET" => SITE_DIR."personal/cart/",
-                                    "PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
-                                    "PATH_TO_PERSONAL" => SITE_DIR."personal/",
-                                    "PATH_TO_PROFILE" => SITE_DIR."personal/",
-                                    "PATH_TO_REGISTER" => SITE_DIR."login/",
-                                    "POSITION_FIXED" => "N",
-                                    "SHOW_AUTHOR" => "N",
-                                    "SHOW_DELAY" => "N",
-                                    "SHOW_EMPTY_VALUES" => "Y",
-                                    "SHOW_IMAGE" => "Y",
-                                    "SHOW_NOTAVAIL" => "N",
-                                    "SHOW_NUM_PRODUCTS" => "Y",
-                                    "SHOW_PERSONAL_LINK" => "N",
-                                    "SHOW_PRICE" => "Y",
-                                    "SHOW_PRODUCTS" => "Y",
-                                    "SHOW_REGISTRATION" => "N",
-                                    "SHOW_SUMMARY" => "Y",
-                                    "SHOW_TOTAL_PRICE" => "N"
-                                )
-                            );?>
-                        </div>
+                        <?$APPLICATION->IncludeComponent(
+                            "gm:sale.basket.basket.line",
+                            "main",
+                            Array(
+                                "HIDE_ON_BASKET_PAGES" => "N",
+                                "PATH_TO_AUTHORIZE" => "",
+                                "PATH_TO_BASKET" => SITE_DIR."personal/cart/",
+                                "PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
+                                "PATH_TO_PERSONAL" => SITE_DIR."personal/",
+                                "PATH_TO_PROFILE" => SITE_DIR."personal/",
+                                "PATH_TO_REGISTER" => SITE_DIR."login/",
+                                "POSITION_FIXED" => "N",
+                                "SHOW_AUTHOR" => "N",
+                                "SHOW_DELAY" => "N",
+                                "SHOW_EMPTY_VALUES" => "Y",
+                                "SHOW_IMAGE" => "Y",
+                                "SHOW_NOTAVAIL" => "N",
+                                "SHOW_NUM_PRODUCTS" => "Y",
+                                "SHOW_PERSONAL_LINK" => "N",
+                                "SHOW_PRICE" => "Y",
+                                "SHOW_PRODUCTS" => "Y",
+                                "SHOW_REGISTRATION" => "N",
+                                "SHOW_SUMMARY" => "Y",
+                                "SHOW_TOTAL_PRICE" => "N"
+                            )
+                        );?>
                     </div>
                 </div>
             </nav>
@@ -96,11 +106,102 @@
                     </div>
                     <div class="services-list__item">
                         <button uk-toggle="target: #user-modal" type="button" class="services-list__icon services-list__icon--user"></button>
-
                     </div>
                     <div class="services-list__item">
-                        <a href="#" class="services-list__icon services-list__icon--cart"></a>
+                        <button uk-toggle="target: .basket-mobile" class="services-list__icon services-list__icon--cart"></button>
                         <span class="uk-badge">1</span>
+                        <div class="basket basket-mobile" uk-dropdown="mode: click">
+                            <div class="basket__dropdown">
+                                <div class="basket__container">
+                                    <div class="basket__body">
+                                        <div class="basket__list">
+                                            <div class="basket__item">
+                                                <div class="basket-card">
+                                                    <div class="basket-card__image">
+                                                        <div class="basket-card__img">
+                                                            <img src="./src/images/card-test.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="basket-card__body">
+                                                        <div class="basket-card__title">Фундук 9/11ММ Сорт Атаататата</div>
+                                                        <div class="basket-card__footer">
+                                                            <div class="basket-card__info">
+                                                                <div class="basket-card__price">2000 Р</div>
+                                                                <div class="basket-card__discount">3000 Р</div>
+                                                                <div class="basket-card__count"></div>
+                                                                <div class="basket-card__total">8000 Р</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="basket-card__delete"><span uk-icon="close"></span></div>
+                                                </div>
+                                            </div>
+                                            <div class="basket__item">
+                                                <div class="basket-card">
+                                                    <div class="basket-card__image">
+                                                        <div class="basket-card__img">
+                                                            <img src="./src/images/card-test.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="basket-card__body">
+                                                        <div class="basket-card__title">Фундук 9/11ММ Сорт Атаататата</div>
+                                                        <div class="basket-card__footer">
+                                                            <div class="basket-card__info">
+                                                                <div class="basket-card__price">2000 Р</div>
+                                                                <div class="basket-card__discount">3000 Р</div>
+                                                                <div class="basket-card__count"></div>
+                                                                <div class="basket-card__total">8000 Р</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="basket-card__delete"><span uk-icon="close"></span></div>
+                                                </div>
+                                            </div>
+                                            <div class="basket__item">
+                                                <div class="basket-card">
+                                                    <div class="basket-card__image">
+                                                        <div class="basket-card__img">
+                                                            <img src="./src/images/card-test.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="basket-card__body">
+                                                        <div class="basket-card__title">Фундук 9/11ММ Сорт Атаататата</div>
+                                                        <div class="basket-card__footer">
+                                                            <div class="basket-card__info">
+                                                                <div class="basket-card__price">2000 Р</div>
+                                                                <div class="basket-card__discount">3000 Р</div>
+                                                                <div class="basket-card__count"></div>
+                                                                <div class="basket-card__total">8000 Р</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="basket-card__delete"><span uk-icon="close"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="basket__footer">
+                                        <div class="basket__price">
+                                            <div class="basket__price-total">
+                                                <span>Итого</span> 23456789 Р
+                                            </div>
+                                            <div class="basket__price-discount">3000 Р</div>
+                                        </div>
+                                        <div class="basket__tools">
+                                            <div class="basket__delete">
+                                                <button class="btn btn--link">
+                                                    <span uk-icon="close"></span>
+                                                    <span>очистить корзину</span>
+                                                </button>
+                                            </div>
+                                            <div class="basket__add">
+                                                <button class="btn">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

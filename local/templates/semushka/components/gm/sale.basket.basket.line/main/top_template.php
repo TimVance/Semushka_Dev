@@ -7,7 +7,7 @@
  */
 $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STUB'] == 'Y');
 
-?><div class="bx-hdr-profile">
+?><div class="services-list__item">
 <?if (!$compositeStub && $arParams['SHOW_AUTHOR'] == 'Y'):?>
 	<div class="bx-basket-block">
 		<i class="fa fa-user"></i>
@@ -75,7 +75,7 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 		if (!$arResult["DISABLE_USE_BASKET"])
 		{
 			?>
-			<a class="services-list__icon services-list__icon--cart" href="<?= $arParams['PATH_TO_BASKET'] ?>"></a><?
+			<a uk-toggle="target: .basket-desktop" class="services-list__icon services-list__icon--cart" href="<?= $arParams['PATH_TO_BASKET'] ?>"></a><?
 		}
 
 		if (!$compositeStub)
@@ -87,4 +87,96 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 		}
         ?>
 	</div>
+    <div class="basket basket-desktop" uk-dropdown="mode: hover">
+        <div class="basket__dropdown">
+            <div class="basket__container">
+                <div class="basket__body">
+                    <div class="basket__list">
+                        <div class="basket__item">
+                            <div class="basket-card">
+                                <div class="basket-card__image">
+                                    <div class="basket-card__img">
+                                        <img src="./src/images/card-test.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="basket-card__body">
+                                    <div class="basket-card__title">Фундук 9/11ММ Сорт Атаататата</div>
+                                    <div class="basket-card__footer">
+                                        <div class="basket-card__info">
+                                            <div class="basket-card__price">2000 Р</div>
+                                            <div class="basket-card__discount">3000 Р</div>
+                                            <div class="basket-card__count">x 4</div>
+                                            <div class="basket-card__total">8000 Р</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket-card__delete"><span uk-icon="close"></span></div>
+                            </div>
+                        </div>
+                        <div class="basket__item">
+                            <div class="basket-card">
+                                <div class="basket-card__image">
+                                    <div class="basket-card__img">
+                                        <img src="./src/images/card-test.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="basket-card__body">
+                                    <div class="basket-card__title">Фундук 9/11ММ Сорт Атаататата</div>
+                                    <div class="basket-card__footer">
+                                        <div class="basket-card__info">
+                                            <div class="basket-card__price">2000 Р</div>
+                                            <div class="basket-card__discount">3000 Р</div>
+                                            <div class="basket-card__count">x 4</div>
+                                            <div class="basket-card__total">8000 Р</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket-card__delete"><span uk-icon="close"></span></div>
+                            </div>
+                        </div>
+                        <div class="basket__item">
+                            <div class="basket-card">
+                                <div class="basket-card__image">
+                                    <div class="basket-card__img">
+                                        <img src="./src/images/card-test.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="basket-card__body">
+                                    <div class="basket-card__title">Фундук 9/11ММ Сорт Атаататата</div>
+                                    <div class="basket-card__footer">
+                                        <div class="basket-card__info">
+                                            <div class="basket-card__price">2000 Р</div>
+                                            <div class="basket-card__discount">3000 Р</div>
+                                            <div class="basket-card__count">x 4</div>
+                                            <div class="basket-card__total">8000 Р</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket-card__delete"><span uk-icon="close"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__footer">
+                    <div class="basket__price">
+                        <div class="basket__price-total">
+                            <span>Итого</span> 23456789 Р
+                        </div>
+                        <div class="basket__price-discount">3000 Р</div>
+                    </div>
+                    <div class="basket__tools">
+                        <div class="basket__delete">
+                            <button class="btn btn--link">
+                                <span uk-icon="close"></span>
+                                <span>очистить корзину</span>
+                            </button>
+                        </div>
+                        <div class="basket__add">
+                            <button class="btn">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

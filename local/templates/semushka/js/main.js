@@ -16,4 +16,8 @@ $(function() {
 
     })
   })();
+  if ($("body").hasClass("admin")) {
+      let height = $("#panel").height();
+      $("#header-search").css("top", height);
+  }
 });
