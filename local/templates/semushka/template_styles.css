@@ -21,3 +21,12 @@ body.admin .page-wrapper {
 .filter-wrapper {
     text-align: right;
 }
+
+.search-page .uk-input {
+    max-width: 300px;
+}
+
+.search-page .btn {
+    height: 48px;
+    line-height: 1px;
+}
