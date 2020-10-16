@@ -30,3 +30,80 @@ body.admin .page-wrapper {
     height: 48px;
     line-height: 1px;
 }
+
+.checkbox-available {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    position: relative;
+    margin-right: 5px;
+}
+
+.checkbox-available.checked:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 7px;
+    left: 0;
+    top: 1px;
+    background-color: transparent;
+    border-top: 2px solid #b39468;
+    border-right: 2px solid #b39468;
+    -webkit-transform: rotate(136deg);
+    -moz-transform: rotate(136deg);
+    -ms-transform: rotate(136deg);
+    -o-transform: rotate(136deg);
+    transform: rotate(136deg);
+}
+
+.filter-wrapper a {
+    border: none;
+}
+
+.arrow.down, .arrow.down:before, .arrow.down:after,
+.arrow.up, .arrow.up:before, .arrow.up:after {
+    height: 1px;
+    background-color: #b39468;
+    display: inline-block;
+}
+
+.arrow.down, .arrow.up {
+    width: 8px;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.arrow.down:before {
+    content: "";
+    width: 12px;
+    top: -3px;
+    position: absolute;
+}
+
+.arrow.down:after {
+    content: "";
+    width: 4px;
+    top: 3px;
+    position: absolute;
+}
+
+.arrow.up:before {
+    content: "";
+    width: 4px;
+    top: -3px;
+    position: absolute;
+}
+
+.arrow.up:after {
+    content: "";
+    width: 12px;
+    top: 3px;
+    position: absolute;
+}
+
+.sort-wrapper > * {
+    margin-right: 10px;
+    display: inline-block;
+    color: #B39467;
+}

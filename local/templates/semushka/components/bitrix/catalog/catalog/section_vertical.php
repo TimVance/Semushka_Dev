@@ -9,7 +9,10 @@ use Bitrix\Main\ModuleManager;
  * @var array $arParams
  * @var array $arResult
  * @var array $arCurSection
+ * @var $request
  */
+
+$request = \Bitrix\Main\Context::getCurrent()->getRequest();
 
 if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMON_SETTINGS_BASKET_POPUP'] == 'Y')
 {
@@ -64,16 +67,46 @@ if ($isFilter || $isSidebar): ?>
 
 <div class="uk-grid">
 <?
+
+$link_price = $APPLICATION->GetCurPageParam("sort=price&order=asc", ["sort", "order"], false);
+$link_popular = $APPLICATION->GetCurPageParam("sort=popular", ["sort", "order"], false);
+$arrow = '';
+if (!empty($request->get("sort"))) {
+    if ($request->get("sort") == "popular") {
+        $arParams["ELEMENT_SORT_FIELD"] = 'show_counter';
+        $arParams["ELEMENT_SORT_ORDER"] = 'DESC';
+        $link_popular = $APPLICATION->GetCurPageParam("", ["sort", "order"], false);
+        $arrow_popular = "down";
+    }
+    elseif ($request->get("sort") == "price" && $request->get("order") == "asc") {
+        $arParams["ELEMENT_SORT_FIELD"] = 'catalog_PRICE_1';
+        $arParams["ELEMENT_SORT_ORDER"] = 'ASC';
+        $link_price = $APPLICATION->GetCurPageParam("sort=price&order=desc", ["sort", "order"], false);
+        $arrow = "up";
+    }
+    elseif ($request->get("sort") == "price" && $request->get("order") == "desc") {
+        $arParams["ELEMENT_SORT_FIELD"] = 'catalog_PRICE_1';
+        $arParams["ELEMENT_SORT_ORDER"] = 'DESC';
+        $link_price = $APPLICATION->GetCurPageParam("sort=price&order=asc", ["sort", "order"], false);
+        $arrow = "down";
+    }
+}
+
 // Sort
 ?><div class="sort-wrapper uk-width-1-2">
-    <a href="#">Цена <i class="arrow"></i></a>
-    <a href="#">Популярность <i class="arrow"></i></a>
+    <? if ($arrow_popular != "down"): ?>
+        <a href="<?=$link_popular?>">Популярность <i class="arrow <?=$arrow_popular?>"></i></a>
+    <? else: ?>
+        <span>Популярность <i class="arrow <?=$arrow_popular?>"></i></span>
+    <? endif; ?>
+    <a href="<?=$link_price?>">Цена <i class="arrow <?=$arrow?>"></i></a>
 </div><?
 // Sort
 
 // Filter
 ?><div class="filter-wrapper uk-width-1-2">
-    <input type="checkbox" name="available" value="1"> Наличие
+    <a href="<?=($request->get("available") == 1 ? $APPLICATION->GetCurPageParam("", ["available"], false) : $APPLICATION->GetCurPageParam("available=1", [], false))?>">
+        <span class="checkbox-available<?=($request->get("available") == 1 ? " checked" : "")?>"></span> Наличие</a>
 </div><?
 // Filter
 ?>
@@ -108,7 +141,7 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y")
         $sectionListParams["COUNT_ELEMENTS_FILTER"] = "CNT_AVAILABLE";
     }
 }
-/*
+
 $APPLICATION->IncludeComponent(
     "bitrix:catalog.section.list",
     "section",
@@ -116,8 +149,13 @@ $APPLICATION->IncludeComponent(
     $component,
     array("HIDE_ICONS" => "Y")
 );
-*/
+
 unset($sectionListParams);
+
+
+if ($request->get("available") == 1)
+    $GLOBALS["arrFilter"]["CATALOG_AVAILABLE"] = "Y";
+
 
 $APPLICATION->IncludeComponent(
     "bitrix:catalog.section",

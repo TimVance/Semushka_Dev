@@ -74,12 +74,18 @@ if ($isFilter)
     <main class="content">
         <div class="page-title">
             <div class="uk-container">
-                <h1 class="uk-h2">Орехи</h1>
-                <ul class="uk-breadcrumb breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Продукция</a></li>
-                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Орехи</a></li>
-                    <li class="breadcrumbs__item"><span class="breadcrumbs__link">Фундук</span></li>
-                </ul>
+                <h1 class="uk-h2"><?$APPLICATION->ShowTitle(false);?></h1>
+                <div class="uk-container">
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:breadcrumb",
+                        "breadcrumb",
+                        Array(
+                            "PATH" => "",
+                            "SITE_ID" => "s1",
+                            "START_FROM" => "0"
+                        )
+                    );?>
+                </div>
             </div>
         </div>
         <section class="uk-section uk-margin">

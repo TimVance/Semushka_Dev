@@ -13,7 +13,3 @@
 $this->setFrameMode(true);
 
 ?>
-
-<? foreach ($arResult["SECTIONS"] as $section): ?>
-    <a href="#"><?=$section["NAME"]?></a>
-<? endforeach; ?>

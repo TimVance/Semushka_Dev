@@ -36,7 +36,6 @@
                                         <button class="uk-offcanvas-close" type="button" uk-close></button>
                                         <form action="/catalog/" class="form form--header-search">
                                             <div class="form__item">
-                                                <? $request = \Bitrix\Main\Context::getCurrent()->getRequest(); ?>
                                                 <input value="<?=$request->get("q");?>" name="q" class="uk-input form__input" type="text" placeholder="Поиск">
                                                 <button class="btn form__btn">Найти</button>
                                             </div>

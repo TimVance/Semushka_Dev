@@ -1,5 +1,13 @@
 <? if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
 
+<?php
+
+/**
+ * @global $APPLICATION
+ */
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,6 +17,7 @@
         use Bitrix\Main\Page\Asset;
         use Bitrix\Main\Localization\Loc;
         Loc::loadMessages(__FILE__);
+        $request = \Bitrix\Main\Context::getCurrent()->getRequest();
         ?>
 
 		<?$APPLICATION->ShowHead();?>
