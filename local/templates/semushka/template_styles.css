@@ -107,3 +107,7 @@ body.admin .page-wrapper {
     display: inline-block;
     color: #B39467;
 }
+
+.uk-modal-title {
+    margin-top: 0;
+}

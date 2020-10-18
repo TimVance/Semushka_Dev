@@ -21,3 +21,7 @@ $(function() {
       $("#header-search").css("top", height);
   }
 });
+
+BX.addCustomEvent('onAjaxSuccess', function(){
+    $('#callback_inputmask').mask("+7 999 999-99-99");
+});

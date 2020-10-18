@@ -151,28 +151,39 @@
 </footer>
 <div id="receiver-modal" uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
-        <h2 class="uk-modal-title uk-h3 uk-text-center">Закажите звонок и получите  бесплатную консультацию</h2>
-        <form class="uk-form-stacked">
-            <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">Ваш номер телефона</label>
-                <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" type="tel" placeholder="+7 000 000-00-00">
-                </div>
-            </div>
-            <div class="uk-margin">
-                <label class="uk-form-label">Комментарий</label>
-                <div class="uk-form-controls">
-                    <textarea class="uk-textarea"></textarea>
-                </div>
-            </div>
-            <div class="uk-margin-medium">
-                <button class="btn uk-width" type="button"><span>Купить</span></button>
-            </div>
-            <div class="uk-margin uk-text-center">
-                <button class="btn btn--link" type="button"><span>Зарегистрироваться</span></button>
-            </div>
-        </form>
-        <button class="uk-modal-close-outside" type="button" uk-close></button>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:form",
+            "callback",
+            Array(
+                "AJAX_MODE" => "Y",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "AJAX_OPTION_HISTORY" => "Y",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "N",
+                "CACHE_TIME" => "3600",
+                "CACHE_TYPE" => "A",
+                "CHAIN_ITEM_LINK" => "",
+                "CHAIN_ITEM_TEXT" => "",
+                "EDIT_ADDITIONAL" => "N",
+                "EDIT_STATUS" => "N",
+                "IGNORE_CUSTOM_TEMPLATE" => "N",
+                "NOT_SHOW_FILTER" => array("",""),
+                "NOT_SHOW_TABLE" => array("",""),
+                "RESULT_ID" => $_REQUEST[RESULT_ID],
+                "SEF_MODE" => "N",
+                "SHOW_ADDITIONAL" => "N",
+                "SHOW_ANSWER_VALUE" => "N",
+                "SHOW_EDIT_PAGE" => "N",
+                "SHOW_LIST_PAGE" => "N",
+                "SHOW_STATUS" => "N",
+                "SHOW_VIEW_PAGE" => "N",
+                "START_PAGE" => "new",
+                "SUCCESS_URL" => "",
+                "USE_EXTENDED_ERRORS" => "N",
+                "VARIABLE_ALIASES" => Array("action"=>"action"),
+                "WEB_FORM_ID" => "1"
+            )
+        );?>
     </div>
 </div>
 <div id="user-modal" uk-modal>
@@ -182,13 +193,13 @@
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Ваш email</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" type="email" placeholder="info@semushka.com">
+                    <input class="uk-input" id="form-stacked-text2" type="email" placeholder="info@semushka.com">
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">Пароль</label>
+                <label class="uk-form-label" for="form-stacked-text3">Пароль</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" type="text" >
+                    <input class="uk-input" id="form-stacked-text4" type="text" >
                 </div>
             </div>
             <div class="uk-margin-medium">

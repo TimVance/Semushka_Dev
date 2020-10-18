@@ -45,6 +45,7 @@
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/vendor/uikit/js/uikit-icons.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/vendor/fotorama/fotorama.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/vendor/fancybox/dist/jquery.fancybox.min.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/vendor/maskedinput/dist/jquery.maskedinput.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
         ?>
 	</head>
