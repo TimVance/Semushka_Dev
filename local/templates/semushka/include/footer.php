@@ -187,28 +187,14 @@
     </div>
 </div>
 <div id="user-modal" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body">
-        <h2 class="uk-modal-title uk-text-center">Вход</h2>
-        <form class="uk-form-stacked">
-            <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">Ваш email</label>
-                <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text2" type="email" placeholder="info@semushka.com">
-                </div>
-            </div>
-            <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text3">Пароль</label>
-                <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text4" type="text" >
-                </div>
-            </div>
-            <div class="uk-margin-medium">
-                <button class="btn uk-width" type="button"><span>Купить</span></button>
-            </div>
-            <div class="uk-margin uk-text-center">
-                <button class="btn btn--link" type="button"><span>Зарегистрироваться</span></button>
-            </div>
-        </form>
-        <button class="uk-modal-close-outside" type="button" uk-close></button>
+    <div class="uk-modal-dialog uk-modal-body modal-user-auth">
+        <?$APPLICATION->IncludeComponent("bitrix:system.auth.form", "authform", Array(
+            "FORGOT_PASSWORD_URL" => "",	// Страница забытого пароля
+            "PROFILE_URL" => "",	// Страница профиля
+            "REGISTER_URL" => "",	// Страница регистрации
+            "SHOW_ERRORS" => "Y",	// Показывать ошибки
+        ),
+            false
+        );?>
     </div>
 </div>

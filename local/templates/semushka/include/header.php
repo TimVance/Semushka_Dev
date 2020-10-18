@@ -49,7 +49,11 @@
 
                         </div>
                         <div class="services-list__item">
-                            <button uk-toggle="target: #user-modal" type="button" class="services-list__icon services-list__icon--user"></button>
+                            <? if ($USER->IsAuthorized()): ?>
+                                <a class="services-list__icon services-list__icon--user" href="/personal/"></a>
+                            <? else: ?>
+                                <button uk-toggle="target: #user-modal" type="button" class="services-list__icon services-list__icon--user"></button>
+                            <? endif; ?>
                         </div>
                         <?$APPLICATION->IncludeComponent(
                             "gm:sale.basket.basket.line",

@@ -111,3 +111,15 @@ body.admin .page-wrapper {
 .uk-modal-title {
     margin-top: 0;
 }
+
+a.services-list__icon--user:after {
+    content: "";
+    background-color: #46b746;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+}

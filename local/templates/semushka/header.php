@@ -50,8 +50,15 @@
         ?>
 	</head>
 	<body<?=($USER->IsAdmin() ? ' class="admin"' : "")?>>
-		<div id="panel">
-			<?$APPLICATION->ShowPanel();?>
-		</div>
+        <?$APPLICATION->ShowPanel();?>
+
+        <? if ($request->get("login") == "yes" && !$USER->IsAuthorized()): ?>
+            <script>
+                $(function() {
+                    var modal = UIkit.modal("#user-modal");
+                    modal.show();
+                });
+            </script>
+        <? endif; ?>
 
         <? include "include/header.php"; ?>
