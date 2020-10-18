@@ -123,3 +123,19 @@ a.services-list__icon--user:after {
     top: 0;
     right: 0;
 }
+
+.registration-page-wrapper {
+    max-width: 400px;
+}
+
+.basket__add a {
+    color: #fff;
+}
+
+.basket__add a:hover {
+    color: #fff;
+}
+
+.basket__tools > * {
+    flex-basis: auto;
+}
