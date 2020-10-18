@@ -7,7 +7,7 @@
  */
 $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STUB'] == 'Y');
 
-?><div class="services-list__item">
+?>
 <?if (!$compositeStub && $arParams['SHOW_AUTHOR'] == 'Y'):?>
 	<div class="bx-basket-block">
 		<i class="fa fa-user"></i>

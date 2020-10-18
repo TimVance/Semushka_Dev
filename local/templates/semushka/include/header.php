@@ -55,6 +55,7 @@
                                 <button uk-toggle="target: #user-modal" type="button" class="services-list__icon services-list__icon--user"></button>
                             <? endif; ?>
                         </div>
+                        <div class="services-list__item" id="desktop-cart-wrapper">
                         <?$APPLICATION->IncludeComponent(
                             "gm:sale.basket.basket.line",
                             "main",
@@ -81,6 +82,7 @@
                                 "SHOW_TOTAL_PRICE" => "N"
                             )
                         );?>
+                        </div>
                     </div>
                 </div>
             </nav>

@@ -23,4 +23,4 @@ $_POST['arParams']['AJAX'] = 'Y';
 
 $APPLICATION->RestartBuffer();
 header('Content-Type: text/html; charset='.LANG_CHARSET);
-$APPLICATION->IncludeComponent('bitrix:sale.basket.basket.line', $_POST['templateName'], $_POST['arParams']);
+$APPLICATION->IncludeComponent('gm:sale.basket.basket.line', $_POST['templateName'], $_POST['arParams']);

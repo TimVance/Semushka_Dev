@@ -27,14 +27,20 @@ function sendRequest(product_id, quantity) {
             if (response.status !== 200) {
                 return Promise.reject();
             }
-            return response.json();
+            return response.text();
         })
         .then(function (data) {
-            JSON.stringify(data);
+            //JSON.stringify(data);
+            /*
             if (data.count !== null) {
                 let badge = document.querySelector(".uk-badge");
                 badge.textContent = data.count;
             }
+
+            */
+
+            let cart = document.querySelector("#desktop-cart-wrapper");
+            cart.innerHTML = data;
         })
         .catch(() => console.log('Ошибка'))
     return true;

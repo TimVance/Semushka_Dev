@@ -74,9 +74,8 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
                 <div class="basket__footer">
                     <div class="basket__price">
                         <div class="basket__price-total">
-                            <span>Итого</span> 23456789 Р
+                            <span>Итого</span> <?=$arResult["TOTAL_PRICE"]?> Р
                         </div>
-                        <div class="basket__price-discount">3000 Р</div>
                     </div>
                     <div class="basket__tools">
                         <div class="basket__delete">

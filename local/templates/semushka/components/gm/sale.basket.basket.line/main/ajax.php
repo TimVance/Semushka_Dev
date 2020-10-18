@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && check_bitrix_sessid() &&
 	require_once "$path/../../class.php";
 
 	$cart = new SaleBasketLineComponent ();
-	$cart->initComponent ('bitrix:sale.basket.basket.line');
+	$cart->initComponent ('gm:sale.basket.basket.line');
 	$cart->includeComponentLang();
 
 	$lang = LangSubst(LANGUAGE_ID);

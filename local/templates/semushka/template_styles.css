@@ -139,3 +139,7 @@ a.services-list__icon--user:after {
 .basket__tools > * {
     flex-basis: auto;
 }
+
+.bx-basket-item-list-item-remove {
+    cursor: pointer;
+}
