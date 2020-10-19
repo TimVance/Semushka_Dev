@@ -45,16 +45,6 @@ $this->setFrameMode(true);?>
                         <div class="card__footer-item">
                             <form class="card__tools">
                                 <label for="select" class="select card__select">
-                                    <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed">
-                                    <div class="select__list">
-                                        <input class="select__toggle" type="radio" name="list" value="first_value">
-                                        <label class="select__label" for="list[0]">1кг</label>
-                                        <input class="select__toggle" type="radio" name="list" value="second_value">
-                                        <label class="select__label" for="list[1]">2кг</label>
-                                        <input class="select__toggle" type="radio" name="list" value="third_value">
-                                        <label class="select__label" for="list[2]">3кг</label>
-                                        <span class="select__placeholder">Вес</span>
-                                    </div>
                                 </label>
                                 <div class="card__count">
                                     <div class="count-tools js-product-quantity">

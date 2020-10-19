@@ -65,16 +65,7 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
                             <div class="product-detail__footer-item">
                                 <form class="product-detail__tools">
                                     <label for="select" class="select product-detail__select">
-                                        <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
-                                        <div class="select__list">
-                                            <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
-                                            <label class="select__label" for="list[0]">1кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
-                                            <label class="select__label" for="list[1]">2кг</label>
-                                            <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
-                                            <label class="select__label" for="list[2]">3кг</label>
-                                            <span class="select__placeholder">Вес</span>
-                                        </div>
+
                                     </label>
                                     <div class="product-detail__count">
                                         <div class="count-tools js-product-quantity">
