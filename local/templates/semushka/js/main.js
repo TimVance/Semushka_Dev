@@ -17,7 +17,7 @@ $(function () {
         })
     })();
     if ($("body").hasClass("admin")) {
-        let height = $("#panel").height();
+        let height = $("#bx-panel").height();
         $("#header-search").css("top", height);
     }
 });

@@ -151,3 +151,15 @@ a.services-list__icon--user:after {
     text-align: center;
     color: #B39467;
 }
+
+.btn {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.btn:active {
+    background-color: #b39468;
+}
