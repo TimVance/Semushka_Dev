@@ -40,7 +40,8 @@ $this->setFrameMode(true);?>
                         <? endforeach; ?>
                         </div>
                     <? endif; ?>
-                    <div class="card__footer">
+                    <div class="prices product-section__price"><?=$item["PRICES"]["BASE"]["PRINT_VALUE"]?></div>
+                    <div class="card__footer" data-product-id="<?=$item["ID"]?>">
                         <div class="card__footer-item">
                             <form class="card__tools">
                                 <label for="select" class="select card__select">
@@ -65,7 +66,7 @@ $this->setFrameMode(true);?>
                             </form>
                         </div>
                         <div class="card__footer-item">
-                            <button class="btn" type="button"><span>Купить</span></button>
+                            <button class="btn js-add-section-product" type="button"><span>Купить</span></button>
                         </div>
                     </div>
                 </div>

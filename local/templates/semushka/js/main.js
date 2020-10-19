@@ -31,12 +31,26 @@ BX.addCustomEvent('onAjaxSuccess', function () {
 // Detail
 window.onload = () => {
     let button_detail = document.querySelector('.js-add-detail-product');
-    button_detail.addEventListener('click', (event) => {
-        let parent = button_detail.closest('.js-product-detail__item');
-        let product_id = parseInt(parent.getAttribute('data-product-id'));
-        let quantity = parseInt(parent.querySelector('.js-product-quantity__num').value);
-        if (!sendRequest(product_id, quantity)) alert('Произошла ошибка');
-    });
+    if (button_detail) {
+        button_detail.addEventListener('click', (event) => {
+            let parent = button_detail.closest('.js-product-detail__item');
+            let product_id = parseInt(parent.getAttribute('data-product-id'));
+            let quantity = parseInt(parent.querySelector('.js-product-quantity__num').value);
+            if (!sendRequest(product_id, quantity)) alert('Произошла ошибка');
+        });
+    }
+
+    let buttons_section = document.querySelectorAll('.js-add-section-product');
+    if (buttons_section) {
+        buttons_section.forEach(function (el) {
+            el.addEventListener('click', (event) => {
+                let parent = el.closest('.card__footer');
+                let product_id = parseInt(parent.getAttribute('data-product-id'));
+                let quantity = parseInt(parent.querySelector('.js-product-quantity__num').value);
+                if (!sendRequest(product_id, quantity)) alert('Произошла ошибка');
+            });
+        });
+    }
 }
 // Detail
 

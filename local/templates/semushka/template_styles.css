@@ -143,3 +143,11 @@ a.services-list__icon--user:after {
 .bx-basket-item-list-item-remove {
     cursor: pointer;
 }
+
+.product-section__price {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Proxima Nova Semibold', sans-serif;
+    text-align: center;
+    color: #B39467;
+}
