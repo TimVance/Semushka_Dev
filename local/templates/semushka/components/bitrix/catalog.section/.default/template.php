@@ -45,13 +45,13 @@ $this->setFrameMode(true);?>
                         <div class="card__footer-item">
                             <form class="card__tools">
                                 <label for="select" class="select card__select">
-                                    <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
+                                    <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed">
                                     <div class="select__list">
-                                        <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
+                                        <input class="select__toggle" type="radio" name="list" value="first_value">
                                         <label class="select__label" for="list[0]">1кг</label>
-                                        <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
+                                        <input class="select__toggle" type="radio" name="list" value="second_value">
                                         <label class="select__label" for="list[1]">2кг</label>
-                                        <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
+                                        <input class="select__toggle" type="radio" name="list" value="third_value">
                                         <label class="select__label" for="list[2]">3кг</label>
                                         <span class="select__placeholder">Вес</span>
                                     </div>
@@ -59,7 +59,7 @@ $this->setFrameMode(true);?>
                                 <div class="card__count">
                                     <div class="count-tools js-product-quantity">
                                         <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
-                                        <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
+                                        <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" />
                                         <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
                                     </div>
                                 </div>
