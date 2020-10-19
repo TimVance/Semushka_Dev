@@ -63,7 +63,7 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
                                                     </div>
                                                 <?endif?>
                                             </div>
-                                            <div class="basket-card__delete bx-basket-item-list-item-remove" onclick="<?=$cartId?>.removeItemFromCart(<?=$v['ID']?>)" title="<?=GetMessage("TSB1_DELETE")?>"><span uk-icon="close"></span></div>
+                                            <div class="basket-card__delete bx-basket-item-list-item-remove" onclick="removeItemCart(<?=$v['ID']?>)" title="<?=GetMessage("TSB1_DELETE")?>"><span uk-icon="close"></span></div>
                                         </div>
                                     </div>
                                 <?endforeach?>
@@ -79,7 +79,7 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
                     </div>
                     <div class="basket__tools">
                         <div class="basket__delete">
-                            <button class="btn btn--link">
+                            <button class="btn btn--link" onclick="clearCart();">
                                 <span uk-icon="close"></span>
                                 <span>очистить корзину</span>
                             </button>
