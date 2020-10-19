@@ -88,7 +88,7 @@ if ($isFilter)
                 </div>
             </div>
         </div>
-        <section class="uk-section uk-margin">
+        <section class="uk-margin">
             <div class="uk-container">
                 <?include($_SERVER["DOCUMENT_ROOT"]."/".$this->GetFolder()."/section_vertical.php");?>
             </div>

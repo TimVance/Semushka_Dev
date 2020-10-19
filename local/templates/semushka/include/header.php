@@ -360,7 +360,7 @@
                 </div>
             </div>
 
-            <section class="uk-section uk-margin">
+            <section class="uk-margin">
                 <div class="uk-container">
     <? endif; ?>
 <? endif; ?>
