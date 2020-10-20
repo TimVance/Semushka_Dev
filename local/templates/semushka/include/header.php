@@ -106,7 +106,18 @@
                     <button uk-toggle="target: #header-mobile" uk-navbar-toggle-icon type="button"></button>
                 </div>
                 <div class="header__mobile-logo logo">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.svg" alt="Логотип: Семушка - back to nature" title="Логотип: Семушка - back to nature">
+                    <? if ($APPLICATION->GetCurPage(false) !== "/") echo '<a href="/">'; ?>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/local/templates/semushka/include/parts/logo.php"
+                        )
+                    );?>
+                    <? if ($APPLICATION->GetCurPage(false) !== "/") echo '</a>'; ?>
                 </div>
                 <div class="header__mobile-link lang-selector">
                     <span class="lang-selector__text">RU</span>

@@ -163,3 +163,12 @@ a.services-list__icon--user:after {
 .btn:active {
     background-color: #b39468;
 }
+
+@media screen and (max-width: 960px) {
+    .breadcrumbs > .breadcrumbs__item:nth-child(n+2):not(.uk-first-column)::before {
+        width: 10px;
+    }
+    .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column)::before {
+        margin: 5px;
+    }
+}
