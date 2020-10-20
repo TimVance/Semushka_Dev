@@ -86,6 +86,18 @@ foreach($arResult as $arItem):?>
 
 <?endforeach?>
 
+<li class="top-nav__item">
+    <div class="top-nav__link lang-selector">
+        <span class="lang-selector__text">RU</span>
+        <div uk-dropdown="pos: bottom-justify" class="lang-selector__dropdown">
+            <ul class="uk-nav uk-dropdown-nav lang-selector__dropdown-nav">
+                <li class="uk-active"><a href="#" class="top-nav__link">RU</a></li>
+                <li><a href="#" class="top-nav__link">EN</a></li>
+            </ul>
+        </div>
+    </div>
+</li>
+
 <?if ($previousLevel > 1)://close last item tags?>
 	<?=str_repeat("</div></div></div></ul></li>", ($previousLevel-1) );?>
 <?endif?>

@@ -95,7 +95,16 @@
         <div class="footer__info" uk-grid>
             <div class="footer__info-item uk-width-1-4@m">
                 <div class="logo">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.svg" alt="Логотип: Семушка - back to nature" title="Логотип: Семушка - back to nature">
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/local/templates/semushka/include/parts/logo.php"
+                        )
+                    );?>
                 </div>
             </div>
             <div class="footer__info-item uk-width-1-4@m">

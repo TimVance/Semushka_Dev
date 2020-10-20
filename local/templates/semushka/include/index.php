@@ -111,6 +111,7 @@
 		"PAGE_ELEMENT_COUNT" => "9",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
+			0 => "BASE",
 		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRODUCT_ID_VARIABLE" => "id",

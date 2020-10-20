@@ -4,7 +4,18 @@
     <div class="header--desktop uk-visible@m">
         <div class="uk-container">
             <div class="logo">
-                <a href="/"><img src="<?=SITE_TEMPLATE_PATH?>/images/logo.svg" alt="Логотип: Семушка - back to nature" title="Логотип: Семушка - back to nature"></a>
+                <? if ($APPLICATION->GetCurPage(false) !== "/") echo '<a href="/">'; ?>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/local/templates/semushka/include/parts/logo.php"
+                        )
+                    );?>
+                <? if ($APPLICATION->GetCurPage(false) !== "/") echo '</a>'; ?>
             </div>
             <nav class="top-nav">
                 <div class="top-nav__row">
