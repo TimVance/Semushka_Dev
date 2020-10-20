@@ -14,7 +14,7 @@ if ($arResult['SHOW_ERRORS'] == 'Y' && $arResult['ERROR'])
 
 <?if($arResult["FORM_TYPE"] == "login"):?>
 
-<form name="system_auth_form<?=$arResult["RND"]?>" method="post" target="_top" action="<?=$arResult["AUTH_URL"]?>&opnmdl=1">
+<form name="system_auth_form<?=$arResult["RND"]?>" method="post" target="_top" action="<?=$APPLICATION->GetCurPageParam("opnmdl=1", ["opnmdl"], false)?>">
 <?if($arResult["BACKURL"] <> ''):?>
 	<input type="hidden" name="backurl" value="<?=$arResult["BACKURL"]?>" />
 <?endif?>

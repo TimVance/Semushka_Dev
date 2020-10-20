@@ -52,7 +52,7 @@
 	<body<?=($USER->IsAdmin() ? ' class="admin"' : "")?>>
         <?$APPLICATION->ShowPanel();?>
 
-        <? if ($request->get("login") == "yes" && !$USER->IsAuthorized()): ?>
+        <? if ($request->get("opnmdl") == "1" && !$USER->IsAuthorized()): ?>
             <script>
                 $(function() {
                     var modal = UIkit.modal("#user-modal");

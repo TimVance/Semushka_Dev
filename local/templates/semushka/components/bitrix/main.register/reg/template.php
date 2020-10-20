@@ -45,7 +45,7 @@ elseif($arResult["USE_EMAIL_CONFIRMATION"] === "Y"):
 
 <?if($arResult["SHOW_SMS_FIELD"] == true):?>
 
-< method="post" action="<?=POST_FORM_ACTION_URI?>" name="regform">
+<input method="post" action="<?=POST_FORM_ACTION_URI?>" name="regform">
 <?
 if($arResult["BACKURL"] <> ''):
 ?>
