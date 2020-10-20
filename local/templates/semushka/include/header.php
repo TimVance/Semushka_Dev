@@ -236,121 +236,34 @@
         </div>
         <div id="header-mobile" uk-offcanvas>
             <div class="uk-offcanvas-bar">
-                <form action="" class="form form--mobile">
+                <form action="/catalog/" class="form form--mobile mobile-search-form">
                     <div class="uk-margin">
                         <div class="uk-inline form__item form__item--search">
-                            <a class="uk-form-icon uk-form-icon-flip form__icon" href="#" uk-icon="icon: search"></a>
-                            <input class="uk-input form__input" type="text" placeholder="Поиск">
+                            <input class="uk-form-icon uk-form-icon-flip form__icon" type="submit" value="">
+                            <input class="uk-input form__input" type="text" placeholder="Поиск" name="q">
                         </div>
                     </div>
                 </form>
                 <nav class="mobile-nav">
-                    <ul uk-accordion="multiple: true" class="mobile-nav__list mobile-nav__list--lvl1">
-                        <li class="mobile-nav__item mobile-nav__item--lvl1">
-                            <a class="uk-accordion-title mobile-nav__title active" href="#">Орехи</a>
-                            <div class="uk-accordion-content mobile-nav__body">
-                                <ul uk-accordion="multiple: true" class="mobile-nav__list mobile-nav__list--lvl2">
-                                    <li class="mobile-nav__item mobile-nav__item--lvl2">
-                                        <a href="#" class="uk-accordion-title mobile-nav__title active">Грецкий орех</a>
-                                        <div class="uk-accordion-content mobile-nav__body">
-                                            <ul uk-accordion="multiple: true" class="mobile-nav__list mobile-nav__list--lvl3">
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Жареный</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Бланшированный</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title active">В скорлупе</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Дробленый</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Сырой</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Лепестки</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="mobile-nav__item mobile-nav__item--lvl2">
-                                        <a href="#" class="uk-accordion-title mobile-nav__title">Миндаль</a>
-                                    </li>
-                                    <li class="mobile-nav__item mobile-nav__item--lvl2">
-                                        <a href="#" class="uk-accordion-title mobile-nav__title">Фундук</a>
-                                        <div class="uk-accordion-content mobile-nav__body">
-                                            <ul uk-accordion="multiple: true" class="mobile-nav__list mobile-nav__list--lvl3">
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Жареный</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Бланшированный</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title active">В скорлупе</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Дробленый</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Сырой</a>
-                                                </li>
-                                                <li class="mobile-nav__item mobile-nav__item--lvl3">
-                                                    <a href="#" class="mobile-nav__title">Лепестки</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="mobile-nav__item mobile-nav__item--lvl2">
-                                        <a href="#" class="uk-accordion-title mobile-nav__title">Фисташки</a>
-                                    </li>
-                                    <li class="mobile-nav__item mobile-nav__item--lvl2">
-                                        <a href="#" class="uk-accordion-title mobile-nav__title">Кешью</a>
-                                    </li>
-                                    <li class="mobile-nav__item mobile-nav__item--lvl2">
-                                        <a href="#" class="uk-accordion-title mobile-nav__title">Ореховые смеси</a>
-                                    </li>
-                                    <li class="mobile-nav__item mobile-nav__item--lvl2">
-                                        <a href="#" class="uk-accordion-title mobile-nav__title">Другие</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="mobile-nav__item mobile-nav__item--lvl1">
-                            <a class="uk-accordion-title mobile-nav__title" href="#">Семена</a>
-                            <div class="uk-accordion-content mobile-nav__body">
-                                123
-                            </div>
-                        </li>
-                        <li class="mobile-nav__item mobile-nav__item--lvl1">
-                            <a class="uk-accordion-title mobile-nav__title" href="#">Сухофрукты</a>
-                            <div class="uk-accordion-content mobile-nav__body">
-                                234
-                            </div>
-                        </li>
-                        <li class="mobile-nav__item mobile-nav__item--lvl1">
-                            <a class="uk-accordion-title mobile-nav__title" href="#">Цукаты</a>
-                            <div class="uk-accordion-content mobile-nav__body">
-                                345
-                            </div>
-                        </li>
-                        <li class="mobile-nav__item mobile-nav__item--lvl1">
-                            <a class="uk-accordion-title mobile-nav__title" href="#">Для кондитеров</a>
-                            <div class="uk-accordion-content mobile-nav__body">
-                                456
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="mobile-nav__list mobile-nav__list--lvl1 uk-margin-medium">
-                        <li class="mobile-nav__item mobile-nav__item--lvl1">
-                            <a class="mobile-nav__title" href="#">Новости</a>
-                        </li>
-                        <li class="mobile-nav__item mobile-nav__item--lvl1">
-                            <a class="mobile-nav__title" href="#">О компании</a>
-                        </li>
-                    </ul>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "header_mobile",
+                        array(
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "CHILD_MENU_TYPE" => "header_catalog",
+                            "DELAY" => "N",
+                            "MAX_LEVEL" => "4",
+                            "MENU_CACHE_GET_VARS" => array(
+                            ),
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_TYPE" => "A",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "ROOT_MENU_TYPE" => "header",
+                            "USE_EXT" => "Y",
+                            "COMPONENT_TEMPLATE" => "header"
+                        ),
+                        false, Array('HIDE_ICONS' => 'Y')
+                    );?>
                 </nav>
             </div>
         </div>

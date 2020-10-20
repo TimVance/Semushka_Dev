@@ -16,7 +16,11 @@ $this->setFrameMode(true);?>
 
 <div class="card-list uk-child-width-1-3@l uk-child-width-1-2 uk-grid-column-small" uk-grid>
     <?foreach ($arResult["ITEMS"] as $item):?>
-        <div class="card-list__item">
+        <?
+        $this->AddEditAction($item['ID'], $item['EDIT_LINK'], CIBlock::GetArrayByID($item["IBLOCK_ID"], "ELEMENT_EDIT"));
+        $this->AddDeleteAction($item['ID'], $item['DELETE_LINK'], CIBlock::GetArrayByID($item["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+        ?>
+        <div class="card-list__item" id="<?=$this->GetEditAreaId($item['ID']);?>">
             <article class="card">
                 <div class="card__image">
                     <div class="card__img">
