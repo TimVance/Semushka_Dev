@@ -26,7 +26,6 @@ foreach($arResult as $arItem):?>
                 </a>
                 <div class="top-nav__childs">
                     <div class="uk-container">
-                        <div class="main-nav">
                             <ul class="main-nav__list main-nav__list--lvl1">
 		<?else:?>
 			<li class="main-nav__item main-nav__item--lvl1"><a href="<?=$arItem["LINK"]?>" class="main-nav__link parent<?if ($arItem["SELECTED"]):?> item-selected<?endif?>"><?=$arItem["TEXT"]?></a>
@@ -86,6 +85,10 @@ foreach($arResult as $arItem):?>
 
 <?endforeach?>
 
+<?if ($previousLevel > 1)://close last item tags?>
+	<?=str_repeat("</ul></div></div></li>", ($previousLevel-1) );?>
+<?endif?>
+
 <li class="top-nav__item">
     <div class="top-nav__link lang-selector">
         <span class="lang-selector__text">RU</span>
@@ -97,10 +100,6 @@ foreach($arResult as $arItem):?>
         </div>
     </div>
 </li>
-
-<?if ($previousLevel > 1)://close last item tags?>
-	<?=str_repeat("</div></div></div></ul></li>", ($previousLevel-1) );?>
-<?endif?>
 
 </ul>
 <?endif?>
