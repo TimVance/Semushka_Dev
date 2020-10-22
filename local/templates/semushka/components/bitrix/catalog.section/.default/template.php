@@ -48,8 +48,10 @@ $this->setFrameMode(true);?>
                     <div class="card__footer" data-product-id="<?=$item["ID"]?>">
                         <div class="card__footer-item">
                             <form class="card__tools">
-                                <label for="select" class="select card__select">
-                                </label>
+                                <div class="select card__select">
+                                    <? if (empty($item["PROPERTIES"]["weight"]["VALUE"])) $item["PROPERTIES"]["weight"]["VALUE"] = 0; ?>
+                                    <span data-num="<?=$item["PROPERTIES"]["weight"]["VALUE"]?>"><?=$item["PROPERTIES"]["weight"]["VALUE"]?></span> кг
+                                </div>
                                 <div class="card__count">
                                     <div class="count-tools js-product-quantity">
                                         <span class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </span>

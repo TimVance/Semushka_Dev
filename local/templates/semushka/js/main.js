@@ -4,15 +4,25 @@ $(function () {
             let $quantityNum = $(this).find($(".js-product-quantity__num"));
             let $quantityArrowMinus = $(this).find($(".js-product-quantity__arrow-minus"));
             let $quantityArrowPlus = $(this).find($(".js-product-quantity__arrow-plus"));
+            let $quantityWrapper = $(this).closest(".card__tools").find(".card__select span");
 
             $quantityArrowMinus.click(function () {
                 if ($quantityNum.val() > 1) {
-                    $quantityNum.val(+$quantityNum.val() - 1);
+                    $quantityNum.val(+$quantityNum.val() - 1).change();
                 }
             });
             $quantityArrowPlus.click(function () {
-                $quantityNum.val(+$quantityNum.val() + 1);
+                $quantityNum.val(+$quantityNum.val() + 1).change();
             });
+
+            /*
+            $quantityNum.change(function () {
+                let sum = parseFloat($quantityWrapper.data("num")) * parseFloat($quantityNum.val());
+                if (sum >= 1000) $quantityWrapper.text(">999");
+                else $quantityWrapper.text(sum);
+
+            });
+             */
 
         })
     })();

@@ -196,3 +196,8 @@ a.services-list__icon--user:after {
         padding: 17px 0 40px;
     }
 }
+
+.card__tools .card__select {
+    text-align: center;
+    line-height: 53px;
+}
