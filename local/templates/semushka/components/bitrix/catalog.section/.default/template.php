@@ -52,9 +52,9 @@ $this->setFrameMode(true);?>
                                 </label>
                                 <div class="card__count">
                                     <div class="count-tools js-product-quantity">
-                                        <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
+                                        <span class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </span>
                                         <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" />
-                                        <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
+                                        <span class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </span>
                                     </div>
                                 </div>
                             </form>

@@ -186,3 +186,13 @@ a.services-list__icon--user:after {
     background-size: 50%;
     outline: none;
 }
+
+.count-tools__arrow-plus, .count-tools__arrow-minus {
+    cursor: pointer;
+}
+
+@media (min-width: 960px) {
+    .content {
+        padding: 17px 0 40px;
+    }
+}
