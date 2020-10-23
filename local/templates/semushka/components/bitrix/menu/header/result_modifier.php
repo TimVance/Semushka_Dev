@@ -35,7 +35,6 @@ foreach ($arResult as $i => $item) {
                 }
             }
         }
-        //$newResult[$i]["IMAGE"] =
     }
     elseif ($item["DEPTH_LEVEL"] == 3) {
         if (!empty($item["IS_PARENT"])) {
