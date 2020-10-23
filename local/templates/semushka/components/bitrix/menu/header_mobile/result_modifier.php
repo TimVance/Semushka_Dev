@@ -24,17 +24,6 @@ foreach ($arResult as $i => $item) {
             $newResult[$parent1]["CHILDS"][$i] = $item;
             $parent2        = $i;
         } else $newResult[$parent1]["CHILDS"][$i]["CHILDS"] = $item;
-
-        $code = str_replace(["catalog", "/"], '', $item["LINK"]);
-        if (!empty($code)) {
-            CModule::IncludeModule("iblock");
-            $seciton_res = CIBlockSection::GetList([], ["CODE" => $code], false, ["ID", "PICTURE"]);
-            while ($section = $seciton_res->GetNext()) {
-                if (!empty($section["PICTURE"])) {
-                    $newResult[$parent1]["CHILDS"][$i]["IMAGE"] = CFile::GetPath($section["PICTURE"]);
-                }
-            }
-        }
     }
     elseif ($item["DEPTH_LEVEL"] == 3) {
         if (!empty($item["IS_PARENT"])) {
