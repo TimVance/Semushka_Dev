@@ -7,7 +7,6 @@
  * @global $arResult
  */
 
-//echo '<pre>'; print_r($arResult);
 
 $newResult = [];
 $parent = '';
@@ -51,5 +50,3 @@ foreach ($arResult as $i => $item) {
 }
 
 $arResult = $newResult;
-
-echo '<pre style="display: none">'; print_r($arResult); echo '</pre>';
