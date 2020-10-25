@@ -198,6 +198,18 @@ a.services-list__icon--user:after {
 }
 
 .card__tools .card__select {
-    text-align: center;
-    line-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav__list--lvl2, .top-nav__item > .top-nav__childs {
+    height: auto;
+    min-height: auto;
+    overflow: hidden;
+}
+
+.main-nav__list-container--lvl2 {
+    padding: 0 10px 30px 30px;
+    overflow: auto;
 }
