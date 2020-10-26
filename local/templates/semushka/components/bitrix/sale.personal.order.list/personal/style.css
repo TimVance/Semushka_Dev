@@ -1,0 +1,12 @@
+.personal-order-list {
+	display: table;
+	width: 100%;
+}
+
+.personal-order-row {
+	display: table-row;
+}
+
+.personal-order-row > div {
+	display: table-cell;
+}

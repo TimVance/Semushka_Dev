@@ -1,0 +1,37 @@
+.personal-page .flexBetween {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.personal-page__left {
+    width: 50%;
+    padding-right: 10px;
+}
+
+.personal-page__right {
+    width: 50%;
+    padding-left: 10px;
+}
+
+.personal-page__item {
+    border: 1px solid #DDDDDD;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.personal-page .title {
+    font-family: 'Proxima Nova Semibold', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.personal-page .title a {
+    font-size: 14px;
+    float: right;
+}
+
+.personal-page .info div {
+    margin-bottom: 5px;
+}
