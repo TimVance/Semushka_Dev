@@ -15,11 +15,50 @@ $request = Context::getCurrent()->getRequest();
     <div class="flexBetween">
         <div class="personal-page__left">
             <div class="personal-page__item">
-                <div class="title">Контактные данные <a class="edit" href="#">Изменить</a></div>
+                <div class="title">Контактные данные <a class="edit" href="<?=$APPLICATION->GetCurPageParam("edit_info=Y", array("edit_info"))?>">Изменить</a></div>
                 <div class="info">
-                    <? foreach ($arResult["user"] as $param): ?>
-                        <div><?=$param?></div>
-                    <? endforeach; ?>
+                    <? if ($request->get("edit_info") == "Y"): ?>
+                        <form method="post" action="/personal/">
+                            <input type="hidden" name="action" value="edit">
+                            <div class="uk-margin">
+                                <label class="uk-form-label">Фамилия</label>
+                                <div class="uk-form-controls">
+                                    <input type="text" class="uk-input" name="LAST_NAME" value="<?=$arResult["user"]["last_name"]?>">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label">Имя</label>
+                                <div class="uk-form-controls">
+                                    <input type="text" class="uk-input" name="NAME" value="<?=$arResult["user"]["name"]?>">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label">Захарович</label>
+                                <div class="uk-form-controls">
+                                    <input type="text" class="uk-input" name="SECOND_NAME" value="<?=$arResult["user"]["second_name"]?>">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label">Номер телефона</label>
+                                <div class="uk-form-controls">
+                                    <input required type="text" class="uk-input" name="PERSONAL_PHONE" value="<?=$arResult["user"]["phone"]?>">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label">E-mail</label>
+                                <div class="uk-form-controls">
+                                    <input type="email" class="uk-input" name="EMAIL" required value="<?=$arResult["user"]["email"]?>">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <input type="submit" class="btn" value="Сохранить">
+                            </div>
+                        </form>
+                    <? else: ?>
+                            <div><?=$arResult["user"]["fio"]?></div>
+                            <div><?=$arResult["user"]["phone"]?></div>
+                            <div><?=$arResult["user"]["email"]?></div>
+                    <? endif; ?>
                 </div>
             </div>
             <div class="personal-page__item">
