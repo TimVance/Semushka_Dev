@@ -5,13 +5,17 @@
  * @var $arResult
  * @var $APPLICATION
  */
+
+use Bitrix\Main\Context;
+$request = Context::getCurrent()->getRequest();
+
 ?>
 
 <div class="personal-page">
     <div class="flexBetween">
         <div class="personal-page__left">
             <div class="personal-page__item">
-                <div class="title">Контактные данные <a href="#">Изменить</a></div>
+                <div class="title">Контактные данные <a class="edit" href="#">Изменить</a></div>
                 <div class="info">
                     <? foreach ($arResult["user"] as $param): ?>
                         <div><?=$param?></div>
@@ -24,7 +28,18 @@
         </div>
         <div class="personal-page__right">
             <div class="personal-page__item">
-                <div class="title">Текущие заказы</div>
+                <div class="title order-title">
+                    <span <? if ($request->get("filter_history") == "Y") echo 'class="active"'; ?>>
+                        <? if ($request->get("filter_history") == "Y") echo '<a href="'.$APPLICATION->GetCurPageParam("", array("filter_history")).'">'; ?>
+                            Текущие заказы
+                        <? if ($request->get("filter_history") == "Y") echo '</a>'; ?>
+                    </span>
+                    <span <? if ($request->get("filter_history") != "Y") echo 'class="active"'; ?>>
+                        <? if ($request->get("filter_history") != "Y") echo '<a href="'.$APPLICATION->GetCurPageParam("filter_history=Y", array("filter_history")).'">'; ?>
+                            История заказов
+                        <? if ($request->get("filter_history") != "Y") echo '</a>'; ?>
+                    </span>
+                </div>
                 <div class="info">
                     <?$APPLICATION->IncludeComponent(
 	"bitrix:sale.personal.order", 
@@ -74,5 +89,3 @@
         </div>
     </div>
 </div>
-
-<? print_r($arResult); ?>

@@ -27,11 +27,27 @@
     margin-bottom: 20px;
 }
 
-.personal-page .title a {
+.personal-page .title .edit {
     font-size: 14px;
     float: right;
 }
 
 .personal-page .info div {
     margin-bottom: 5px;
+}
+
+.order-title > span {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.order-title > span.active {
+    opacity: 1;
+    cursor: default;
+}
+
+.order-title > span:first-child {
+    border-right: 2px solid rgba(153, 153, 153, .6);
+    padding-right: 10px;
+    margin-right: 10px;
 }
