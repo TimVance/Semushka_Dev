@@ -61,9 +61,6 @@ $request = Context::getCurrent()->getRequest();
                     <? endif; ?>
                 </div>
             </div>
-            <div class="personal-page__item">
-                <div class="title">Компания</div>
-            </div>
         </div>
         <div class="personal-page__right">
             <div class="personal-page__item">

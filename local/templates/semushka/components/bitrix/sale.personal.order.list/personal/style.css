@@ -17,12 +17,12 @@
 }
 
 .personal-order-row .date {
-	width: 200px;
+	width: 35%;
 	text-align: center;
 }
 
 .personal-order-row .price {
-	width: 200px;
+	width: 35%;
 	text-align: center;
 	cursor: pointer;
 }
@@ -73,4 +73,14 @@
 
 .personal-order-basket-item-price {
 	text-align: center;
+}
+
+.personal-order-row .repeat {
+	width: calc(30% - 50px);
+	text-align: right;
+}
+
+.personal-order-row .repeat svg {
+	width: 16px;
+	height: 16px;
 }

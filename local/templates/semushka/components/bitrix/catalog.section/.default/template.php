@@ -39,30 +39,32 @@ $this->setFrameMode(true);?>
                         <? foreach ($item["DISPLAY_PROPERTIES"] as $prop): ?>
                             <div class="card__info-row">
                                 <div class="card__info-title"><?=$prop["NAME"]?></div>
-                                <div class="card__info-note" uk-tooltip="title: Подсказка <?=$prop["VALUE"]?>"><?=$prop["VALUE"]?></div>
+                                <div class="card__info-note" uk-tooltip="title: <?=$prop["NAME"]?> <?=$prop["VALUE"]?>"><?=$prop["VALUE"]?></div>
                             </div>
                         <? endforeach; ?>
                         </div>
                     <? endif; ?>
-                    <div class="prices product-section__price"><?=$item["PRICES"]["BASE"]["PRINT_VALUE"]?></div>
-                    <div class="card__footer" data-product-id="<?=$item["ID"]?>">
-                        <div class="card__footer-item">
-                            <form class="card__tools">
-                                <div class="select card__select">
-                                    <? if (empty($item["PROPERTIES"]["weight"]["VALUE"])) $item["PROPERTIES"]["weight"]["VALUE"] = 0; ?>
-                                    <span data-num="<?=$item["PROPERTIES"]["weight"]["VALUE"]?>"><?=$item["PROPERTIES"]["weight"]["VALUE"]?></span> кг
-                                </div>
-                                <div class="card__count">
-                                    <div class="count-tools js-product-quantity">
-                                        <span class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </span>
-                                        <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" />
-                                        <span class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </span>
+                    <div class="card__footer-container">
+                        <div class="card__price prices product-section__price"><?=$item["PRICES"]["BASE"]["PRINT_VALUE"]?></div>
+                        <div class="card__footer" data-product-id="<?=$item["ID"]?>">
+                            <div class="card__footer-item">
+                                <form class="card__tools">
+                                    <div class="select card__select" uk-tooltip="title: Фасовка">
+                                        <? if (empty($item["PROPERTIES"]["weight"]["VALUE"])) $item["PROPERTIES"]["weight"]["VALUE"] = 0; ?>
+                                        <span data-num="<?=$item["PROPERTIES"]["weight"]["VALUE"]?>"><?=$item["PROPERTIES"]["weight"]["VALUE"]?></span>&nbsp;кг
                                     </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="card__footer-item">
-                            <button class="btn js-add-section-product" type="button"><span>Купить</span></button>
+                                    <div class="card__count">
+                                        <div class="count-tools js-product-quantity">
+                                            <span class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </span>
+                                            <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" />
+                                            <span class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card__footer-item">
+                                <button class="btn js-add-section-product" type="button"><span>Купить</span></button>
+                            </div>
                         </div>
                     </div>
                 </div>
