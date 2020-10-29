@@ -64,8 +64,9 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
                         <div class="product-detail__footer">
                             <div class="product-detail__footer-item">
                                 <form class="product-detail__tools">
-                                    <label for="select" class="select product-detail__select">
-
+                                    <label for="select" class="select product-detail__select" uk-tooltip="title: Фасовка">
+                                        <? if (empty($arResult["PROPERTIES"]["weight"]["VALUE"])) $arResult["PROPERTIES"]["weight"]["VALUE"] = 0; ?>
+                                        <span data-num="<?=$arResult["PROPERTIES"]["weight"]["VALUE"]?>"><?=$arResult["PROPERTIES"]["weight"]["VALUE"]?></span>&nbsp;кг
                                     </label>
                                     <div class="product-detail__count">
                                         <div class="count-tools js-product-quantity">

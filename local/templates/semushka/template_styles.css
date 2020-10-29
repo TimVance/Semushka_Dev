@@ -197,7 +197,7 @@ a.services-list__icon--user:after {
     }
 }
 
-.card__tools .card__select {
+.card__tools .card__select, .product-detail__select {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,4 +231,8 @@ a.services-list__icon--user:after {
         padding: 0;
         margin: 0;
     }
+}
+
+.product-detail__footer-item {
+    max-width: 30%;
 }
