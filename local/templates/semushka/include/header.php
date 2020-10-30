@@ -97,13 +97,11 @@
             <div class="services-list">
                 <div class="services-list__item uk-visible@s">
                     <div class="lang-selector">
-                        <span class="lang-selector__text">RU</span>
-                        <div uk-dropdown="pos: bottom-justify" class="lang-selector__dropdown">
-                            <ul class="uk-nav uk-dropdown-nav lang-selector__dropdown-nav">
-                                <li class="uk-active"><a href="#" class="top-nav__link">RU</a></li>
-                                <li><a href="#" class="top-nav__link">EN</a></li>
-                            </ul>
-                        </div>
+                        <? if (LANGUAGE_ID == "ru"): ?>
+                            <a href="<?=$APPLICATION->GetCurPageParam("lang_ui=en", ["lang_ui"], false);?>" class="lang-selector__text">EN</a>
+                        <? else: ?>
+                            <a href="<?=$APPLICATION->GetCurPageParam("lang_ui=ru", ["lang_ui"], false);?>" class="lang-selector__text">RU</a>
+                        <? endif; ?>
                     </div>
                 </div>
                 <div class="services-list__item uk-visible@m">

@@ -1,7 +1,7 @@
 <? if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <div class="page-wrapper">
-    <div class="page-top" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/images/bg-test.png');">
+    <div class="page-top" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/images/bg-test.jpg');">
         <div class="uk-container">
             <div class="page-top__btn" type="button" uk-toggle="target: +">
                 <svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
