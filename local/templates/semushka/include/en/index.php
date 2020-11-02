@@ -26,7 +26,7 @@
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => "/local/templates/semushka/include/parts/about_title.php"
+                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/about_title.php"
                         )
                     );?>
                 </h1>
@@ -38,7 +38,7 @@
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => "/local/templates/semushka/include/parts/about.php"
+                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/about.php"
                         )
                     );?>
                 </div>
@@ -55,7 +55,7 @@
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => "/local/templates/semushka/include/parts/main_catalog_title.php"
+                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/main_catalog_title.php"
                         )
                     );?>
                 </h2>

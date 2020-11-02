@@ -11,7 +11,7 @@ $APPLICATION->SetTitle("О компании");
                 "AREA_FILE_SHOW" => "file",
                 "AREA_FILE_SUFFIX" => "inc",
                 "EDIT_TEMPLATE" => "",
-                "PATH" => "/local/templates/semushka/include/parts/about/intro.php"
+                "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/about/intro.php"
             )
         );?>
     </div>
@@ -91,7 +91,7 @@ $APPLICATION->SetTitle("О компании");
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => "/local/templates/semushka/include/parts/about/relations_title.php"
+                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/about/relations_title.php"
                         )
                     );?>
                 </h2>
@@ -102,7 +102,7 @@ $APPLICATION->SetTitle("О компании");
                         "AREA_FILE_SHOW" => "file",
                         "AREA_FILE_SUFFIX" => "inc",
                         "EDIT_TEMPLATE" => "",
-                        "PATH" => "/local/templates/semushka/include/parts/about/relations.php"
+                        "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/about/relations.php"
                     )
                 );?>
             </div>
@@ -114,7 +114,7 @@ $APPLICATION->SetTitle("О компании");
                         "AREA_FILE_SHOW" => "file",
                         "AREA_FILE_SUFFIX" => "inc",
                         "EDIT_TEMPLATE" => "",
-                        "PATH" => "/local/templates/semushka/include/parts/about/relations_image.php"
+                        "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/about/relations_image.php"
                     )
                 );?>
             </div>

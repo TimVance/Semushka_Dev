@@ -61,4 +61,4 @@
             </script>
         <? endif; ?>
 
-        <? include "include/header.php"; ?>
+        <? include "include/".LANGUAGE_ID."/header.php"; ?>

@@ -40,7 +40,7 @@
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => "/local/templates/semushka/include/parts/phone.php"
+                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/phone.php"
                         )
                     );?>
                     <div class="footer__item-body">
@@ -54,7 +54,7 @@
                                             "AREA_FILE_SHOW" => "file",
                                             "AREA_FILE_SUFFIX" => "inc",
                                             "EDIT_TEMPLATE" => "",
-                                            "PATH" => "/local/templates/semushka/include/parts/address.php"
+                                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/address.php"
                                         )
                                     );?>
                                 </p>
@@ -68,7 +68,7 @@
                                             "AREA_FILE_SHOW" => "file",
                                             "AREA_FILE_SUFFIX" => "inc",
                                             "EDIT_TEMPLATE" => "",
-                                            "PATH" => "/local/templates/semushka/include/parts/worktime.php"
+                                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/worktime.php"
                                         )
                                     );?>
                                 </p>
@@ -82,7 +82,7 @@
                                             "AREA_FILE_SHOW" => "file",
                                             "AREA_FILE_SUFFIX" => "inc",
                                             "EDIT_TEMPLATE" => "",
-                                            "PATH" => "/local/templates/semushka/include/parts/mail.php"
+                                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/mail.php"
                                         )
                                     );?>
                                 </p>
@@ -102,7 +102,7 @@
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => "/local/templates/semushka/include/parts/logo.php"
+                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/logo.php"
                         )
                     );?>
                 </div>
@@ -115,7 +115,7 @@
                         "AREA_FILE_SHOW" => "file",
                         "AREA_FILE_SUFFIX" => "inc",
                         "EDIT_TEMPLATE" => "",
-                        "PATH" => "/local/templates/semushka/include/parts/policy.php"
+                        "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/policy.php"
                     )
                 );?>
                 <div>
@@ -126,7 +126,7 @@
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => "/local/templates/semushka/include/parts/copyright.php"
+                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/copyright.php"
                         )
                     );?>
                 </div>
@@ -139,7 +139,7 @@
                         "AREA_FILE_SHOW" => "file",
                         "AREA_FILE_SUFFIX" => "inc",
                         "EDIT_TEMPLATE" => "",
-                        "PATH" => "/local/templates/semushka/include/parts/map.php"
+                        "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/map.php"
                     )
                 );?>
             </div>
@@ -152,7 +152,7 @@
                     "AREA_FILE_SHOW" => "file",
                     "AREA_FILE_SUFFIX" => "inc",
                     "EDIT_TEMPLATE" => "",
-                    "PATH" => "/local/templates/semushka/include/parts/requisites.php"
+                    "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/requisites.php"
                 )
             );?>
         </div>

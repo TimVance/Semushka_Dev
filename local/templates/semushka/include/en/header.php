@@ -14,7 +14,7 @@
                                     "AREA_FILE_SHOW" => "file",
                                     "AREA_FILE_SUFFIX" => "inc",
                                     "EDIT_TEMPLATE" => "",
-                                    "PATH" => "/local/templates/semushka/include/parts/logo.php"
+                                    "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/logo.php"
                                 )
                             );?>
                         <? if ($APPLICATION->GetCurPage(false) !== "/") echo '</a>'; ?>
@@ -55,7 +55,7 @@
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => "/local/templates/semushka/include/parts/logo.php"
+                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/logo.php"
                         )
                     );?>
                     <? if ($APPLICATION->GetCurPage(false) !== "/") echo '</a>'; ?>

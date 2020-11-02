@@ -3,7 +3,7 @@
 }
 
 .card__img {
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
 }
 
 .header {
@@ -235,4 +235,13 @@ a.services-list__icon--user:after {
 
 .product-detail__footer-item {
     max-width: 30%;
+}
+
+.news-detail-text {
+    margin-top: 0;
+}
+
+b, strong {
+    font-weight: 700;
+    font-family: 'Proxima Nova Semibold', sans-serif;
 }

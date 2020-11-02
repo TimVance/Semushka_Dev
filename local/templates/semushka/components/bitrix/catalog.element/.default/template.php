@@ -87,41 +87,11 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
                 </div>
                 <section class="uk-section">
                     <ul class="tabs" uk-tab>
-                        <? if (!empty($arResult["DETAIL_TEXT"])): ?>
-                            <li><a href="#">О продукции</a></li>
-                        <? endif; ?>
-                        <li><a href="#">Доставка</a></li>
-                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">О продукции</a></li>
                     </ul>
 
                     <ul class="uk-switcher uk-margin">
-                        <? if (!empty($arResult["DETAIL_TEXT"])): ?>
-                            <li><?=$arResult["DETAIL_TEXT"]?></li>
-                        <? endif; ?>
-                        <li>
-                            <?$APPLICATION->IncludeComponent(
-                                "bitrix:main.include",
-                                "",
-                                Array(
-                                    "AREA_FILE_SHOW" => "file",
-                                    "AREA_FILE_SUFFIX" => "inc",
-                                    "EDIT_TEMPLATE" => "",
-                                    "PATH" => "/local/templates/semushka/include/parts/detail_pay.php"
-                                )
-                            );?>
-                        </li>
-                        <li>
-                            <?$APPLICATION->IncludeComponent(
-                                "bitrix:main.include",
-                                "",
-                                Array(
-                                    "AREA_FILE_SHOW" => "file",
-                                    "AREA_FILE_SUFFIX" => "inc",
-                                    "EDIT_TEMPLATE" => "",
-                                    "PATH" => "/local/templates/semushka/include/parts/detail_delivery.php"
-                                )
-                            );?>
-                        </li>
+                        <li><?=$arResult["DETAIL_TEXT"]?></li>
                     </ul>
                 </section>
                 <?$APPLICATION->IncludeComponent(
