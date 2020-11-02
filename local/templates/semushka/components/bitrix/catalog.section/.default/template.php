@@ -42,6 +42,12 @@ $this->setFrameMode(true);?>
                                 <div class="card__info-note" uk-tooltip="title: <?=$prop["NAME"]?> <?=$prop["VALUE"]?>"><?=$prop["VALUE"]?></div>
                             </div>
                         <? endforeach; ?>
+                        <? if (!empty($item["PROPERTIES"]["city"]["VALUE_ENUM"])): ?>
+                            <div class="card__info-row">
+                                <div class="card__info-title"><?=$item["PROPERTIES"]["city"]["NAME"]?></div>
+                                <div class="card__info-note" uk-tooltip="title: <?=$item["PROPERTIES"]["city"]["NAME"]?> <?=$item["PROPERTIES"]["city"]["VALUE_ENUM"]?>"><?=$item["PROPERTIES"]["city"]["VALUE_ENUM"]?></div>
+                            </div>
+                        <? endif; ?>
                         </div>
                     <? endif; ?>
                     <div class="card__footer-container">
