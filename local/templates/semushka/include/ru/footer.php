@@ -207,3 +207,8 @@
         );?>
     </div>
 </div>
+<div class="notice-add-cart">
+    Товар добавлен в корзину!
+    <br>
+    <a href="/personal/cart/">Оформить заказ</a>
+</div>

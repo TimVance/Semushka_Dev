@@ -88,6 +88,9 @@ function sendRequest(product_id, quantity) {
         .then(function (data) {
             let cart = document.querySelector("#desktop-cart-wrapper");
             cart.innerHTML = data;
+            let notice = document.querySelector(".notice-add-cart");
+            notice.classList.add("active");
+            setTimeout(() => notice.classList.remove("active"), 3000);
         })
         .catch(() => console.log('Ошибка'))
     return true;
