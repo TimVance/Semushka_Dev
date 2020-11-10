@@ -1,6 +1,6 @@
 <? if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<header class="header" uk-sticky>
+<header class="header" <?if ($APPLICATION->GetCurPage(false) !== "/personal/order/make/") echo "uk-sticky";?>>
     <div class="uk-container">
         <div class="header-container">
             <nav class="top-nav uk-visible@m">
