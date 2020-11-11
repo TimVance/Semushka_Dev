@@ -282,3 +282,25 @@ b, strong {
         visibility: visible;
     }
 }
+
+@media screen and (max-width: 460px){
+    .uk-child-width-1-2>.card-list__item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .card__footer-item .btn {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px 20px;
+        max-width: 120px;
+        margin: auto;
+        display: inherit;
+    }
+}
+
+.card__tools {
+    max-width: 200px;
+    margin: auto;
+}
