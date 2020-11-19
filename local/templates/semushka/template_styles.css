@@ -304,3 +304,22 @@ b, strong {
     max-width: 200px;
     margin: auto;
 }
+
+#bx-soa-paysystem-and-delivery {
+    display: none;
+}
+
+.top-nav__row {
+    max-width: 540px;
+    flex-basis: 540px;
+}
+
+.footer .logo {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1180px) {
+    .top-nav__parent {
+        display: none;
+    }
+}

@@ -32,68 +32,6 @@
                 ), false, Array('HIDE_ICONS' => 'Y')
             );?>
             <div class="footer__item uk-width-1-4@m">
-                <div class="">
-                    <?$APPLICATION->IncludeComponent(
-                        "bitrix:main.include",
-                        "",
-                        Array(
-                            "AREA_FILE_SHOW" => "file",
-                            "AREA_FILE_SUFFIX" => "inc",
-                            "EDIT_TEMPLATE" => "",
-                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/phone.php"
-                        )
-                    );?>
-                    <div class="footer__item-body">
-                        <ul class="footer__item-list">
-                            <li>
-                                <p>
-                                    <?$APPLICATION->IncludeComponent(
-                                        "bitrix:main.include",
-                                        "",
-                                        Array(
-                                            "AREA_FILE_SHOW" => "file",
-                                            "AREA_FILE_SUFFIX" => "inc",
-                                            "EDIT_TEMPLATE" => "",
-                                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/address.php"
-                                        )
-                                    );?>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <?$APPLICATION->IncludeComponent(
-                                        "bitrix:main.include",
-                                        "",
-                                        Array(
-                                            "AREA_FILE_SHOW" => "file",
-                                            "AREA_FILE_SUFFIX" => "inc",
-                                            "EDIT_TEMPLATE" => "",
-                                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/worktime.php"
-                                        )
-                                    );?>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <?$APPLICATION->IncludeComponent(
-                                        "bitrix:main.include",
-                                        "",
-                                        Array(
-                                            "AREA_FILE_SHOW" => "file",
-                                            "AREA_FILE_SUFFIX" => "inc",
-                                            "EDIT_TEMPLATE" => "",
-                                            "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/mail.php"
-                                        )
-                                    );?>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer__info" uk-grid>
-            <div class="footer__info-item uk-width-1-4@m">
                 <div class="logo">
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:main.include",
@@ -106,8 +44,6 @@
                         )
                     );?>
                 </div>
-            </div>
-            <div class="footer__info-item uk-width-1-4@m">
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:main.include",
                     "",
@@ -130,18 +66,6 @@
                         )
                     );?>
                 </div>
-            </div>
-            <div class="footer__info-item uk-width-1-2@m uk-visible@m">
-                <?$APPLICATION->IncludeComponent(
-                    "bitrix:main.include",
-                    "",
-                    Array(
-                        "AREA_FILE_SHOW" => "file",
-                        "AREA_FILE_SUFFIX" => "inc",
-                        "EDIT_TEMPLATE" => "",
-                        "PATH" => "/local/templates/semushka/include/".LANGUAGE_ID."/parts/map.php"
-                    )
-                );?>
             </div>
         </div>
         <div class="copyright">
