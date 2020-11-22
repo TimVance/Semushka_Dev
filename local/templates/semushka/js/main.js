@@ -62,6 +62,12 @@ window.onload = () => {
             });
         });
     }
+
+    // Video
+    $(".page-top__btn").click(function () {
+        $(".main-video").fadeIn('slow').trigger("play");
+        $(this).remove();
+    });
 }
 // Detail
 

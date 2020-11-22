@@ -11,7 +11,10 @@
                 </svg>
                 <span>Смотреть видео</span>
             </div>
-            <iframe src="https://www.youtube-nocookie.com/embed/gfhzYty8X3Y?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true; autoplay: false" hidden></iframe>
+            <iframe style="display: none" src="https://www.youtube-nocookie.com/embed/gfhzYty8X3Y?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true; autoplay: false" hidden></iframe>
+            <video class="uk-responsive-width main-video" preload="auto" controls="controls">
+                <source src="/upload/video/FINALL2.mp4"></source>
+            </video>
         </div>
     </div>
 
