@@ -333,3 +333,12 @@ b, strong {
     display: none;
     background-color: rgba(0,0,0,.7);
 }
+
+.first-open > .top-nav__item:hover .main-nav__item--lvl1:first-child > .main-nav__childs {
+    visibility: visible !important;
+}
+
+.first-open > .top-nav__item:hover .main-nav__item--lvl1:first-child > a {
+    color: #8D5D09;
+    border-bottom-color: #8D5D09;
+}

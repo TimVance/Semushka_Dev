@@ -1,7 +1,7 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <? if (!empty($arResult)): ?>
-    <ul class="top-nav__list">
+    <ul class="top-nav__list first-open">
         <? foreach ($arResult as $item1): ?>
             <? if ($item1["LINK"] == '/catalog/'): ?>
                 <li class="top-nav__item">

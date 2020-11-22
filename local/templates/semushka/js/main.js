@@ -68,6 +68,14 @@ window.onload = () => {
         $(".main-video").fadeIn('slow').trigger("play");
         $(this).remove();
     });
+
+    // Menu first hover
+    $(".main-nav__item--lvl1").hover(function () {
+        $(".top-nav__list").removeClass("first-open");
+    }, function () {
+        $(".top-nav__list").addClass("first-open");
+    });
+
 }
 // Detail
 
