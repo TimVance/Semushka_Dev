@@ -64,32 +64,26 @@ $this->setFrameMode(true);?>
                                     <? endforeach; ?>
                                 </div>
                             <? endif; ?>
-                            <div class="card__footer">
-                                <div class="card__footer-item">
-                                    <form class="card__tools">
-                                        <label for="select" class="select card__select">
-                                            <input class="select__toggle select__toggle--select" type="radio" name="list" value="not_changed" id="select">
-                                            <div class="select__list">
-                                                <input class="select__toggle" type="radio" name="list" value="first_value" id="list[0]">
-                                                <label class="select__label" for="list[0]">1кг</label>
-                                                <input class="select__toggle" type="radio" name="list" value="second_value" id="list[1]">
-                                                <label class="select__label" for="list[1]">2кг</label>
-                                                <input class="select__toggle" type="radio" name="list" value="third_value" id="list[2]">
-                                                <label class="select__label" for="list[2]">3кг</label>
-                                                <span class="select__placeholder">Вес</span>
+                            <div class="card__footer-container">
+                                <div class="card__footer" data-product-id="<?=$item["ID"]?>">
+                                    <div class="card__footer-item">
+                                        <form class="card__tools">
+                                            <div class="select card__select">
+                                                <? if (empty($item["PROPERTIES"]["weight"]["VALUE"])) $item["PROPERTIES"]["weight"]["VALUE"] = 0; ?>
+                                                <span data-num="<?=$item["PROPERTIES"]["weight"]["VALUE"]?>"><?=$item["PROPERTIES"]["weight"]["VALUE"]?></span> кг
                                             </div>
-                                        </label>
-                                        <div class="card__count">
-                                            <div class="count-tools js-product-quantity">
-                                                <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
-                                                <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
-                                                <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
+                                            <div class="card__count">
+                                                <div class="count-tools js-product-quantity">
+                                                    <a class="count-tools__arrow-minus js-product-quantity__arrow-minus"> — </a>
+                                                    <input class="count-tools__num js-product-quantity__num input-num" type="number" value="1" id="quantity" />
+                                                    <a class="count-tools__arrow-plus js-product-quantity__arrow-plus"> + </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="card__footer-item">
-                                    <button class="btn" type="button"><span>Купить</span></button>
+                                        </form>
+                                    </div>
+                                    <div class="card__footer-item">
+                                        <button class="btn js-add-section-product" type="button"><span>Купить</span></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
