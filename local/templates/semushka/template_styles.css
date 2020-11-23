@@ -342,3 +342,17 @@ b, strong {
     color: #8D5D09;
     border-bottom-color: #8D5D09;
 }
+
+.main-nav__img img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.main-nav__img {
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+}

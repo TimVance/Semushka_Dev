@@ -51,7 +51,12 @@ $this->setFrameMode(true);?>
                         </div>
                     <? endif; ?>
                     <div class="card__footer-container">
-                        <div class="card__price prices product-section__price"><?=$item["PRICES"]["BASE"]["PRINT_VALUE"]?></div>
+                        <div class="card__price prices product-section__price">
+                            <?
+                            if ($item["PROPERTIES"]["under_the_order"]["VALUE_XML_ID"] != "Y")
+                                echo $item["PRICES"]["BASE"]["PRINT_VALUE"];
+                            ?>
+                        </div>
                         <div class="card__footer" data-product-id="<?=$item["ID"]?>">
                             <div class="card__footer-item">
                                 <form class="card__tools">
@@ -69,7 +74,9 @@ $this->setFrameMode(true);?>
                                 </form>
                             </div>
                             <div class="card__footer-item">
-                                <button class="btn js-add-section-product" type="button"><span>Купить</span></button>
+                                <button class="btn js-add-section-product" type="button">
+                                    <span><?=($item["PROPERTIES"]["under_the_order"]["VALUE_XML_ID"] == "Y" ? "Под заказ" : "Купить")?></span>
+                                </button>
                             </div>
                         </div>
                     </div>
