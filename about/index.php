@@ -120,5 +120,15 @@ $APPLICATION->SetTitle("О компании");
             </div>
         </div>
     </section>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:main.include",
+        "",
+        Array(
+            "AREA_FILE_SHOW" => "file",
+            "AREA_FILE_SUFFIX" => "inc",
+            "EDIT_TEMPLATE" => "",
+            "PATH" => "/local/templates/semushka/include/feedback.php"
+        )
+    );?>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

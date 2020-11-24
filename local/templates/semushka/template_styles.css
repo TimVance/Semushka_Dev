@@ -356,3 +356,51 @@ b, strong {
     right: auto;
     bottom: auto;
 }
+
+.select-type-form label {
+    display: block;
+}
+
+.form-fiz-wrapper, .form-ur-wrapper {
+    max-width: 500px;
+}
+
+.form-fiz-wrapper .uk-modal-title,
+.form-ur-wrapper .uk-modal-title {
+    display: none;
+}
+
+.select-type-form {
+    margin-bottom: 20px;
+}
+
+.select-type-form input {
+    display: none;
+}
+
+.select-type-form label > span {
+    border: 1px solid #202020;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+}
+
+.select-type-form input:checked + span:after {
+    content: "";
+    position: absolute;
+    background-color: #202020;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
