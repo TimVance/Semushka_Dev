@@ -404,3 +404,7 @@ b, strong {
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
+
+.form-fiz-wrapper textarea, .form-ur-wrapper textarea {
+    min-height: 100px;
+}
